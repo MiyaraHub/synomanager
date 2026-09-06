@@ -1,0 +1,208 @@
+<!--meta
+{
+  "url": "/guide/system/",
+  "nav": "guide",
+  "priority": "0.8",
+  "title": "System, CPU, RAM & Fan Control - Syno Manager",
+  "description": "Watch CPU, RAM, load, disk I/O and temperature, change the fan speed mode, check for DSM updates, and restart or shut down your Synology from your phone.",
+  "keywords": "Synology CPU RAM phone, Synology fan speed mode app, Synology temperature monitor, Synology restart from phone, Synology DSM update app, Synology log viewer app, Synology resource monitor",
+  "og_image": "screenshots/system-health.webp",
+  "og_type": "article",
+  "crumb": [
+    [
+      "Home",
+      "/"
+    ],
+    [
+      "User Guide",
+      "/guide/"
+    ],
+    [
+      "System",
+      null
+    ]
+  ],
+  "faq": [
+    [
+      "Can I change the fan speed from the app?",
+      "Yes. System Health has a Cooling card with Full Speed, Cool and Quiet. The app reads the mode the NAS is currently in, writes your choice, and reads it back to confirm. A NAS reporting a mode outside those three keeps a read-only display rather than being misrepresented."
+    ],
+    [
+      "Can I restart or shut down my NAS from my phone?",
+      "Yes, from the Power Controls card at the bottom of System Health. Both are confirmed before they run, because they affect every connected user. Shutting down remotely is worth thinking twice about - a powered-off NAS cannot be woken over the internet without a VPN or a router configured for Wake-on-LAN."
+    ],
+    [
+      "What is Identify NAS for?",
+      "It blinks the NAS's status light so you can tell which box in a rack or a cupboard you are looking at. Silence beep stops the alarm buzzer without silencing the condition that set it off - fix the cause too."
+    ],
+    [
+      "Do the logs refresh by themselves?",
+      "No, and deliberately. A log used to re-read on a timer whether or not you were reading it, which cost battery and network for nothing. It now loads once and holds still. Press play to follow it live, press again to pause, and it stops following on its own when you leave the screen."
+    ]
+  ]
+}
+-->
+<div class="hero split">
+  <div class="wrap">
+    <div>
+      {{CRUMB}}
+      <div class="eyebrow">System</div>
+      <h1>What the box is <span class="g">actually doing</span></h1>
+      <p>Three sub-views: <b>System Health</b> for the state of the machine, <b>Resources</b> for live charts, and <b>Logs</b> for what DSM has recorded. Plus the controls that change something - fan mode, the identify light, DSM updates, restart and shutdown.</p>
+    </div>
+    <div class="hero-shot"><img alt="System Health with CPU and RAM gauges, load average, disk I/O and temperature history" src="{{PRE}}screenshots/system-health.webp" /></div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="onthispage"><b>On this page</b><ul>
+      <li><a href="#health">System Health</a></li>
+      <li><a href="#cooling">Cooling &amp; fan mode</a></li>
+      <li><a href="#identify">Identify &amp; alerts</a></li>
+      <li><a href="#dsm-update">DSM update</a></li>
+      <li><a href="#power">Power controls</a></li>
+      <li><a href="#resources">Resources</a></li>
+      <li><a href="#logs">Logs</a></li>
+    </ul></div>
+
+    <div class="section-head" id="health">
+      <div class="eyebrow">System Health</div>
+      <h2>The readings</h2>
+    </div>
+    <div class="tscroll"><table class="t">
+      <thead><tr><th>Card</th><th>What it shows</th></tr></thead>
+      <tbody>
+        <tr><td>CPU &amp; RAM gauges</td><td>Total CPU as a ring, with the <b>user</b> share called out underneath so you can tell your own workload from system overhead. RAM shows the percentage and the absolute figures.</td></tr>
+        <tr><td>Memory</td><td>Used against total, as a bar. Green until it matters.</td></tr>
+        <tr><td>CPU Load Average</td><td>One, five and fifteen minute figures - processes waiting for CPU time, not a percentage. Judged against your core count, so a healthy figure on an eight-core rackmount is a busy one on a two-bay.</td></tr>
+        <tr><td>Disk I/O</td><td>Read and write throughput plus the utilisation percentage - how much of the time the disks were busy, which is often the real answer when a NAS feels slow while the CPU looks idle.</td></tr>
+        <tr><td>Temperature History</td><td>A rolling chart with the current figure. In &deg;C or &deg;F per your <a href="/guide/settings/#preferences">preference</a>.</td></tr>
+        <tr><td>Processes</td><td>How many processes the NAS is running.</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head" id="cooling">
+      <div class="eyebrow">Cooling</div>
+      <h2>Fan speed mode, changed from your phone</h2>
+    </div>
+    <div class="with-shot">
+      <div>
+        <p class="lead">The Cooling card shows fan status and the mode the NAS is in, as a three-way control:</p>
+        <ul class="plain">
+          <li><b>Full Speed</b> - maximum airflow, maximum noise. Right for a rack or a cupboard.</li>
+          <li><b>Cool</b> - the balanced default.</li>
+          <li><b>Quiet</b> - lower speed, higher temperatures. Right for a NAS in a living room, if the drives can take it.</li>
+        </ul>
+        <div class="note"><b>Confirmed, not assumed.</b> The app reads the current mode from the NAS, writes your choice, then <b>reads it back</b>. A mode the NAS quietly refused is reported as refused, rather than sitting on screen looking as though it applied.</div>
+        <div class="note" style="margin-top:14px"><b>An unrecognised mode stays read-only.</b> If your NAS reports a cooling mode outside those three, the card shows what it reported and does not offer to change it - rather than mislabelling it as one of the three it knows.</div>
+      </div>
+      <img alt="The Cooling card with Full Speed, Cool and Quiet, plus Identify and Power Controls" src="{{PRE}}screenshots/system-cooling.webp" />
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head" id="identify">
+      <div class="eyebrow">Identify &amp; Alerts</div>
+      <h2>Find the box, silence the buzzer</h2>
+    </div>
+    <ul class="plain">
+      <li><b>Identify</b> blinks the NAS's status light so you can tell which unit you are standing in front of. <b>Stop</b> ends it.</li>
+      <li><b>Silence beep</b> stops the alarm buzzer. It silences the noise, not the condition - whatever set the alarm off is still true, and the health header will still say so.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head" id="dsm-update">
+      <div class="eyebrow">DSM Update</div>
+      <h2>Is there a firmware update</h2>
+      <p class="lead">The DSM Update card reports the version you are on and whether Synology has something newer. <b>Check for update</b> asks the NAS to look again.</p>
+    </div>
+    <div class="note"><b>This is your NAS's firmware, not the app.</b> Syno Manager updates itself through the App Store or Google Play like any other app. This card is DSM's own update surface, the same one in Control Panel.</div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head" id="power">
+      <div class="eyebrow">Power Controls</div>
+      <h2>Restart and shut down</h2>
+      <p class="lead">At the bottom of System Health, and marked in red, because they affect every connected user - including the person mid-way through a file copy.</p>
+    </div>
+    <ul class="plain">
+      <li><b>Restart NAS</b> - a clean reboot. Confirmed before it runs.</li>
+      <li><b>Shutdown NAS</b> - a clean power-off. Confirmed before it runs.</li>
+    </ul>
+    <div class="note stop"><b>Think before shutting down remotely.</b> A powered-off NAS cannot relay its own wake packet. Bringing it back from outside your network needs a VPN into it, or a router set up to forward Wake-on-LAN. See <a href="/guide/wake-on-lan/">Wake-on-LAN</a> for what works from where.</div>
+    <div class="note" style="margin-top:14px"><b>Shortcuts do not skip the confirmation.</b> The <code>synomanager://reboot</code> and <code>synomanager://shutdown</code> <a href="/guide/shortcuts/">links</a> deliberately only <em>open the app</em> at this screen. A destructive action does not become one-tap because it was triggered from a launcher.</div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head" id="resources">
+      <div class="eyebrow">Resources</div>
+      <h2>Live charts</h2>
+    </div>
+    <div class="with-shot left">
+      <img alt="Resource monitor charts for CPU, memory, disk read and disk write" src="{{PRE}}screenshots/system-resources.webp" />
+      <div>
+        <p class="lead">The Resources sub-view is the same data as a rolling graph, which is what you want when the question is "is this a spike or is this constant?"</p>
+        <ul class="plain">
+          <li><b>CPU Usage</b> with the user and system split.</li>
+          <li><b>Memory Usage</b> with used against total.</li>
+          <li><b>Disk Read</b> and <b>Disk Write</b>, each with its own chart, plus overall disk utilisation.</li>
+          <li><b>Load Averages</b> over one, five and fifteen minutes.</li>
+        </ul>
+        <div class="note">Charts fill at the <a href="/guide/settings/#preferences">polling interval</a>. A shorter interval gives finer detail and costs more battery; a longer one is kinder and coarser.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head" id="logs">
+      <div class="eyebrow">Logs</div>
+      <h2>What DSM recorded</h2>
+      <p class="lead">Two tabs: <b>System</b> for DSM's own log, and <b>Connection</b> for sign-ins and file access. Both are read when you ask for them.</p>
+    </div>
+    <ul class="plain">
+      <li><b>It loads once and holds still.</b> A log that re-reads on a timer while you are trying to read a line is useless, and it costs battery and network for nothing.</li>
+      <li><b>Press play to follow live.</b> Press it again to pause. Following stops on its own when you leave the screen or send the app to the background, so a forgotten log tab is not quietly polling in your pocket.</li>
+      <li><b>There is a search box</b> for finding one line in a long log.</li>
+      <li><b>Container and stack logs work the same way</b> - see <a href="/guide/apps/#docker">Docker</a>.</li>
+    </ul>
+    <div class="note warn"><b>If the log will not load</b> and reports a connection timeout while the rest of the app is fine, the Log Center service on the NAS is the thing not answering, not your connection. Check that Log Center is installed and running in DSM's Package Center - the system log API is part of it.</div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Common questions</div>
+      <h2>System FAQ</h2>
+    </div>
+    <details open><summary>Can I change the fan speed from the app?</summary><div class="body">Yes. System Health has a Cooling card with Full Speed, Cool and Quiet. The app reads the mode the NAS is currently in, writes your choice, and reads it back to confirm. A NAS reporting a mode outside those three keeps a read-only display rather than being misrepresented.</div></details>
+    <details><summary>Can I restart or shut down my NAS from my phone?</summary><div class="body">Yes, from Power Controls at the bottom of System Health. Both are confirmed before they run. Shutting down remotely is worth thinking twice about - a powered-off NAS cannot be woken over the internet without a VPN or a router configured for Wake-on-LAN.</div></details>
+    <details><summary>What is Identify NAS for?</summary><div class="body">It blinks the NAS's status light so you can tell which box in a rack or a cupboard you are looking at. Silence beep stops the alarm buzzer without silencing the condition that set it off.</div></details>
+    <details><summary>Do the logs refresh by themselves?</summary><div class="body">No, and deliberately. A log loads once and holds still so you can read it. Press play to follow it live, press again to pause, and it stops following on its own when you leave the screen or background the app.</div></details>
+    <details><summary>Why is my load average high when CPU looks fine?</summary><div class="body">Load average counts processes waiting, and they are often waiting on disks rather than CPU. Check Disk I/O utilisation on the same screen - a high utilisation percentage with low CPU is the usual explanation.</div></details>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <h2>Next: Storage</h2>
+    <p class="lead" style="margin:0 auto 24px">Volumes, pools, per-drive SMART health and safe eject.</p>
+    <p><a class="btn" href="/guide/storage/">Storage &amp; drives &rarr;</a> &nbsp; <a class="btn ghost" href="/guide/">Back to the guide</a></p>
+  </div>
+</section>

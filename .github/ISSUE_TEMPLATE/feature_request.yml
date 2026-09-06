@@ -1,0 +1,32 @@
+name: Feature request
+description: Something Syno Manager should do but does not.
+title: "[Feature]: "
+labels: ["enhancement", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Worth checking the [manual](https://synomanager.com/guide/) first - some
+        things are already there under a different name.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What are you trying to do
+      description: The problem, not the solution. What are you trying to achieve?
+      placeholder: "I want to know if a scrub is running without opening DSM."
+    validations:
+      required: true
+
+  - type: textarea
+    id: idea
+    attributes:
+      label: What you would like it to do
+    validations:
+      required: true
+
+  - type: input
+    id: model
+    attributes:
+      label: NAS model and DSM version
+      placeholder: "DS923+, DSM 7.2.2"

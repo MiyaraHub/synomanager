@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Storage, RAID & SMART Health - Syno Manager</title>
+<meta name="description" content="Synology volumes and pools with RAID type and free space, per-drive SMART status and temperature, a Quick SMART Test, and safe eject for USB and eSATA." />
+<meta name="keywords" content="Synology storage app, Synology SMART status phone, Synology RAID monitoring, Synology drive temperature, Synology safe eject USB, Synology volume usage app" />
+<meta name="author" content="MiyaraHub Technologies LLC" />
+<meta name="robots" content="index, follow, max-image-preview:large" />
+<meta name="theme-color" content="#3b82f6" />
+<link rel="canonical" href="https://synomanager.com/guide/storage/" />
+<meta property="og:title" content="Storage, RAID & SMART Health - Syno Manager" />
+<meta property="og:description" content="Synology volumes and pools with RAID type and free space, per-drive SMART status and temperature, a Quick SMART Test, and safe eject for USB and eSATA." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://synomanager.com/guide/storage/" />
+<meta property="og:site_name" content="Syno Manager" />
+<meta property="og:image" content="https://synomanager.com/screenshots/storage-volumes.webp" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Storage, RAID & SMART Health - Syno Manager" />
+<meta name="twitter:description" content="Synology volumes and pools with RAID type and free space, per-drive SMART status and temperature, a Quick SMART Test, and safe eject for USB and eSATA." />
+<meta name="twitter:image" content="https://synomanager.com/screenshots/storage-volumes.webp" />
+<link rel="icon" href="../../assets/favicon.ico" sizes="any" />
+<link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png" />
+<link rel="icon" type="image/png" sizes="48x48" href="../../assets/favicon-48.png" />
+<link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preconnect" href="https://img.shields.io" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" />
+<link rel="stylesheet" href="../../assets/site.css" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "MiyaraHub Technologies LLC",
+  "url": "https://miyarahub.com",
+  "logo": "https://synomanager.com/assets/icon-192.png"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Syno Manager",
+  "url": "https://synomanager.com/",
+  "publisher": {
+    "@type": "Organization",
+    "name": "MiyaraHub Technologies LLC"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://synomanager.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "User Guide",
+      "item": "https://synomanager.com/guide/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Storage"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Storage, RAID & SMART Health - Syno Manager",
+  "description": "Synology volumes and pools with RAID type and free space, per-drive SMART status and temperature, a Quick SMART Test, and safe eject for USB and eSATA.",
+  "image": "https://synomanager.com/screenshots/storage-volumes.webp",
+  "url": "https://synomanager.com/guide/storage/",
+  "inLanguage": "en",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Syno Manager",
+    "url": "https://synomanager.com/"
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "MiyaraHub Technologies LLC"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "MiyaraHub Technologies LLC",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://synomanager.com/assets/icon-192.png"
+    }
+  },
+  "about": {
+    "@type": "SoftwareApplication",
+    "name": "Syno Manager",
+    "operatingSystem": "Android, iOS, macOS, Windows",
+    "applicationCategory": "UtilitiesApplication"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can I see SMART status for each drive?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The Disk Health sub-view lists every drive with its model, whether it is an HDD or SSD, its capacity, its temperature and its SMART verdict. You can also start a Quick SMART Test on any drive from the phone."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What temperature is too hot for a NAS drive?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The app colours a drive amber past 45 degrees C and red past 55 degrees C, and the system temperature amber past 50 and red past 60. Those thresholds also feed the health badge on the home screen, so a hot drive shows up there without you going looking."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I safely eject a USB drive from the app?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, from the External sub-view. The eject is confirmed by the drive actually leaving the device list, not by the request being accepted - so a drive that says it ejected really has. A drive that is formatting or initialising cannot be ejected."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I create or expand a volume from the app?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Creating, expanding and repairing volumes and pools are done in DSM's Storage Manager. The app reports what your storage is doing and lets you act on drives; it does not restructure your array from a phone."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="/"><img src="../../assets/syno-manager-icon.png" alt="Syno Manager icon" width="104" height="104" decoding="async" /> Syno Manager</a>
+    <button class="nav-toggle" aria-label="Menu" onclick="document.getElementById('m').classList.toggle('open')">&#9776;</button>
+    <nav id="m">
+      <a href="/">Home</a>
+      <a href="/guide/" class="active">User Guide</a>
+      <a href="/#screenshots">Screenshots</a>
+      <a href="/compatible-nas/">Compatibility</a>
+      <a href="/best-synology-nas-app/">Why switch</a>
+      <a href="/help/">Help</a>
+      <a href="/#top" class="cta">Download</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero split">
+  <div class="wrap">
+    <div>
+      <div class="crumb"><a href="/">Home</a> &rsaquo; <a href="/guide/">User Guide</a> &rsaquo; Storage</div>
+      <div class="eyebrow">Storage</div>
+      <h1>Every volume, <span class="g">every drive</span></h1>
+      <p>Three sub-views: <b>Volumes &amp; Pools</b> for capacity and RAID, <b>Disk Health</b> for SMART and temperature per drive, and <b>External</b> for anything plugged into the back.</p>
+    </div>
+    <div class="hero-shot"><img alt="Storage volumes and drives in Syno Manager" src="../../screenshots/storage-volumes.webp" width="1324" height="2644" decoding="async" fetchpriority="high" /></div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="onthispage"><b>On this page</b><ul>
+      <li><a href="#volumes">Volumes &amp; Pools</a></li>
+      <li><a href="#drives">The drive list</a></li>
+      <li><a href="#disk-health">Disk Health &amp; SMART</a></li>
+      <li><a href="#thresholds">Temperature thresholds</a></li>
+      <li><a href="#external">External &amp; safe eject</a></li>
+      <li><a href="#limits">What it will not do</a></li>
+    </ul></div>
+
+    <div class="section-head" id="volumes">
+      <div class="eyebrow">Volumes &amp; Pools</div>
+      <h2>Capacity, at a glance</h2>
+      <p class="lead">Each volume gets a card with its name, its RAID type, its status and how many drives back it, over a usage bar with used, percentage, total and free.</p>
+    </div>
+    <div class="tscroll"><table class="t">
+      <thead><tr><th>Shown</th><th>Meaning</th></tr></thead>
+      <tbody>
+        <tr><td>Volume name</td><td>As DSM names it - <code>VOLUME_1</code>, and so on.</td></tr>
+        <tr><td>RAID type</td><td>RAID 5, SHR, RAID 1, Basic - whatever the pool underneath actually is.</td></tr>
+        <tr><td>Status</td><td>The volume's own state: <b>normal</b>, degraded, crashed. A degraded array is the one thing on this screen worth acting on today.</td></tr>
+        <tr><td>Drive count</td><td>How many physical drives the volume spans.</td></tr>
+        <tr><td>Usage bar</td><td>Green normally, amber past 80% and red past 90%. Those are the same thresholds the <a href="/guide/home/#header">health badge</a> uses.</td></tr>
+        <tr><td>Used / Total / Free</td><td>All three, because "70% full" and "13 TB free" answer different questions.</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head" id="drives">
+      <div class="eyebrow">Drives</div>
+      <h2>What is in each bay</h2>
+      <p class="lead">Below the volumes, every physical drive by bay number.</p>
+    </div>
+    <ul class="plain">
+      <li><b>Bay</b> - Disk 1, Disk 2, and so on, matching the labels on the chassis.</li>
+      <li><b>Model</b> - the drive's own model string.</li>
+      <li><b>Vendor and type</b> - the manufacturer and whether it is an HDD or an SSD. A drive whose vendor the NAS could not identify is shown as <b>Unknown</b> rather than being guessed at.</li>
+      <li><b>Temperature</b>, coloured against the thresholds below.</li>
+      <li><b>SMART verdict</b> - <b>SMART OK</b> when the drive's own self-assessment is healthy.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head" id="disk-health">
+      <div class="eyebrow">Disk Health</div>
+      <h2>SMART, and a test you can start</h2>
+    </div>
+    <div class="with-shot">
+      <div>
+        <p class="lead">The Disk Health sub-view is the same drives with more room: capacity, type, temperature and SMART state each get their own chip, and every drive carries a <b>Quick SMART Test</b> button.</p>
+        <ul class="plain" style="margin-top:16px">
+          <li><b>Quick SMART Test</b> asks the drive to run its own short self-assessment. It takes a couple of minutes and does not interrupt anything using the volume.</li>
+          <li><b>The verdict is the drive's, not ours.</b> SMART is the drive reporting on itself; the app relays it. A drive that says it is fine and then fails is a limitation of SMART, not of the reading.</li>
+          <li><b>An unreadable SMART state is shown as unknown</b>, never as healthy. A missing reading and a good reading are different things and are never merged.</li>
+        </ul>
+      </div>
+      <img alt="Disk Health showing every drive with SMART status, temperature and a Quick SMART Test button" src="../../screenshots/storage-disk-health.webp" width="1324" height="2644" decoding="async" loading="lazy" />
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head" id="thresholds">
+      <div class="eyebrow">The numbers behind the colours</div>
+      <h2>Thresholds</h2>
+      <p class="lead">Nothing here is a guess about your hardware - these are the points at which the app changes a colour and, where relevant, the home screen's health badge.</p>
+    </div>
+    <div class="tscroll"><table class="t">
+      <thead><tr><th>Reading</th><th>Amber at</th><th>Red at</th></tr></thead>
+      <tbody>
+        <tr><td>Drive temperature</td><td>45&deg;C</td><td>55&deg;C</td></tr>
+        <tr><td>System temperature</td><td>50&deg;C</td><td>60&deg;C</td></tr>
+        <tr><td>Volume usage</td><td>80%</td><td>90%</td></tr>
+        <tr><td>UPS charge</td><td>below 50%</td><td>below 20%</td></tr>
+      </tbody>
+    </table></div>
+    <div class="note">Switch between &deg;C and &deg;F in <a href="/guide/settings/#preferences">Settings &rsaquo; Temperature Unit</a>. Every temperature in the app follows it immediately, including the ones on the home screen and in the widgets.</div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head" id="external">
+      <div class="eyebrow">External</div>
+      <h2>USB, eSATA and safe eject</h2>
+    </div>
+    <div class="with-shot left">
+      <img alt="External storage and USB devices, with nothing attached and a UPS listed" src="../../screenshots/storage-external.webp" width="1324" height="2644" decoding="async" loading="lazy" />
+      <div>
+        <p class="lead">Two sections: <b>External Storage</b> for drives you can mount and eject, and <b>USB Devices</b> for everything else plugged in - a UPS, a printer, a dongle.</p>
+        <ul class="plain" style="margin-top:16px">
+          <li><b>Eject is confirmed by the drive leaving.</b> The app does not report success because the request came back OK; it re-reads the device list and only says the drive is ejected once it is genuinely gone. That is the difference between "safe to unplug" and "probably safe to unplug".</li>
+          <li><b>A busy drive cannot be ejected.</b> One that is formatting or initialising is refused, with the reason, rather than being yanked mid-write.</li>
+          <li><b>Nothing attached says so plainly.</b> An empty list reads "No external drives attached" - not an empty box you have to interpret.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head" id="limits">
+      <div class="eyebrow">Boundaries</div>
+      <h2>What this screen will not do</h2>
+      <p class="lead">Storage is the one place where a mistaken tap is not recoverable, so the app reads far more than it writes.</p>
+    </div>
+    <ul class="plain">
+      <li><b>It will not create, expand or delete a volume or pool.</b> Those live in DSM's Storage Manager, on a screen big enough to show what you are about to do.</li>
+      <li><b>It will not repair a degraded array.</b> It will tell you, clearly and on the home screen, that one is degraded.</li>
+      <li><b>It will not format anything.</b></li>
+      <li><b>It will not run a full SMART test</b> - only the quick one. A full surface scan takes hours and belongs somewhere you are not going to walk away from.</li>
+    </ul>
+    <div class="note"><b>Scrubbing, rebuilds and parity checks</b> show up as running operations while they are in progress, so you can watch one finish from the app even though you started it in DSM.</div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Common questions</div>
+      <h2>Storage FAQ</h2>
+    </div>
+    <details open><summary>Can I see SMART status for each drive?</summary><div class="body">Yes. The Disk Health sub-view lists every drive with its model, whether it is an HDD or SSD, its capacity, its temperature and its SMART verdict. You can also start a Quick SMART Test on any drive from the phone.</div></details>
+    <details><summary>What temperature is too hot for a NAS drive?</summary><div class="body">The app colours a drive amber past 45&deg;C and red past 55&deg;C, and the system temperature amber past 50&deg;C and red past 60&deg;C. Those thresholds also feed the health badge on the home screen.</div></details>
+    <details><summary>Can I safely eject a USB drive from the app?</summary><div class="body">Yes, from the External sub-view. The eject is confirmed by the drive actually leaving the device list, not by the request being accepted. A drive that is formatting or initialising cannot be ejected.</div></details>
+    <details><summary>Can I create or expand a volume from the app?</summary><div class="body">No. Creating, expanding and repairing volumes and pools are done in DSM's Storage Manager. The app reports what your storage is doing and lets you act on drives; it does not restructure your array from a phone.</div></details>
+    <details><summary>Why does a drive say Unknown for its vendor?</summary><div class="body">Because the NAS did not report one. The app shows what it was told rather than inferring a manufacturer from the model string, which would be a guess presented as a fact.</div></details>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <h2>Next: Network</h2>
+    <p class="lead" style="margin:0 auto 24px">Throughput, connections, services, VPN and DDNS.</p>
+    <p><a class="btn" href="/guide/network/">Network &rarr;</a> &nbsp; <a class="btn ghost" href="/guide/">Back to the guide</a></p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="flinks"><a href="/">Home</a><a href="/guide/">User Guide</a><a href="/guide/getting-started/">Getting started</a><a href="/compatible-nas/">Compatibility</a><a href="/help/">Help</a><a href="/privacy/">Privacy</a><a href="https://play.google.com/store/apps/details?id=com.synomanager">Google Play</a><a href="https://apps.apple.com/us/app/syno-manager/id6763011668">App Store</a><a href="https://github.com/MiyaraHub/synomanager/issues">Report a bug</a><a href="https://miyarahub.com">MiyaraHub</a></div>
+    <p class="legal">&copy; MiyaraHub Technologies LLC. Syno Manager is an independent app and is not affiliated with, endorsed by, or sponsored by Synology Inc. Synology, DSM, DiskStation, RackStation, Hyper Backup, Active Backup, Surveillance Station and QuickConnect are trademarks of Synology Inc.</p>
+  </div>
+</footer>
+
+<script defer src="/assets/search.js"></script>
+<script defer src="/assets/lightbox.js"></script>
+</body>
+</html>

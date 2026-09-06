@@ -1,0 +1,95 @@
+name: Bug report
+description: Report something that is broken in Syno Manager.
+title: "[Bug]: "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for filing this. The more of the form you fill in, the faster it
+        can be fixed. Skip a field only if it genuinely does not apply.
+
+        Please do not paste your public IP address, your QuickConnect ID, your
+        DDNS hostname or any password. A local address like 192.168.1.20 is fine.
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: A short, plain description of what went wrong.
+      placeholder: "The Storage tab shows a spinner forever and never loads my volumes."
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+      placeholder: "It should list VOLUME_1 with its usage, the way it does at home."
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Numbered steps, starting from a known state.
+      placeholder: |
+        1. Open the app on mobile data.
+        2. Tap Storage in the bottom bar.
+        3. The spinner never stops.
+    validations:
+      required: true
+
+  - type: input
+    id: app-version
+    attributes:
+      label: App version
+      description: Settings shows it inline; About has the build number too.
+      placeholder: "2.3.0 (41)"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      options:
+        - Android
+        - iOS
+    validations:
+      required: true
+
+  - type: input
+    id: dsm
+    attributes:
+      label: DSM version
+      placeholder: "DSM 7.2.2-72806"
+    validations:
+      required: true
+
+  - type: input
+    id: model
+    attributes:
+      label: NAS model
+      placeholder: "DS923+"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: route
+    attributes:
+      label: How were you connected?
+      options:
+        - On the same network as the NAS
+        - QuickConnect
+        - Custom domain or DDNS
+        - VPN
+    validations:
+      required: true
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: Anything else
+      description: Screenshots help - crop out anything private first.

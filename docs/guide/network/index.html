@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Network, Services, VPN & DDNS - Syno Manager</title>
+<meta name="description" content="Live throughput per interface, active connections and blocked IPs, DSM services you can toggle, VPN client profiles, and DDNS with your public address." />
+<meta name="keywords" content="Synology network monitoring app, Synology throughput phone, Synology active connections, Synology blocked IP, Synology services app, Synology DDNS app, Synology external IP" />
+<meta name="author" content="MiyaraHub Technologies LLC" />
+<meta name="robots" content="index, follow, max-image-preview:large" />
+<meta name="theme-color" content="#3b82f6" />
+<link rel="canonical" href="https://synomanager.com/guide/network/" />
+<meta property="og:title" content="Network, Services, VPN & DDNS - Syno Manager" />
+<meta property="og:description" content="Live throughput per interface, active connections and blocked IPs, DSM services you can toggle, VPN client profiles, and DDNS with your public address." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://synomanager.com/guide/network/" />
+<meta property="og:site_name" content="Syno Manager" />
+<meta property="og:image" content="https://synomanager.com/screenshots/network.webp" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Network, Services, VPN & DDNS - Syno Manager" />
+<meta name="twitter:description" content="Live throughput per interface, active connections and blocked IPs, DSM services you can toggle, VPN client profiles, and DDNS with your public address." />
+<meta name="twitter:image" content="https://synomanager.com/screenshots/network.webp" />
+<link rel="icon" href="../../assets/favicon.ico" sizes="any" />
+<link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png" />
+<link rel="icon" type="image/png" sizes="48x48" href="../../assets/favicon-48.png" />
+<link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preconnect" href="https://img.shields.io" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" />
+<link rel="stylesheet" href="../../assets/site.css" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "MiyaraHub Technologies LLC",
+  "url": "https://miyarahub.com",
+  "logo": "https://synomanager.com/assets/icon-192.png"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Syno Manager",
+  "url": "https://synomanager.com/",
+  "publisher": {
+    "@type": "Organization",
+    "name": "MiyaraHub Technologies LLC"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://synomanager.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "User Guide",
+      "item": "https://synomanager.com/guide/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Network"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Network, Services, VPN & DDNS - Syno Manager",
+  "description": "Live throughput per interface, active connections and blocked IPs, DSM services you can toggle, VPN client profiles, and DDNS with your public address.",
+  "image": "https://synomanager.com/screenshots/network.webp",
+  "url": "https://synomanager.com/guide/network/",
+  "inLanguage": "en",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Syno Manager",
+    "url": "https://synomanager.com/"
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "MiyaraHub Technologies LLC"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "MiyaraHub Technologies LLC",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://synomanager.com/assets/icon-192.png"
+    }
+  },
+  "about": {
+    "@type": "SoftwareApplication",
+    "name": "Syno Manager",
+    "operatingSystem": "Android, iOS, macOS, Windows",
+    "applicationCategory": "UtilitiesApplication"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can I see how fast my NAS is transferring right now?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The Network sub-view shows live download and upload for every interface the NAS has, each with its own chart, its link speed and its address. Bonded interfaces appear as the bond, with the aggregate speed."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I start and stop DSM services from the app?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, for services DSM lets a client control - SMB, NFS, FTP, rsync and the rest each have a toggle. Some are marked system-managed, which means DSM runs them on its own terms and the app shows their state without offering to change it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the app show which IP addresses are blocked?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The Connections sub-view shows the auto-block policy - how many failed attempts within how long - and the list of addresses currently blocked, collapsed behind a count so a hundred entries do not bury the rest of the screen."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I tell whether my VPN is connected?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The app lists the VPN client profiles your NAS has and lets you ask it to connect or disconnect one. It does not claim which one is up, because the DSM record it reads carries no status field. Saying otherwise would be inventing a reading."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="/"><img src="../../assets/syno-manager-icon.png" alt="Syno Manager icon" width="104" height="104" decoding="async" /> Syno Manager</a>
+    <button class="nav-toggle" aria-label="Menu" onclick="document.getElementById('m').classList.toggle('open')">&#9776;</button>
+    <nav id="m">
+      <a href="/">Home</a>
+      <a href="/guide/" class="active">User Guide</a>
+      <a href="/#screenshots">Screenshots</a>
+      <a href="/compatible-nas/">Compatibility</a>
+      <a href="/best-synology-nas-app/">Why switch</a>
+      <a href="/help/">Help</a>
+      <a href="/#top" class="cta">Download</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero split">
+  <div class="wrap">
+    <div>
+      <div class="crumb"><a href="/">Home</a> &rsaquo; <a href="/guide/">User Guide</a> &rsaquo; Network</div>
+      <div class="eyebrow">Network</div>
+      <h1>What is going <span class="g">in and out</span></h1>
+      <p>Five sub-views: live <b>Network</b> throughput, <b>Connections</b> with auto-block, <b>Services</b> you can toggle, <b>VPN</b> profiles, and <b>DDNS</b> with your public address.</p>
+    </div>
+    <div class="hero-shot"><img alt="Live network throughput per interface" src="../../screenshots/network.webp" width="1324" height="2644" decoding="async" fetchpriority="high" /></div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="onthispage"><b>On this page</b><ul>
+      <li><a href="#throughput">Throughput</a></li>
+      <li><a href="#connections">Connections &amp; auto-block</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#vpn">VPN</a></li>
+      <li><a href="#ddns">DDNS &amp; external IP</a></li>
+    </ul></div>
+
+    <div class="section-head" id="throughput">
+      <div class="eyebrow">Network</div>
+      <h2>Live, per interface</h2>
+      <p class="lead">Every interface the NAS has gets its own card - and that includes bonds and Open vSwitch interfaces, which many tools skip.</p>
+    </div>
+    <div class="tscroll"><table class="t">
+      <thead><tr><th>Shown</th><th>Meaning</th></tr></thead>
+      <tbody>
+        <tr><td>Interface name and speed</td><td>The name DSM uses and its negotiated speed - <code>bond0 (20 Gbps)</code> for a two-port aggregate, for example.</td></tr>
+        <tr><td>Address</td><td>The IP the interface currently holds.</td></tr>
+        <tr><td>LIVE indicator</td><td>Green while the figures are updating.</td></tr>
+        <tr><td>Download / Upload</td><td>Current throughput, each with a rolling chart underneath so a burst is distinguishable from sustained traffic.</td></tr>
+        <tr><td>Network Info</td><td>Server name, gateway and primary DNS - the three values you want when something on the network is not resolving.</td></tr>
+        <tr><td>Active Connections</td><td>A count, with a way into the detail.</td></tr>
+      </tbody>
+    </table></div>
+    <div class="note"><b>Direction is from the NAS's point of view.</b> "Download" is traffic arriving at the NAS; when you copy a file <em>to</em> the NAS, that is its download.</div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head" id="connections">
+      <div class="eyebrow">Connections</div>
+      <h2>Who is on it, and who is banned</h2>
+    </div>
+    <div class="with-shot">
+      <div>
+        <p class="lead">Three things, in the order you usually want them:</p>
+        <ul class="plain">
+          <li><b>Auto Block</b> - whether DSM's brute-force protection is on, how many failed attempts trigger it and over what window. This is the setting that locks out a phone after a few wrong passwords.</li>
+          <li><b>Blocked IPs</b> - every address currently banned, behind a count. A hundred blocked addresses is normal on an internet-facing NAS and would otherwise bury the screen, so it stays collapsed until you open it.</li>
+          <li><b>Active Connections</b> - who is signed in, from which address, over which protocol, and when the session started. HTTP/HTTPS, SMB, NFS, FTP - each session is named.</li>
+        </ul>
+        <div class="note"><b>You can end a session.</b> An active connection can be kicked from here, which is the fast answer to "something is holding a file open" or "why is that address still connected".</div>
+      </div>
+      <img alt="Connections showing the auto-block policy, blocked IPs and active connections" src="../../screenshots/network-connections.webp" width="1324" height="2644" decoding="async" loading="lazy" />
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head" id="services">
+      <div class="eyebrow">Services</div>
+      <h2>What DSM is running</h2>
+    </div>
+    <div class="with-shot left">
+      <img alt="DSM services with running state and toggles" src="../../screenshots/network-services.webp" width="1324" height="2644" decoding="async" loading="lazy" />
+      <div>
+        <p class="lead">A count at the top - <b>running out of total</b> - then every service DSM exposes, each with a state dot and a switch.</p>
+        <ul class="plain" style="margin-top:16px">
+          <li><b>File and connection services</b> - SMB, NFS, AFP, FTP, FTPS, SFTP, rsync, iSCSI. Turn one on or off from the phone.</li>
+          <li><b>Discovery and printing</b> - Bonjour Printer Broadcast, WS-Discovery, the CUPS printer daemon.</li>
+          <li><b>Infrastructure</b> - NTP, KMIP and the rest.</li>
+          <li><b>System-managed services carry a lock.</b> DSM runs those on its own terms, so the app shows their state and does not offer a switch that would be refused. A control that cannot work is worse than no control.</li>
+        </ul>
+        <div class="note warn"><b>Turning off SMB will disconnect anyone using it.</b> These are live switches on a running server, not a preferences screen.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head" id="vpn">
+      <div class="eyebrow">VPN</div>
+      <h2>Client profiles</h2>
+      <p class="lead">The VPN sub-view lists the VPN <b>client</b> profiles configured on your NAS - the connections it makes out to somewhere else - and lets you ask it to connect or disconnect one.</p>
+    </div>
+    <div class="with-shot">
+      <div>
+    <div class="note" style="margin-top:0"><b>It does not claim which profile is connected, and that is deliberate.</b> The NAS acknowledges a connect or disconnect request but the DSM record the app reads carries no status field, so there is nothing to read a verdict from. Rather than infer one and be confidently wrong, the app says so and points you at DSM's Network page, which is the place that knows.</div>
+    <p style="color:var(--steel);margin-top:18px">With no profiles set up, the screen says so and tells you where to add one: DSM, under <b>Network &rsaquo; Network Interface</b>.</p>
+      </div>
+      <img alt="The VPN sub-view listing client profiles" src="../../screenshots/network-vpn.webp" width="1324" height="2644" decoding="async" loading="lazy" />
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head" id="ddns">
+      <div class="eyebrow">DDNS</div>
+      <h2>Your public address, and the name that points at it</h2>
+    </div>
+    <div class="with-shot">
+      <div>
+        <p class="lead">One card, two independent halves:</p>
+        <ul class="plain">
+          <li><b>External IP</b> - the public address your connection currently has.</li>
+          <li><b>Each DDNS hostname</b> your NAS publishes, the status DSM holds for it, when it last updated and when it will update next.</li>
+        </ul>
+        <h3 style="margin-top:22px">Refresh and Update</h3>
+        <ul class="plain">
+          <li><b>Refresh</b> re-reads what DSM currently holds.</li>
+          <li><b>Update now</b> asks the NAS to publish its address again - the same thing DSM's own button does.</li>
+        </ul>
+        <div class="note"><b>Each half fails on its own.</b> A DDNS provider that is down does not take the public-IP reading with it, and an unreadable IP does not blank the hostname status. Two readings, two verdicts.</div>
+        <div class="note" style="margin-top:14px"><b>It reports what DSM stores, not a live test.</b> The app does not resolve your hostname itself to check it points at you. A provider that answers a request says nothing about whether your record is correct, so the app relays DSM's own verdict rather than inventing a second one.</div>
+      </div>
+      <img alt="DDNS and external IP, with the public address and hostname obscured" src="../../screenshots/network-ddns.webp" width="1324" height="2644" decoding="async" loading="lazy" />
+    </div>
+    <p class="capt" style="margin-top:14px">The address and hostname in this screenshot are blurred - they are a real NAS's.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Common questions</div>
+      <h2>Network FAQ</h2>
+    </div>
+    <details open><summary>Can I see how fast my NAS is transferring right now?</summary><div class="body">Yes. The Network sub-view shows live download and upload for every interface the NAS has, each with its own chart, its link speed and its address. Bonded interfaces appear as the bond, with the aggregate speed.</div></details>
+    <details><summary>Can I start and stop DSM services from the app?</summary><div class="body">Yes, for services DSM lets a client control - SMB, NFS, FTP, rsync and the rest each have a toggle. Some are marked system-managed, which means DSM runs them on its own terms and the app shows their state without offering to change it.</div></details>
+    <details><summary>Does the app show which IP addresses are blocked?</summary><div class="body">Yes. The Connections sub-view shows the auto-block policy and the list of addresses currently blocked, collapsed behind a count so a hundred entries do not bury the rest of the screen.</div></details>
+    <details><summary>Can I tell whether my VPN is connected?</summary><div class="body">The app lists the VPN client profiles your NAS has and lets you ask it to connect or disconnect one. It does not claim which one is up, because the DSM record it reads carries no status field. DSM's Network page is the place that knows.</div></details>
+    <details><summary>Why is my public IP different from what a website tells me?</summary><div class="body">Because this is the address your NAS's connection has, read through DSM. If your phone is on mobile data it has a different one. They are two different networks and both readings are correct.</div></details>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <h2>Next: Files</h2>
+    <p class="lead" style="margin:0 auto 24px">File Station, shared folders, notes, documents and contacts.</p>
+    <p><a class="btn" href="/guide/files/">Files &amp; shares &rarr;</a> &nbsp; <a class="btn ghost" href="/guide/">Back to the guide</a></p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="flinks"><a href="/">Home</a><a href="/guide/">User Guide</a><a href="/guide/getting-started/">Getting started</a><a href="/compatible-nas/">Compatibility</a><a href="/help/">Help</a><a href="/privacy/">Privacy</a><a href="https://play.google.com/store/apps/details?id=com.synomanager">Google Play</a><a href="https://apps.apple.com/us/app/syno-manager/id6763011668">App Store</a><a href="https://github.com/MiyaraHub/synomanager/issues">Report a bug</a><a href="https://miyarahub.com">MiyaraHub</a></div>
+    <p class="legal">&copy; MiyaraHub Technologies LLC. Syno Manager is an independent app and is not affiliated with, endorsed by, or sponsored by Synology Inc. Synology, DSM, DiskStation, RackStation, Hyper Backup, Active Backup, Surveillance Station and QuickConnect are trademarks of Synology Inc.</p>
+  </div>
+</footer>
+
+<script defer src="/assets/search.js"></script>
+<script defer src="/assets/lightbox.js"></script>
+</body>
+</html>

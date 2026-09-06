@@ -1,0 +1,300 @@
+<!--meta
+{
+  "url": "/guide/settings/",
+  "nav": "guide",
+  "priority": "0.8",
+  "title": "Settings, Themes & Accents - Syno Manager",
+  "description": "Six accent colours or your own, AMOLED true black, text size, dashboard cards, the bottom bar, launch behaviour, polling interval and temperature unit.",
+  "keywords": "Syno Manager settings, Synology app AMOLED theme, Synology app accent color, Synology app polling interval, Synology app Fahrenheit, customize bottom bar NAS app",
+  "og_image": "screenshots/settings-theme.webp",
+  "og_type": "article",
+  "crumb": [
+    [
+      "Home",
+      "/"
+    ],
+    [
+      "User Guide",
+      "/guide/"
+    ],
+    [
+      "Settings",
+      null
+    ]
+  ],
+  "faq": [
+    [
+      "Can I change the app's accent colour?",
+      "Yes. Theme and Colors has six named accents - Blue, Cyan, Purple, Green, Amber and Pink - plus Custom, where you pick any colour you like. The accent drives the whole app, not just a seed: buttons, highlights, card borders and chrome all follow it, and a live preview shows the change as you make it."
+    ],
+    [
+      "Is there a true black mode for OLED screens?",
+      "Yes. Surface has three settings - Light, Dark and AMOLED. AMOLED uses true black, which switches those pixels off entirely on an OLED panel. Brightness and Surface are separate controls, so you can follow the system for light and dark while still pinning the exact background style."
+    ],
+    [
+      "How often does the app poll my NAS?",
+      "At whatever you set the polling interval to. System values use that interval, storage uses a longer one, because volume usage does not change every five seconds and asking costs battery. Polling stops entirely when the app is in the background."
+    ],
+    [
+      "Can I put my most-used screens in the bottom bar?",
+      "Yes. Customize Navigation lets you pick between two and nine items for the bottom bar and drag them into the order you want, with a live preview above the list. Home is always first and cannot be removed."
+    ],
+    [
+      "Can I switch to Fahrenheit?",
+      "Yes, in Settings under Temperature Unit. Every temperature in the app changes immediately, including the ones on the home screen and in the home-screen widgets."
+    ]
+  ]
+}
+-->
+<div class="hero split">
+  <div class="wrap">
+    <div>
+      {{CRUMB}}
+      <div class="eyebrow">Settings</div>
+      <h1>Make it <span class="g">yours</span></h1>
+      <p>Reachable from the gear on the home screen, or as the last sub-view of the Control Panel tab. Six groups, and every one of them changes something you can see.</p>
+    </div>
+    <div class="hero-shot"><img alt="Theme and Colors with brightness, surface, text size and accent" src="{{PRE}}screenshots/settings-theme.webp" /></div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="onthispage"><b>On this page</b><ul>
+      <li><a href="#connections">NAS Connections</a></li>
+      <li><a href="#theme">Theme &amp; Colors</a></li>
+      <li><a href="#accents">The accents</a></li>
+      <li><a href="#cards">Dashboard Categories</a></li>
+      <li><a href="#nav">Customize Navigation</a></li>
+      <li><a href="#launch">Launch Behavior</a></li>
+      <li><a href="#cardview">Default Card View</a></li>
+      <li><a href="#preferences">Preferences</a></li>
+      <li><a href="#help">Help cards</a></li>
+      <li><a href="#about">About</a></li>
+    </ul></div>
+
+    <div class="section-head" id="connections">
+      <div class="eyebrow">NAS Connections</div>
+      <h2>Devices and waking</h2>
+    </div>
+    <div class="with-shot">
+      <div>
+    <ul class="plain">
+      <li><b>Manage NAS Devices</b> - add, edit, reorder, rename and switch between them. See <a href="/guide/multi-nas/">multiple NAS devices</a>.</li>
+      <li><b>Wake devices</b> - other machines on your network you can wake through the NAS. See <a href="/guide/wake-on-lan/">Wake-on-LAN</a>.</li>
+    </ul>
+        <div class="note">Settings is reachable two ways: the gear on the home screen, or the last sub-view of the <a href="/guide/control-panel/">Control Panel</a> tab.</div>
+      </div>
+      <img alt="The Settings screen with NAS Connections, Appearance and Preferences" src="{{PRE}}screenshots/settings-main.webp" />
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head" id="theme">
+      <div class="eyebrow">Appearance</div>
+      <h2>Theme &amp; Colors</h2>
+      <p class="lead">A <b>live preview</b> sits at the top - accent and surface update instantly, and a Sample button shows what a button looks like before you commit.</p>
+    </div>
+    <div class="tscroll"><table class="t">
+      <thead><tr><th>Setting</th><th>Options</th><th>What it does</th></tr></thead>
+      <tbody>
+        <tr><td>Brightness</td><td>Auto / Light / Dark</td><td><b>Auto</b> follows your device's own light-dark setting.</td></tr>
+        <tr><td>Surface</td><td>Light / Dark / AMOLED</td><td>The exact background style. <b>AMOLED</b> is true black, which switches those pixels off entirely on an OLED screen - noticeably easier on the battery, and on your eyes at 2am.</td></tr>
+        <tr><td>Text Size</td><td>Small / Default / Large</td><td>Scales in-app text. <b>Independent of the system font-size setting</b>, so you can have large text everywhere else and compact text here, or the reverse.</td></tr>
+        <tr><td>Accent Color</td><td>Blue, Cyan, Purple, Green, Amber, Pink, Custom</td><td>Drives the <b>whole app</b>, not just a seed colour - buttons, highlights, card borders and chrome all follow it. <b>Custom</b> opens a picker for any colour you like.</td></tr>
+        <tr><td>Clear custom color</td><td>-</td><td>Reverts to the Blue accent.</td></tr>
+      </tbody>
+    </table></div>
+    <div class="note"><b>Brightness and Surface are two controls on purpose.</b> One decides whether the app is light or dark; the other decides <em>which</em> dark. That is how you get "follow my phone, but use true black when it goes dark".</div>
+  </div>
+</section>
+
+<section id="accents">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">The accents</div>
+      <h2>The same NAS, six ways</h2>
+      <p class="lead">The accent is not a button tint. It drives the card borders, the icons, the section headings, the brand line and the bottom bar - so picking one changes the whole app, not one control. Here is the identical home screen in each named accent.</p>
+    </div>
+    <div class="gallery six">
+      <figure><img loading="lazy" alt="The home screen in the Blue accent" src="{{PRE}}screenshots/dashboard.webp" /><figcaption>Blue &middot; default</figcaption></figure>
+      <figure><img loading="lazy" alt="The home screen in the Cyan accent" src="{{PRE}}screenshots/accent-cyan.webp" /><figcaption>Cyan</figcaption></figure>
+      <figure><img loading="lazy" alt="The home screen in the Purple accent" src="{{PRE}}screenshots/accent-purple.webp" /><figcaption>Purple</figcaption></figure>
+      <figure><img loading="lazy" alt="The home screen in the Green accent" src="{{PRE}}screenshots/accent-green.webp" /><figcaption>Green</figcaption></figure>
+      <figure><img loading="lazy" alt="The home screen in the Amber accent" src="{{PRE}}screenshots/accent-amber.webp" /><figcaption>Amber</figcaption></figure>
+      <figure><img loading="lazy" alt="The home screen in the Pink accent" src="{{PRE}}screenshots/accent-pink.webp" /><figcaption>Pink</figcaption></figure>
+    </div>
+    <div class="note" style="margin-top:26px"><b>And any colour you like.</b> <b>Custom</b> opens a colour picker, so the accent does not have to be one of the six. <b>Clear custom color</b> puts it back to Blue.</div>
+    <div class="note" style="margin-top:14px"><b>Status colours do not follow the accent</b>, and that is deliberate. Green for healthy, amber for warning and red for a problem stay put whichever accent you choose - a health signal that changed colour with a theme would stop being a signal. You can see it in the shots above: the volume bar is green in all six, and the Amber one caught a CPU spike, so its gauge is red.</div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head" id="cards">
+      <div class="eyebrow">Appearance</div>
+      <h2>Dashboard Categories</h2>
+    </div>
+    <div class="with-shot">
+      <div>
+        <p class="lead">The full list of dashboard cards with a switch each, and a running count of how many are on. It is the same set you get from the home screen's edit mode, laid out as a list when you want to review everything at once rather than scroll the dashboard.</p>
+        <ul class="plain" style="margin-top:16px">
+          <li><b>Every card your NAS supports appears here</b>, on by default.</li>
+          <li><b>Drag to reorder</b>, the same order the home screen uses.</li>
+          <li><b>Cards for packages you do not have are not listed</b>, because there is nothing behind them.</li>
+        </ul>
+      </div>
+      <img alt="Dashboard Categories with a switch per card" src="{{PRE}}screenshots/settings-categories.webp" />
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head" id="nav">
+      <div class="eyebrow">Appearance</div>
+      <h2>Customize Navigation</h2>
+    </div>
+    <div class="with-shot left">
+      <img alt="Customize Navigation with a live preview of the bottom bar" src="{{PRE}}screenshots/settings-nav.webp" />
+      <div>
+        <p class="lead">Pick <b>between two and nine</b> items for the bottom bar, with a live preview of the bar itself above the list so you can see the labels fit.</p>
+        <ul class="plain" style="margin-top:16px">
+          <li><b>Selected</b> - drag to reorder, tap the red minus to remove. <b>Home is locked</b> and always first.</li>
+          <li><b>Available</b> - everything else, with a checkbox to add it.</li>
+          <li><b>Anything not in the bar goes under More</b>, so nothing becomes unreachable by removing it.</li>
+          <li><b>Reset</b> restores the defaults; <b>Save</b> applies your choice.</li>
+        </ul>
+        <div class="note">Only tabs your NAS supports are offered. A NAS without Surveillance Station never lists Media's camera view, so you cannot pin a tab that would be empty.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head" id="launch">
+      <div class="eyebrow">Appearance</div>
+      <h2>Launch Behavior</h2>
+      <p class="lead">What the app opens on from a cold start, when you have more than one NAS.</p>
+    </div>
+    <div class="tscroll"><table class="t">
+      <thead><tr><th>Option</th><th>What happens on a cold start</th></tr></thead>
+      <tbody>
+        <tr><td>Always show NAS selector</td><td>Lands on the device picker so you choose which NAS to open.</td></tr>
+        <tr><td>Last NAS I used</td><td>Auto-selects whichever NAS you most recently switched to.</td></tr>
+        <tr><td>Specific NAS</td><td>Always opens the same one, regardless of which you last used.</td></tr>
+      </tbody>
+    </table></div>
+    <div class="with-shot" style="margin-top:26px">
+      <div class="note" style="margin-top:0"><b>With one NAS configured, this setting does nothing and says so.</b> The screen tells you it only takes effect from two NAS upward, rather than letting you set a preference that quietly has no effect - which is why the options are greyed out in the screenshot.</div>
+      <img alt="Launch Behavior with the three cold-start options" src="{{PRE}}screenshots/settings-launch.webp" />
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head" id="cardview">
+      <div class="eyebrow">Appearance</div>
+      <h2>Default Card View</h2>
+      <p class="lead">Whether cards remember how you left them.</p>
+    </div>
+    <div class="tscroll"><table class="t">
+      <thead><tr><th>Option</th><th>Behaviour</th></tr></thead>
+      <tbody>
+        <tr><td>Remember last view</td><td>Each card reopens exactly how you left it - your expanded and collapsed cards are kept between launches. The default.</td></tr>
+        <tr><td>Always expanded</td><td>Every card starts open on each launch.</td></tr>
+        <tr><td>Always collapsed</td><td>Every card starts collapsed, for a compact overview you expand as needed.</td></tr>
+      </tbody>
+    </table></div>
+    <div class="with-shot" style="margin-top:26px">
+      <div class="note" style="margin-top:0"><b>Always collapsed is worth trying</b> on a NAS with a lot of cards. Every collapsed row still carries its status glyph, so a fully-folded dashboard is a one-screen status board.</div>
+      <img alt="Default Card View with Remember last view, Always expanded and Always collapsed" src="{{PRE}}screenshots/settings-cardview.webp" />
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head" id="preferences">
+      <div class="eyebrow">Preferences</div>
+      <h2>Polling, temperature and backup</h2>
+    </div>
+    <div class="tscroll"><table class="t">
+      <thead><tr><th>Setting</th><th>What it does</th></tr></thead>
+      <tbody>
+        <tr><td>Polling Interval</td><td>How often live readings refresh. System values use the interval you pick; storage uses a longer one, because volume usage does not change every five seconds and asking costs battery. A shorter interval gives finer charts and uses more power.</td></tr>
+        <tr><td>Temperature Unit</td><td>&deg;C or &deg;F. Everything follows immediately - the home screen, the system charts, the drive list and the widgets.</td></tr>
+        <tr><td>Backup &amp; Restore</td><td>Export the app's own settings to a file, and restore them on another device. See <a href="/guide/backup-restore/">Backup &amp; restore</a>.</td></tr>
+      </tbody>
+    </table></div>
+    <div class="note"><b>Polling stops in the background.</b> Whatever interval you choose, the app is not draining your battery while it is not on screen.</div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head" id="help">
+      <div class="eyebrow">Help</div>
+      <h2>The explanation cards</h2>
+    </div>
+    <div class="with-shot">
+      <div>
+        <p class="lead">Several screens carry a short card explaining what that view can and cannot do - how live view streams, how remote Wake-on-LAN works, what the system panel is showing. Useful once, clutter afterwards.</p>
+        <ul class="plain" style="margin-top:16px">
+          <li><b>Show help cards</b> - the master switch.</li>
+          <li><b>Tap a card to expand it; tap the X to dismiss it.</b> Long-press also dismisses.</li>
+          <li><b>Hidden help cards</b> lists everything you have dismissed, with a <b>Restore</b> per card and a <b>Restore all</b>. Dismissing one is never a one-way door.</li>
+        </ul>
+      </div>
+      <img alt="The Help section with the help-card switch and the list of hidden cards" src="{{PRE}}screenshots/settings-help.webp" />
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head" id="about">
+      <div class="eyebrow">About</div>
+      <h2>Version, rating and the rest</h2>
+    </div>
+    <div class="with-shot left">
+      <img alt="The About screen with version, features and links" src="{{PRE}}screenshots/about.webp" />
+      <div>
+        <ul class="plain">
+          <li><b>Rate Syno Manager</b> - opens the store listing for your platform.</li>
+          <li><b>About Syno Manager</b> - the version and build number, what the app does, the Synology trademark notice, and links to the website, the community and the privacy policy.</li>
+          <li><b>Version</b> is shown inline in Settings too, so you can read it without opening About - useful when reporting a bug.</li>
+          <li><b>Browse all our apps</b> - the rest of the MiyaraHub catalogue.</li>
+        </ul>
+        <div class="note"><b>Also on this screen:</b> an <b>On-Device AI</b> row under Appearance, which reports whether this device has a usable model for <a href="/guide/assistant/">the assistant</a> and what it found.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Common questions</div>
+      <h2>Settings FAQ</h2>
+    </div>
+    <details open><summary>Can I change the app's accent colour?</summary><div class="body">Yes. Theme and Colors has six named accents - Blue, Cyan, Purple, Green, Amber and Pink - plus Custom, where you pick any colour you like. The accent drives the whole app, and a live preview shows the change as you make it.</div></details>
+    <details><summary>Is there a true black mode for OLED screens?</summary><div class="body">Yes. Surface has Light, Dark and AMOLED, and AMOLED uses true black. Brightness and Surface are separate controls, so you can follow the system for light and dark while pinning the exact background style.</div></details>
+    <details><summary>How often does the app poll my NAS?</summary><div class="body">At whatever you set the polling interval to. System values use that interval, storage uses a longer one. Polling stops entirely when the app is in the background.</div></details>
+    <details><summary>Can I put my most-used screens in the bottom bar?</summary><div class="body">Yes. Customize Navigation lets you pick between two and nine items and drag them into order, with a live preview. Home is always first and cannot be removed.</div></details>
+    <details><summary>Can I switch to Fahrenheit?</summary><div class="body">Yes, under Temperature Unit. Every temperature in the app changes immediately, widgets included.</div></details>
+    <details><summary>Do settings apply to all my NAS devices?</summary><div class="body">Appearance and preferences are app-wide. Dashboard layout, card order and collapse state are per NAS, so each device opens the way you arranged it.</div></details>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <h2>Next: customizing everything else</h2>
+    <p class="lead" style="margin:0 auto 24px">Cards, tabs, sub-views and the order they come in.</p>
+    <p><a class="btn" href="/guide/customizing/">Customizing the app &rarr;</a> &nbsp; <a class="btn ghost" href="/guide/">Back to the guide</a></p>
+  </div>
+</section>

@@ -1,0 +1,164 @@
+<!--meta
+{
+  "url": "/guide/control-panel/",
+  "nav": "guide",
+  "priority": "0.75",
+  "title": "Users, Tasks & UPS - Syno Manager",
+  "description": "Manage Synology user accounts with system accounts protected, run and toggle scheduled tasks, and read UPS charge and estimated runtime from your phone.",
+  "keywords": "Synology user management app, Synology task scheduler phone, Synology UPS status app, DSM users from phone, run scheduled task Synology",
+  "og_image": "screenshots/tasks.webp",
+  "og_type": "article",
+  "crumb": [
+    [
+      "Home",
+      "/"
+    ],
+    [
+      "User Guide",
+      "/guide/"
+    ],
+    [
+      "Control Panel",
+      null
+    ]
+  ],
+  "faq": [
+    [
+      "Can I add or edit DSM users from the app?",
+      "Yes. Add a user, edit their details, change a password or delete an account. System accounts - admin, guest and the service accounts DSM creates - are detected and protected from deletion, because removing one breaks the NAS in ways that are tedious to undo."
+    ],
+    [
+      "Can I run a scheduled task manually?",
+      "Yes, for tasks DSM allows to be triggered - each of those has a Run Now. You can also enable or disable any task without opening DSM."
+    ],
+    [
+      "What does the UPS screen show?",
+      "The UPS model, whether it is online or on battery, its charge as a percentage and a bar, how it is connected, the estimated runtime left, and whether UPS support is enabled on the NAS."
+    ],
+    [
+      "Can I change how long the NAS waits before shutting down on battery?",
+      "No. The app reports UPS state; the shutdown policy is set in DSM under Hardware and Power, where the consequences of the setting are spelled out."
+    ]
+  ]
+}
+-->
+<div class="hero split">
+  <div class="wrap">
+    <div>
+      {{CRUMB}}
+      <div class="eyebrow">Control Panel</div>
+      <h1>Accounts, schedules <span class="g">and power</span></h1>
+      <p>Four sub-views: <b>Users</b>, <b>Tasks</b>, <b>Power</b> for the UPS, and <b>Settings</b> - the app's own preferences, reachable without leaving the tab you are in.</p>
+    </div>
+    <div class="hero-shot"><img alt="Task Scheduler showing scheduled tasks with toggles and Run Now" src="{{PRE}}screenshots/tasks.webp" /></div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="onthispage"><b>On this page</b><ul>
+      <li><a href="#users">Users</a></li>
+      <li><a href="#tasks">Task Scheduler</a></li>
+      <li><a href="#ups">UPS</a></li>
+      <li><a href="#settings">Settings</a></li>
+    </ul></div>
+
+    <div class="section-head" id="users">
+      <div class="eyebrow">Users</div>
+      <h2>DSM accounts</h2>
+    </div>
+    <div class="with-shot">
+      <div>
+        <p class="lead">Every account on the NAS, with its display name, its description and its email address where one is set. An <b>Expired</b> chip marks accounts DSM has disabled.</p>
+        <h3 style="margin-top:20px">What you can do</h3>
+        <ul class="plain">
+          <li><b>Add a user</b> with the details DSM asks for.</li>
+          <li><b>Edit</b> an existing account.</li>
+          <li><b>Change a password.</b></li>
+          <li><b>Delete</b> an account you created.</li>
+        </ul>
+        <div class="note"><b>System accounts cannot be deleted.</b> <code>admin</code>, <code>guest</code> and the service accounts DSM creates for its own packages are detected and protected. Removing one of those breaks the NAS in ways that are tedious to undo, and a phone is not the place to find that out.</div>
+      </div>
+      <img alt="DSM user accounts, with two names and addresses obscured" src="{{PRE}}screenshots/users.webp" />
+    </div>
+    <p class="capt" style="margin-top:14px">Two accounts in this screenshot are blurred - they are real people's names and addresses.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head" id="tasks">
+      <div class="eyebrow">Task Scheduler</div>
+      <h2>What is scheduled, and what runs next</h2>
+      <p class="lead">Every task DSM has, whether it is enabled, what it does and when it next fires.</p>
+    </div>
+    <ul class="plain">
+      <li><b>The task name and its type</b> - a Hyper Backup task, a user-defined script, a recycle-bin clean-up - each labelled with what kind of thing it is.</li>
+      <li><b>What it actually does.</b> A script task shows the command it runs; a backup task shows its description.</li>
+      <li><b>Next run</b>, as a date and time.</li>
+      <li><b>A switch per task</b> to enable or disable it without opening DSM.</li>
+      <li><b>Run Now</b> on tasks DSM allows to be triggered on demand.</li>
+    </ul>
+    <div class="note warn"><b>Run Now runs it now.</b> A scheduled script that expects to run at 3am on an idle NAS will behave differently at 6pm during a file copy. The button does what it says.</div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head" id="ups">
+      <div class="eyebrow">Power</div>
+      <h2>The UPS</h2>
+    </div>
+    <div class="with-shot left">
+      <img alt="UPS status with model, charge, connection mode and estimated runtime" src="{{PRE}}screenshots/ups.webp" />
+      <div>
+        <p class="lead">Present when a UPS is attached. One card, everything on it.</p>
+        <div class="tscroll"><table class="t">
+          <thead><tr><th>Shown</th><th>Meaning</th></tr></thead>
+          <tbody>
+            <tr><td>Manufacturer and model</td><td>As the UPS reports itself.</td></tr>
+            <tr><td>Status</td><td><b>Online</b> on mains, or on battery.</td></tr>
+            <tr><td>Charge</td><td>Percentage and a bar. Amber below 50%, red below 20%.</td></tr>
+            <tr><td>Mode</td><td>How the NAS is talking to it - USB, or over the network.</td></tr>
+            <tr><td>Runtime</td><td>How long the UPS estimates it can hold the load.</td></tr>
+            <tr><td>Enabled</td><td>Whether UPS support is switched on in DSM at all.</td></tr>
+          </tbody>
+        </table></div>
+        <div class="note"><b>Charge feeds the health badge.</b> A UPS that is discharging shows up on the <a href="/guide/home/#header">home screen</a> without you opening this tab - which is the point, because by the time you think to check, you may not have long.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head" id="settings">
+      <div class="eyebrow">Settings</div>
+      <h2>The app's own preferences</h2>
+      <p class="lead">The fourth sub-view is Settings, embedded here so you can change the polling interval or the accent colour without leaving the tab. It is the same screen the gear icon opens.</p>
+    </div>
+    <p style="margin-top:16px"><a class="btn ghost" href="/guide/settings/">Every setting, explained</a></p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Common questions</div>
+      <h2>Control Panel FAQ</h2>
+    </div>
+    <details open><summary>Can I add or edit DSM users from the app?</summary><div class="body">Yes. Add a user, edit their details, change a password or delete an account. System accounts - admin, guest and the service accounts DSM creates - are detected and protected from deletion.</div></details>
+    <details><summary>Can I run a scheduled task manually?</summary><div class="body">Yes, for tasks DSM allows to be triggered. You can also enable or disable any task without opening DSM.</div></details>
+    <details><summary>What does the UPS screen show?</summary><div class="body">The UPS model, whether it is online or on battery, its charge as a percentage and a bar, how it is connected, the estimated runtime left, and whether UPS support is enabled on the NAS.</div></details>
+    <details><summary>Can I change the shutdown-on-battery policy?</summary><div class="body">No. The app reports UPS state; the policy is set in DSM under Hardware and Power, where the consequences are spelled out.</div></details>
+    <details><summary>Why is the Power sub-view missing?</summary><div class="body">Because no UPS is attached, or UPS support is switched off in DSM. The app hides screens for hardware that is not there.</div></details>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <h2>Next: the Assistant</h2>
+    <p class="lead" style="margin:0 auto 24px">Ask your NAS a question, answered by a model on your phone.</p>
+    <p><a class="btn" href="/guide/assistant/">The Assistant &rarr;</a> &nbsp; <a class="btn ghost" href="/guide/">Back to the guide</a></p>
+  </div>
+</section>

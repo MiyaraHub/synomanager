@@ -1,0 +1,182 @@
+<!--meta
+{
+  "url": "/guide/downloads/",
+  "nav": "guide",
+  "priority": "0.75",
+  "title": "Download Station on Your Phone - Syno Manager",
+  "description": "Add a link, magnet or .torrent to Synology Download Station from your phone, watch progress, and change the BitTorrent port, speed caps and destination.",
+  "keywords": "Synology Download Station app, add magnet link Synology phone, Synology torrent app, Download Station settings, Synology BitTorrent port, Synology download speed limit",
+  "og_image": "screenshots/download-settings.webp",
+  "og_type": "article",
+  "crumb": [
+    [
+      "Home",
+      "/"
+    ],
+    [
+      "User Guide",
+      "/guide/"
+    ],
+    [
+      "Download Station",
+      null
+    ]
+  ],
+  "faq": [
+    [
+      "Can I add a torrent from my phone?",
+      "Yes, three ways: paste a URL, paste a magnet link, or pick a .torrent file from the device. You can also choose which folder it saves to before you add it."
+    ],
+    [
+      "Can I change Download Station's settings from the app?",
+      "Yes - the BitTorrent listening port, download and upload speed caps, maximum peers, how many tasks run at once, and the destination folder. Every change is read back from the NAS afterwards, so a value the NAS refused is reported as refused rather than sitting on screen looking saved."
+    ],
+    [
+      "What does a download limit of 0 mean?",
+      "No limit. That is Download Station's own convention, and it is why the app never shows a section it could not read as zero - zero is a real setting that means something specific, and a missing reading dressed up as zero would be a different and wrong statement."
+    ],
+    [
+      "Why is the Download Station tab missing?",
+      "Because the package is not installed on that NAS. Install Download Station from Package Center, then pull to refresh or reopen the app, and the tab appears."
+    ]
+  ]
+}
+-->
+<div class="hero split">
+  <div class="wrap">
+    <div>
+      {{CRUMB}}
+      <div class="eyebrow">Download Station</div>
+      <h1>Send it to the NAS, <span class="g">not the phone</span></h1>
+      <p>Paste a link or a magnet, or pick a <code>.torrent</code>, and the NAS does the downloading. Watch progress, pause and resume, and change the settings it is actually configured with.</p>
+    </div>
+    <div class="hero-shot"><img alt="Download Station settings read from the NAS" src="{{PRE}}screenshots/download-settings.webp" /></div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="onthispage"><b>On this page</b><ul>
+      <li><a href="#tasks">The task list</a></li>
+      <li><a href="#adding">Adding a download</a></li>
+      <li><a href="#settings">Download Settings</a></li>
+      <li><a href="#zero">Why zero is never invented</a></li>
+      <li><a href="#missing">If the tab is missing</a></li>
+    </ul></div>
+
+    <div class="section-head" id="tasks">
+      <div class="eyebrow">Download Station</div>
+      <h2>What is running</h2>
+      <p class="lead">A speed header at the top - total download and upload across every task - then the tasks themselves.</p>
+    </div>
+    <div class="with-shot">
+      <div>
+        <ul class="plain">
+          <li><b>Each task</b> shows its name, its state, a progress bar, its current speed and an estimated time remaining.</li>
+          <li><b>Pause, resume or delete</b> any task.</li>
+          <li><b>Nothing running says so</b> - "No active downloads", rather than an empty box you have to interpret.</li>
+          <li><b>Settings</b> is one tap from the header.</li>
+          <li><b>Both API generations work.</b> Download Station has had two API versions; the app speaks whichever your NAS offers.</li>
+        </ul>
+      </div>
+      <img alt="Download Station with the speed header and no active downloads" src="{{PRE}}screenshots/downloads.webp" />
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head" id="adding">
+      <div class="eyebrow">Adding</div>
+      <h2>Three ways in</h2>
+    </div>
+    <div class="with-shot left">
+      <img alt="The Add a download sheet with a link field, a destination picker and a torrent file option" src="{{PRE}}screenshots/download-add.webp" />
+      <div>
+        <p class="lead">Tap <b>+</b> at the bottom right.</p>
+        <ol class="steps" style="margin-top:18px">
+          <li><b>Paste a link or a magnet.</b> An <code>https://</code> URL or a <code>magnet:?xt=</code> link both go in the same field.</li>
+          <li><b>Or choose a .torrent file</b> from the device, which opens the file picker.</li>
+          <li><b>Pick where it saves</b> with <b>Save to</b>, or leave it and Download Station uses its own default folder.</li>
+          <li><b>Add.</b> The task appears in the list.</li>
+        </ol>
+        <div class="note"><b>The phone is only the remote control.</b> The file is fetched by the NAS over its own connection, so you can close the app, leave the house, and it carries on.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head" id="settings">
+      <div class="eyebrow">Download Settings</div>
+      <h2>Every setting, read from your NAS</h2>
+      <p class="lead">Its own sub-view, grouped the way Download Station groups them. Editable values carry a tick to confirm the change; read-only ones are shown as facts.</p>
+    </div>
+    <div class="tscroll"><table class="t">
+      <thead><tr><th>Group</th><th>Setting</th><th>What it does</th></tr></thead>
+      <tbody>
+        <tr><td rowspan="5">BitTorrent</td><td>Listening port</td><td>The TCP port Download Station listens on. Editable.</td></tr>
+        <tr><td>Download limit</td><td>In KB/s. <b>0 means no limit.</b> Editable.</td></tr>
+        <tr><td>Upload limit</td><td>In KB/s. 0 means no limit. Editable.</td></tr>
+        <tr><td>Maximum peers</td><td>How many peers a torrent may connect to.</td></tr>
+        <tr><td>DHT</td><td>Whether the distributed hash table is on, and on which port.</td></tr>
+        <tr><td>FTP and HTTP</td><td>Download limit</td><td>A separate cap for plain HTTP and FTP downloads. 0 means no limit. Editable.</td></tr>
+        <tr><td rowspan="2">Tasks and schedule</td><td>Tasks at once</td><td>How many downloads run simultaneously - and the app tells you <b>the maximum your NAS allows</b>, so you are not guessing at the ceiling. Editable.</td></tr>
+        <tr><td>Alternative schedule</td><td>Whether a different speed schedule is in force at certain hours.</td></tr>
+        <tr><td rowspan="3">Destination</td><td>Default folder</td><td>Where downloads land when a task does not name a folder. Shown as <b>Not set</b> when there is none, rather than blank.</td></tr>
+        <tr><td>Runs on</td><td>Which volume the Download Station package itself is installed on.</td></tr>
+        <tr><td>eMule</td><td>Whether the eMule service is enabled.</td></tr>
+      </tbody>
+    </table></div>
+    <div class="note"><b>Every change is confirmed by reading it back.</b> The app writes your value, then re-reads the setting from the NAS. If the NAS quietly clamped or refused it, you are told - instead of the number you typed sitting there looking as though it took.</div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head" id="zero">
+      <div class="eyebrow">A small thing that matters</div>
+      <h2>Why an unread section is named, not zeroed</h2>
+      <p class="lead">Only the settings your NAS actually reported are shown. A section the app could not read is <b>named as unread</b> rather than drawn as zero.</p>
+    </div>
+    <p style="color:var(--steel);max-width:70ch">That is not pedantry. Here, <b>0 means no limit</b> - so a failed read rendered as <code>0</code> would tell you your downloads are uncapped when the truth is that nobody knows. A value that could mean two things is worth naming as unknown, and this screen names it.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head" id="missing">
+      <div class="eyebrow">Not there?</div>
+      <h2>If the Download Station tab is missing</h2>
+    </div>
+    <ol class="steps">
+      <li><b>Check the package is installed.</b> Download Station is not part of DSM - it comes from Package Center. You can <a href="/guide/apps/#package-center">install it from this app</a>.</li>
+      <li><b>Refresh the app's view of your NAS.</b> The capability list is read on connect, so a package installed since then has no tab yet. Pull to refresh, or reopen the app.</li>
+      <li><b>Check it is not hidden.</b> The overflow menu on the Files tab has <b>Customize views</b>, where a sub-view can be switched off.</li>
+    </ol>
+    <div class="note"><b>Download Station needs Python2</b> on most DSM 7 versions, and Package Center installs it for you as a dependency when you install the package.</div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Common questions</div>
+      <h2>Download Station FAQ</h2>
+    </div>
+    <details open><summary>Can I add a torrent from my phone?</summary><div class="body">Yes, three ways: paste a URL, paste a magnet link, or pick a .torrent file from the device. You can also choose which folder it saves to before you add it.</div></details>
+    <details><summary>Can I change Download Station's settings from the app?</summary><div class="body">Yes - the BitTorrent listening port, download and upload speed caps, maximum peers, how many tasks run at once, and the destination folder. Every change is read back from the NAS afterwards, so a value the NAS refused is reported as refused.</div></details>
+    <details><summary>What does a download limit of 0 mean?</summary><div class="body">No limit. That is Download Station's own convention, and it is why the app never shows a section it could not read as zero - a missing reading dressed up as zero would be a different and wrong statement.</div></details>
+    <details><summary>Why is the Download Station tab missing?</summary><div class="body">Because the package is not installed on that NAS. Install Download Station from Package Center, then pull to refresh or reopen the app, and the tab appears.</div></details>
+    <details><summary>Does the download continue if I close the app?</summary><div class="body">Yes. The NAS does the downloading over its own connection. The phone is only the remote control.</div></details>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <h2>Next: Apps</h2>
+    <p class="lead" style="margin:0 auto 24px">Package Center, Docker, Compose projects and virtual machines.</p>
+    <p><a class="btn" href="/guide/apps/">Packages, Docker &amp; VMs &rarr;</a> &nbsp; <a class="btn ghost" href="/guide/">Back to the guide</a></p>
+  </div>
+</section>

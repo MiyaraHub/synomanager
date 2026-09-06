@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Packages, Docker & VMs - Syno Manager</title>
+<meta name="description" content="Install DSM packages from Package Center, start, stop and restart Docker containers, read their logs, run Compose stacks, and control virtual machines." />
+<meta name="keywords" content="Synology Package Center app, install Synology package from phone, Synology Docker app, Docker container phone, Synology Docker Compose app, Synology Virtual Machine Manager app" />
+<meta name="author" content="MiyaraHub Technologies LLC" />
+<meta name="robots" content="index, follow, max-image-preview:large" />
+<meta name="theme-color" content="#3b82f6" />
+<link rel="canonical" href="https://synomanager.com/guide/apps/" />
+<meta property="og:title" content="Packages, Docker & VMs - Syno Manager" />
+<meta property="og:description" content="Install DSM packages from Package Center, start, stop and restart Docker containers, read their logs, run Compose stacks, and control virtual machines." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://synomanager.com/guide/apps/" />
+<meta property="og:site_name" content="Syno Manager" />
+<meta property="og:image" content="https://synomanager.com/screenshots/docker.webp" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Packages, Docker & VMs - Syno Manager" />
+<meta name="twitter:description" content="Install DSM packages from Package Center, start, stop and restart Docker containers, read their logs, run Compose stacks, and control virtual machines." />
+<meta name="twitter:image" content="https://synomanager.com/screenshots/docker.webp" />
+<link rel="icon" href="../../assets/favicon.ico" sizes="any" />
+<link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png" />
+<link rel="icon" type="image/png" sizes="48x48" href="../../assets/favicon-48.png" />
+<link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preconnect" href="https://img.shields.io" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" />
+<link rel="stylesheet" href="../../assets/site.css" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "MiyaraHub Technologies LLC",
+  "url": "https://miyarahub.com",
+  "logo": "https://synomanager.com/assets/icon-192.png"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Syno Manager",
+  "url": "https://synomanager.com/",
+  "publisher": {
+    "@type": "Organization",
+    "name": "MiyaraHub Technologies LLC"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://synomanager.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "User Guide",
+      "item": "https://synomanager.com/guide/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Apps"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Packages, Docker & VMs - Syno Manager",
+  "description": "Install DSM packages from Package Center, start, stop and restart Docker containers, read their logs, run Compose stacks, and control virtual machines.",
+  "image": "https://synomanager.com/screenshots/docker.webp",
+  "url": "https://synomanager.com/guide/apps/",
+  "inLanguage": "en",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Syno Manager",
+    "url": "https://synomanager.com/"
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "MiyaraHub Technologies LLC"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "MiyaraHub Technologies LLC",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://synomanager.com/assets/icon-192.png"
+    }
+  },
+  "about": {
+    "@type": "SoftwareApplication",
+    "name": "Syno Manager",
+    "operatingSystem": "Android, iOS, macOS, Windows",
+    "applicationCategory": "UtilitiesApplication"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can I install a DSM package from my phone?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Package Center in the app has the same catalogue DSM has - Installed, All packages, Beta and Community - with a search box. Pick a package, choose the volume, and install. Update and uninstall work the same way, and each action is confirmed by re-reading the package list rather than by the request coming back OK."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I restart a Docker container from the app?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Each container has start, stop and restart, plus a button that opens its logs. A container that has exited shows a start button rather than a stop it could not honour."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I control Docker Compose stacks?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The Projects sub-view lists your Compose projects and starts or stops the whole stack, rather than making you find each container. Stack logs open the same way container logs do."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I start and stop virtual machines?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, if Virtual Machine Manager is installed. Start, shut down or force off any machine. Force off is hold-to-confirm because it is the equivalent of pulling the plug. A machine in a state the NAS does not call running or off is shown as exactly that, and is offered the recovery control rather than a Start it cannot honour."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="/"><img src="../../assets/syno-manager-icon.png" alt="Syno Manager icon" width="104" height="104" decoding="async" /> Syno Manager</a>
+    <button class="nav-toggle" aria-label="Menu" onclick="document.getElementById('m').classList.toggle('open')">&#9776;</button>
+    <nav id="m">
+      <a href="/">Home</a>
+      <a href="/guide/" class="active">User Guide</a>
+      <a href="/#screenshots">Screenshots</a>
+      <a href="/compatible-nas/">Compatibility</a>
+      <a href="/best-synology-nas-app/">Why switch</a>
+      <a href="/help/">Help</a>
+      <a href="/#top" class="cta">Download</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero split">
+  <div class="wrap">
+    <div>
+      <div class="crumb"><a href="/">Home</a> &rsaquo; <a href="/guide/">User Guide</a> &rsaquo; Apps</div>
+      <div class="eyebrow">Apps</div>
+      <h1>Everything <span class="g">your NAS runs</span></h1>
+      <p>Four sub-views: <b>Package Center</b> for DSM packages, <b>Docker</b> for containers, <b>Projects</b> for Compose stacks, and <b>Virtual Machines</b> when VMM is installed.</p>
+    </div>
+    <div class="hero-shot"><img alt="Docker containers with status and controls" src="../../screenshots/docker.webp" width="1324" height="2644" decoding="async" fetchpriority="high" /></div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="onthispage"><b>On this page</b><ul>
+      <li><a href="#package-center">Package Center</a></li>
+      <li><a href="#installing">Installing a package</a></li>
+      <li><a href="#docker">Docker</a></li>
+      <li><a href="#logs">Container logs</a></li>
+      <li><a href="#projects">Compose projects</a></li>
+      <li><a href="#virtual-machines">Virtual machines</a></li>
+    </ul></div>
+
+    <div class="section-head" id="package-center">
+      <div class="eyebrow">Package Center</div>
+      <h2>The whole catalogue, searchable</h2>
+      <p class="lead">The same four filters DSM has, and a search box across all of them.</p>
+    </div>
+    <div class="with-shot">
+      <div>
+        <div class="tscroll"><table class="t">
+          <thead><tr><th>Filter</th><th>What it lists</th></tr></thead>
+          <tbody>
+            <tr><td>Installed</td><td>What is on your NAS now, with its version, its size and a running indicator.</td></tr>
+            <tr><td>All packages</td><td>Synology's full catalogue for your model.</td></tr>
+            <tr><td>Beta</td><td>Pre-release packages.</td></tr>
+            <tr><td>Community</td><td>Packages from third-party sources you have added in DSM.</td></tr>
+          </tbody>
+        </table></div>
+        <p style="color:var(--steel);margin-top:16px">Each entry carries its version and download size, its description, and any dependency it needs - <code>Needs Python2</code>, <code>Needs SynoFinder</code> - so a surprise second install is not a surprise.</p>
+        <div class="shots one" style="margin-top:22px"><img alt="Searching the full package catalogue, with Install buttons" src="../../screenshots/packages-search.webp" width="1324" height="2644" decoding="async" loading="lazy" /></div>
+        <p class="capt" style="text-align:center">Searching <b>All packages</b> for a package that is not installed yet.</p>
+      </div>
+      <img alt="Package Center showing installed packages with running state" src="../../screenshots/packages.webp" width="1324" height="2644" decoding="async" loading="lazy" />
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head" id="installing">
+      <div class="eyebrow">Install, update, uninstall</div>
+      <h2>What happens when you tap Install</h2>
+    </div>
+    <div class="cols">
+      <div>
+        <ol class="steps">
+          <li><b>Search or filter</b> to the package you want.</li>
+          <li><b>Install.</b> A dialog names the package, lists any dependency, and asks which volume to install to - showing each volume's free space so you are not choosing blind.</li>
+          <li><b>Confirm.</b> The NAS installs it, dependencies included.</li>
+          <li><b>The list re-reads itself.</b> The button flips to <b>Uninstall</b> because the package list now says it is installed - not because the request returned OK.</li>
+        </ol>
+        <div class="note"><b>That last step is the point.</b> A request that succeeds and an install that finished are different events. The app waits for the second one.</div>
+      </div>
+      <div>
+        <div class="shots one"><img alt="The install dialog naming the package, its dependency and the destination volume" src="../../screenshots/packages-install.webp" width="1324" height="2644" decoding="async" loading="lazy" /></div>
+      </div>
+    </div>
+    <div class="note warn" style="margin-top:24px"><b>Installing a package adds screens to the app.</b> The tab list is built from what your NAS reports on connect, so after installing something like Download Station, pull to refresh or reopen the app and its sub-view appears.</div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head" id="docker">
+      <div class="eyebrow">Docker</div>
+      <h2>Every container, with the controls that matter</h2>
+      <p class="lead">A status header - <b>running out of total</b> - then every container the NAS has, in one list.</p>
+    </div>
+    <ul class="plain">
+      <li><b>Name and image tag</b> on every row, so two containers from the same image are still distinguishable.</li>
+      <li><b>State</b> as a chip: <b>Running</b>, <b>Exited</b>, and whatever else Docker reports. A container Docker calls healthy says so - <code>Up 2 hours (healthy)</code>.</li>
+      <li><b>Uptime</b> for anything running.</li>
+      <li><b>Start, stop and restart</b>, with the control that fits the state: a stopped container is offered start, not a stop that would do nothing.</li>
+      <li><b>Logs</b> from the button on each row.</li>
+      <li><b>Expand a row</b> for its detail - memory and network figures among them.</li>
+      <li><b>Collapse the whole list</b> with the control at the top when you only want the count.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head" id="logs">
+      <div class="eyebrow">Logs</div>
+      <h2>Read once, follow on purpose</h2>
+      <p class="lead">Container and stack logs behave the same way <a href="/guide/system/#logs">the system log</a> does, and for the same reason.</p>
+    </div>
+    <ul class="plain">
+      <li><b>It loads once and holds still</b>, so a line does not scroll away while you are reading it.</li>
+      <li><b>Press play to follow live</b>, press again to pause.</li>
+      <li><b>Following stops on its own</b> when you leave the screen or send the app to the background - no forgotten tab polling in your pocket.</li>
+      <li><b>Search</b> for one line in a long log.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head" id="projects">
+      <div class="eyebrow">Projects</div>
+      <h2>Compose stacks, as stacks</h2>
+    </div>
+    <div class="with-shot left">
+      <img alt="Docker Compose projects, with none configured" src="../../screenshots/docker-projects.webp" width="1324" height="2644" decoding="async" loading="lazy" />
+      <div>
+        <p class="lead">A Compose project is several containers that belong together. The Projects sub-view treats them that way: start or stop <b>the whole stack</b> rather than hunting down each container in the Docker list and hoping you got them all.</p>
+        <ul class="plain" style="margin-top:16px">
+          <li><b>Each project</b> shows its name and how many of its containers are up.</li>
+          <li><b>Start or stop the project</b> as a unit.</li>
+          <li><b>Stack logs</b> open like container logs.</li>
+          <li><b>No projects says so</b> - "Docker Compose projects will appear here" - rather than an empty screen.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head" id="virtual-machines">
+      <div class="eyebrow">Virtual Machines</div>
+      <h2>Virtual Machine Manager</h2>
+      <p class="lead">Present when VMM is installed. Every virtual machine on the NAS, what it is doing, and the three power actions.</p>
+    </div>
+    <div class="tscroll"><table class="t">
+      <thead><tr><th>Action</th><th>What it does</th></tr></thead>
+      <tbody>
+        <tr><td>Start</td><td>Powers the machine on.</td></tr>
+        <tr><td>Shut down</td><td>Asks the guest operating system to shut down cleanly.</td></tr>
+        <tr><td>Force off</td><td>Cuts the power. <b>Hold to confirm</b>, because it is the equivalent of pulling the plug on a running computer - a tap is too cheap for that.</td></tr>
+      </tbody>
+    </table></div>
+    <div class="note"><b>A machine in an in-between state is described as one.</b> If the NAS reports a state it does not call running or off - starting, suspending, crashed - the app shows exactly that word and offers the recovery control, rather than a Start button it cannot honour or a green tick that is not true.</div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Common questions</div>
+      <h2>Apps FAQ</h2>
+    </div>
+    <details open><summary>Can I install a DSM package from my phone?</summary><div class="body">Yes. Package Center in the app has the same catalogue DSM has - Installed, All packages, Beta and Community - with a search box. Pick a package, choose the volume, and install. Update and uninstall work the same way, and each action is confirmed by re-reading the package list.</div></details>
+    <details><summary>Can I restart a Docker container from the app?</summary><div class="body">Yes. Each container has start, stop and restart, plus a button that opens its logs. A container that has exited shows a start button rather than a stop it could not honour.</div></details>
+    <details><summary>Can I control Docker Compose stacks?</summary><div class="body">Yes. The Projects sub-view lists your Compose projects and starts or stops the whole stack. Stack logs open the same way container logs do.</div></details>
+    <details><summary>Can I start and stop virtual machines?</summary><div class="body">Yes, if Virtual Machine Manager is installed. Start, shut down or force off any machine. Force off is hold-to-confirm because it is the equivalent of pulling the plug.</div></details>
+    <details><summary>Can I create a new container from the app?</summary><div class="body">No. Creating a container means image selection, port mappings, volume mounts and environment variables - a form that belongs on a screen where you can see all of it at once. The app runs and monitors what you have created in DSM or Portainer.</div></details>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <h2>Next: Media</h2>
+    <p class="lead" style="margin:0 auto 24px">Photos, Drive and Surveillance Station live view.</p>
+    <p><a class="btn" href="/guide/media/">Photos, Drive &amp; cameras &rarr;</a> &nbsp; <a class="btn ghost" href="/guide/">Back to the guide</a></p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="flinks"><a href="/">Home</a><a href="/guide/">User Guide</a><a href="/guide/getting-started/">Getting started</a><a href="/compatible-nas/">Compatibility</a><a href="/help/">Help</a><a href="/privacy/">Privacy</a><a href="https://play.google.com/store/apps/details?id=com.synomanager">Google Play</a><a href="https://apps.apple.com/us/app/syno-manager/id6763011668">App Store</a><a href="https://github.com/MiyaraHub/synomanager/issues">Report a bug</a><a href="https://miyarahub.com">MiyaraHub</a></div>
+    <p class="legal">&copy; MiyaraHub Technologies LLC. Syno Manager is an independent app and is not affiliated with, endorsed by, or sponsored by Synology Inc. Synology, DSM, DiskStation, RackStation, Hyper Backup, Active Backup, Surveillance Station and QuickConnect are trademarks of Synology Inc.</p>
+  </div>
+</footer>
+
+<script defer src="/assets/search.js"></script>
+<script defer src="/assets/lightbox.js"></script>
+</body>
+</html>

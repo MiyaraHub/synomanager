@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Compatible Synology NAS Models - Syno Manager</title>
+<meta name="description" content="Syno Manager works with any Synology NAS on DSM 7.0 or later - DiskStation, RackStation, FlashStation and expansion units. No per-model list to check." />
+<meta name="keywords" content="Synology app compatibility, DSM 7 app, DS220+ app, DS923+ app, RS1221+ app, Synology NAS models supported, DiskStation mobile app" />
+<meta name="author" content="MiyaraHub Technologies LLC" />
+<meta name="robots" content="index, follow, max-image-preview:large" />
+<meta name="theme-color" content="#3b82f6" />
+<link rel="canonical" href="https://synomanager.com/compatible-nas/" />
+<meta property="og:title" content="Compatible Synology NAS Models - Syno Manager" />
+<meta property="og:description" content="Syno Manager works with any Synology NAS on DSM 7.0 or later - DiskStation, RackStation, FlashStation and expansion units. No per-model list to check." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://synomanager.com/compatible-nas/" />
+<meta property="og:site_name" content="Syno Manager" />
+<meta property="og:image" content="https://synomanager.com/screenshots/dashboard.webp" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Compatible Synology NAS Models - Syno Manager" />
+<meta name="twitter:description" content="Syno Manager works with any Synology NAS on DSM 7.0 or later - DiskStation, RackStation, FlashStation and expansion units. No per-model list to check." />
+<meta name="twitter:image" content="https://synomanager.com/screenshots/dashboard.webp" />
+<link rel="icon" href="../assets/favicon.ico" sizes="any" />
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png" />
+<link rel="icon" type="image/png" sizes="48x48" href="../assets/favicon-48.png" />
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preconnect" href="https://img.shields.io" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" />
+<link rel="stylesheet" href="../assets/site.css" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "MiyaraHub Technologies LLC",
+  "url": "https://miyarahub.com",
+  "logo": "https://synomanager.com/assets/icon-192.png"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Syno Manager",
+  "url": "https://synomanager.com/",
+  "publisher": {
+    "@type": "Organization",
+    "name": "MiyaraHub Technologies LLC"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://synomanager.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Compatibility"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Which Synology models does Syno Manager support?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Any Synology NAS running DSM 7.0 or later. That covers DiskStation, RackStation and FlashStation models, with or without expansion units. There is no per-model list to check because the app does not work from one - it asks your NAS what it can do when it connects."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it work on DSM 6?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Syno Manager requires DSM 7.0 or later. DSM 6 uses different API versions and authentication behaviour, and supporting both would mean guessing which one a NAS is speaking."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will it work on a small two-bay NAS?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. A two-bay DiskStation shows fewer screens than a rackmount does, because it runs fewer services - not because it is unsupported. Everything it does run is shown in full."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it support expansion units?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Drives in an expansion unit appear alongside the internal ones, because the app lists what DSM reports rather than assuming a bay count."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if my NAS is running a beta DSM?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It will generally work, since the app reads the API catalogue rather than assuming a version. A beta that changes an API can produce a screen that reports a value as unread - which the app will say, rather than showing a wrong number."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="/"><img src="../assets/syno-manager-icon.png" alt="Syno Manager icon" width="104" height="104" decoding="async" /> Syno Manager</a>
+    <button class="nav-toggle" aria-label="Menu" onclick="document.getElementById('m').classList.toggle('open')">&#9776;</button>
+    <nav id="m">
+      <a href="/">Home</a>
+      <a href="/guide/">User Guide</a>
+      <a href="/#screenshots">Screenshots</a>
+      <a href="/compatible-nas/" class="active">Compatibility</a>
+      <a href="/best-synology-nas-app/">Why switch</a>
+      <a href="/help/">Help</a>
+      <a href="/#top" class="cta">Download</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero split">
+  <div class="wrap">
+    <div>
+      <div class="crumb"><a href="/">Home</a> &rsaquo; Compatibility</div>
+      <div class="eyebrow">Compatibility</div>
+      <h1>If it runs <span class="g">DSM 7</span>, it works</h1>
+      <p>There is no model list to check, because the app does not use one. It asks your NAS what it can do when it connects, and builds itself around the answer.</p>
+    </div>
+    <div class="hero-shot"><img alt="Syno Manager on a Synology RackStation" src="../screenshots/dashboard.webp" width="1324" height="2644" decoding="async" fetchpriority="high" /></div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">The rule</div>
+      <h2>One requirement, then it adapts</h2>
+    </div>
+    <div class="tscroll"><table class="t">
+      <thead><tr><th>Requirement</th><th>Detail</th></tr></thead>
+      <tbody>
+        <tr><td>DSM version</td><td><b>DSM 7.0 or later.</b> This is the only hard requirement.</td></tr>
+        <tr><td>Model</td><td><b>Any.</b> DiskStation, RackStation, FlashStation, with or without expansion units.</td></tr>
+        <tr><td>Bays</td><td><b>Any.</b> One drive or twenty-four; the app lists what DSM reports.</td></tr>
+        <tr><td>Architecture</td><td><b>Any.</b> The app talks to DSM's API, not to the hardware.</td></tr>
+        <tr><td>Your device</td><td><b>Android 7.0</b>, <b>iOS 16.0</b>, <b>macOS 11.0</b> or <b>Windows</b> - the app ships on all four stores.</td></tr>
+      </tbody>
+    </table></div>
+    <div class="note stop"><b>DSM 6 is not supported.</b> It uses different API versions and different authentication behaviour, and supporting both would mean guessing which one a NAS is speaking. Guessing is exactly what this app avoids.</div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Why there is no matrix</div>
+      <h2>Discovery, not a hard-coded list</h2>
+      <p class="lead">A per-model support table would be wrong the day Synology released a model, and wrong again the day one of them gained a package.</p>
+    </div>
+    <ul class="plain">
+      <li><b>The app queries DSM's API catalogue on connect</b> and keeps the answer. That catalogue is the ground truth for what your NAS can do.</li>
+      <li><b>Screens appear because your NAS reported the API behind them.</b> Install Surveillance Station and a Cameras view appears. Uninstall it and the view goes.</li>
+      <li><b>Nothing is assumed from the model name.</b> Two identical models with different packages get different apps, which is correct.</li>
+      <li><b>A value the NAS did not report is named as unread</b>, never filled in with a plausible default.</li>
+    </ul>
+    <p style="color:var(--steel);margin-top:18px;max-width:74ch">The practical version: if <b>DSM's own web interface</b> works from your phone's browser, and your DSM account can see a thing there, Syno Manager can see it too.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Examples</div>
+      <h2>Models people ask about</h2>
+      <p class="lead">Not a support list - every one of these is covered by the single rule above. They are here because they are what people search for.</p>
+    </div>
+    <div class="grid">
+      <div class="gcard"><h3>DiskStation - home &amp; SOHO</h3><p>DS124, DS223, DS223j, DS224+, DS423, DS423+, DS723+, DS923+, DS1522+, DS1621+, DS1821+, DS1823xs+ and their predecessors on DSM 7.</p></div>
+      <div class="gcard"><h3>DiskStation - the older ones</h3><p>DS218+, DS220+, DS418, DS420+, DS718+, DS720+, DS918+, DS920+, DS1019+, DS1520+ - all fine, as long as they are on DSM 7.</p></div>
+      <div class="gcard"><h3>RackStation</h3><p>RS422+, RS822+, RS1221+, RS2421+, RS3621xs+, RS4021xs+ and the rest of the rackmount line.</p></div>
+      <div class="gcard"><h3>FlashStation</h3><p>FS3410, FS6400 and the all-flash line.</p></div>
+      <div class="gcard"><h3>Expansion units</h3><p>DX517, DX1222, RX418, RX1223RP - drives in an expansion appear alongside the internal ones.</p></div>
+      <div class="gcard"><h3>Value line</h3><p>The j and play models too. Fewer packages means fewer screens, not a lesser app.</p></div>
+    </div>
+    <div class="note"><b>Do not see yours?</b> That is not a signal. The list is illustrative; the rule is DSM 7.0 or later, full stop.</div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">What changes by model</div>
+      <h2>Which screens you get</h2>
+      <p class="lead">The difference between a two-bay DiskStation and a rackmount is not how well the app works - it is how many services the NAS runs.</p>
+    </div>
+    <div class="tscroll"><table class="t">
+      <thead><tr><th>Screen</th><th>Appears when</th></tr></thead>
+      <tbody>
+        <tr><td>System, Storage, Network</td><td>Always. Every DSM 7 NAS reports these.</td></tr>
+        <tr><td>Docker, Projects</td><td>Container Manager is installed. Not available on every model.</td></tr>
+        <tr><td>Virtual Machines</td><td>Virtual Machine Manager is installed - which needs a model that supports it.</td></tr>
+        <tr><td>Cameras</td><td>Surveillance Station is installed.</td></tr>
+        <tr><td>Photos, Drive, Office, Notes, Contacts</td><td>Each appears when its own package is installed.</td></tr>
+        <tr><td>Download Station</td><td>The package is installed.</td></tr>
+        <tr><td>Backup, Active Backup</td><td>Hyper Backup and Active Backup for Business respectively.</td></tr>
+        <tr><td>UPS / Power</td><td>A UPS is attached and UPS support is on in DSM.</td></tr>
+        <tr><td>External storage</td><td>The NAS has USB or eSATA ports.</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Common questions</div>
+      <h2>Compatibility FAQ</h2>
+    </div>
+    <details open><summary>Which Synology models does Syno Manager support?</summary><div class="body">Any Synology NAS running DSM 7.0 or later - DiskStation, RackStation and FlashStation, with or without expansion units. There is no per-model list because the app asks your NAS what it can do when it connects.</div></details>
+    <details><summary>Does it work on DSM 6?</summary><div class="body">No. DSM 7.0 or later is required. DSM 6 uses different API versions and authentication behaviour.</div></details>
+    <details><summary>Will it work on a small two-bay NAS?</summary><div class="body">Yes. It shows fewer screens because it runs fewer services, not because it is unsupported. Everything it does run is shown in full.</div></details>
+    <details><summary>Does it support expansion units?</summary><div class="body">Yes. Drives in an expansion unit appear alongside the internal ones.</div></details>
+    <details><summary>What if my NAS runs a beta DSM?</summary><div class="body">It will generally work, since the app reads the API catalogue rather than assuming a version. A beta that changes an API can produce a value the app reports as unread - which it will say, rather than showing a wrong number.</div></details>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <h2>Try it on yours</h2>
+    <p class="lead" style="margin:0 auto 26px">A one-time $6.99 purchase.* No ads, no subscriptions, no in-app purchases. Connected in under a minute.</p>
+    <div class="badges"><a href="https://play.google.com/store/apps/details?id=com.synomanager"><img alt="Get it on Google Play" src="https://img.shields.io/badge/Google%20Play-Download-414141?logo=google-play&logoColor=white&style=for-the-badge" decoding="async" /></a><a href="https://apps.apple.com/us/app/syno-manager/id6763011668"><img alt="Download on the App Store" src="https://img.shields.io/badge/App%20Store-Download-0D96F6?logo=app-store&logoColor=white&style=for-the-badge" decoding="async" /></a><a href="https://apps.apple.com/us/app/syno-manager/id6763011668"><img alt="Download on the Mac App Store" src="https://img.shields.io/badge/Mac%20App%20Store-Download-1D1D1F?logo=apple&logoColor=white&style=for-the-badge" decoding="async" /></a><a href="https://apps.microsoft.com/detail/9P19N2B54N1R"><img alt="Get it on the Microsoft Store" src="https://img.shields.io/badge/Microsoft%20Store-Download-0078D4?logo=windows&logoColor=white&style=for-the-badge" decoding="async" /></a></div>
+    <p class="capt" style="text-align:center;margin-top:14px">* One-time purchase per platform. Apple is a single universal purchase covering iPhone, iPad and Mac.</p>
+    <p style="margin-top:22px"><a class="btn ghost" href="/guide/getting-started/">Getting started</a></p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="flinks"><a href="/">Home</a><a href="/guide/">User Guide</a><a href="/guide/getting-started/">Getting started</a><a href="/compatible-nas/">Compatibility</a><a href="/help/">Help</a><a href="/privacy/">Privacy</a><a href="https://play.google.com/store/apps/details?id=com.synomanager">Google Play</a><a href="https://apps.apple.com/us/app/syno-manager/id6763011668">App Store</a><a href="https://github.com/MiyaraHub/synomanager/issues">Report a bug</a><a href="https://miyarahub.com">MiyaraHub</a></div>
+    <p class="legal">&copy; MiyaraHub Technologies LLC. Syno Manager is an independent app and is not affiliated with, endorsed by, or sponsored by Synology Inc. Synology, DSM, DiskStation, RackStation, Hyper Backup, Active Backup, Surveillance Station and QuickConnect are trademarks of Synology Inc.</p>
+  </div>
+</footer>
+
+<script defer src="/assets/search.js"></script>
+<script defer src="/assets/lightbox.js"></script>
+</body>
+</html>

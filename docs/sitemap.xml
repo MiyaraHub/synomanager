@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://synomanager.com/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://synomanager.com/screenshots/add-nas.webp</image:loc>
+      <image:title>The Add NAS form with Direct IP and QuickConnect options</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://synomanager.com/screenshots/assistant.webp</image:loc>
+      <image:title>The on-device assistant ready to answer questions about the NAS</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://synomanager.com/screenshots/backup-hyper.webp</image:loc>
+      <image:title>Hyper Backup tasks with backup size and next run</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://synomanager.com/screenshots/cameras.webp</image:loc>
+      <image:title>Surveillance Station camera grid</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://synomanager.com/screenshots/dashboard-customize.webp</image:loc>
+      <image:title>Edit Dashboard mode with drag handles and remove buttons</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://synomanager.com/screenshots/dashboard.webp</image:loc>
+      <image:title>Syno Manager home screen showing a Synology RackStation at a glance</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://synomanager.com/screenshots/dashboard.webp</image:loc>
+      <image:title>Syno Manager home screen with health header, quick stats and cards</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://synomanager.com/screenshots/docker.webp</image:loc>
+      <image:title>Docker container list with status and controls</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://synomanager.com/screenshots/download-settings.webp</image:loc>
+      <image:title>Download Station settings read back from the NAS</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://synomanager.com/screenshots/network.webp</image:loc>
+      <image:title>Live network throughput per interface</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://synomanager.com/screenshots/packages.webp</image:loc>
+      <image:title>Package Center showing installed DSM packages</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://synomanager.com/screenshots/photos.webp</image:loc>
+      <image:title>Synology Photos library with thumbnail previews</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://synomanager.com/screenshots/settings-theme.webp</image:loc>
+      <image:title>Theme and colour settings with accent picker and AMOLED surface</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://synomanager.com/screenshots/storage-disk-health.webp</image:loc>
+      <image:title>Per-drive SMART status and temperature</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://synomanager.com/screenshots/storage-volumes.webp</image:loc>
+      <image:title>Storage volumes and pools with RAID type and free space</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://synomanager.com/screenshots/system-health.webp</image:loc>
+      <image:title>CPU and RAM gauges, load average, disk I/O and temperature history</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://synomanager.com/best-synology-nas-app/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://synomanager.com/screenshots/dashboard.webp</image:loc>
+      <image:title>The Syno Manager home screen</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://synomanager.com/compatible-nas/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://synomanager.com/screenshots/dashboard.webp</image:loc>
+      <image:title>Syno Manager on a Synology RackStation</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://synomanager.com/guide/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://synomanager.com/guide/apps/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://synomanager.com/screenshots/docker-projects.webp</image:loc>
+      <image:title>Docker Compose projects, with none configured</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://synomanager.com/screenshots/docker.webp</image:loc>
+      <image:title>Docker containers with status and controls</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://synomanager.com/screenshots/packages-install.webp</image:loc>
+      <image:title>The install dialog naming the package, its dependency and the destination volume</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://synomanager.com/screenshots/packages-search.webp</image:loc>
+      <image:title>Searching the full package catalogue, with Install buttons</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://synomanager.com/screenshots/packages.webp</image:loc>
+      <image:title>Package Center showing installed packages with running state</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://synomanager.com/guide/assistant/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://synomanager.com/screenshots/assistant-how.webp</image:loc>
+      <image:title>How it works, explaining that the model is on the device and no data leaves it</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://synomanager.com/screenshots/assistant.webp</image:loc>
+      <image:title>The assistant, ready with suggested questions</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://synomanager.com/guide/backup-restore/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+    <image:image>
+      <image:loc>https://synomanager.com/screenshots/settings-backup.webp</image:loc>
+      <image:title>The Backup and Restore screen with Export and Restore</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://synomanager.com/guide/backup/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://synomanager.com/screenshots/backup-active.webp</image:loc>
+      <image:title>Active Backup for Business with repository size by workload and protected devices</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://synomanager.com/screenshots/backup-hyper.webp</image:loc>
+      <image:title>Hyper Backup tasks with backup size, source size and next run</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://synomanager.com/guide/control-panel/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <image:image>
+      <image:loc>https://synomanager.com/screenshots/tasks.webp</image:loc>
+      <image:title>Task Scheduler showing scheduled tasks with toggles and Run Now</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://synomanager.com/screenshots/ups.webp</image:loc>
+      <image:title>UPS status with model, charge, connection mode and estimated runtime</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://synomanager.com/screenshots/users.webp</image:loc>
+      <image:title>DSM user accounts, with two names and addresses obscured</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://synomanager.com/guide/customizing/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <image:image>
+      <image:loc>https://synomanager.com/screenshots/customize-views.webp</image:loc>
+      <image:title>Customize Views with a live preview and drag handles</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://synomanager.com/guide/downloads/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <image:image>
+      <image:loc>https://synomanager.com/screenshots/download-add.webp</image:loc>
+      <image:title>The Add a download sheet with a link field, a destination picker and a torrent file option</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://synomanager.com/screenshots/download-settings.webp</image:loc>
+      <image:title>Download Station settings read from the NAS</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://synomanager.com/screenshots/downloads.webp</image:loc>
+      <image:title>Download Station with the speed header and no active downloads</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://synomanager.com/guide/files/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://synomanager.com/screenshots/contacts.webp</image:loc>
+      <image:title>Synology Contacts address books with contact counts</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://synomanager.com/screenshots/files-shared.webp</image:loc>
+      <image:title>Shared folders with volume, description and ACL chips</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://synomanager.com/screenshots/files-station.webp</image:loc>
+      <image:title>File Station browsing shared folders</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://synomanager.com/screenshots/notes.webp</image:loc>
+      <image:title>Note Station notebooks with note counts</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://synomanager.com/screenshots/office.webp</image:loc>
+      <image:title>Synology Office status with Documents, Spreadsheets and Slides</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://synomanager.com/guide/getting-started/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://synomanager.com/screenshots/add-nas.webp</image:loc>
+      <image:title>The Add NAS form</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://synomanager.com/screenshots/add-nas.webp</image:loc>
+      <image:title>The Add NAS form in Syno Manager</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://synomanager.com/screenshots/dashboard.webp</image:loc>
+      <image:title>The Syno Manager home screen after connecting</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://synomanager.com/guide/home/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://synomanager.com/screenshots/dashboard-cards.webp</image:loc>
+      <image:title>Dashboard cards for Docker and Surveillance Station, each summarising and linking to its screen</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://synomanager.com/screenshots/dashboard-customize.webp</image:loc>
+      <image:title>Edit Dashboard mode with the toolbar, drag handles and remove buttons</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://synomanager.com/screenshots/dashboard.webp</image:loc>
+      <image:title>Syno Manager home screen</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://synomanager.com/guide/media/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://synomanager.com/screenshots/camera-live.webp</image:loc>
+      <image:title>Full-screen Surveillance Station live view with the LIVE indicator and mute control</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://synomanager.com/screenshots/cameras.webp</image:loc>
+      <image:title>The Surveillance Station camera grid</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://synomanager.com/screenshots/drive.webp</image:loc>
+      <image:title>Synology Drive browsing personal drive folders and files</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://synomanager.com/screenshots/photos.webp</image:loc>
+      <image:title>Synology Photos library with thumbnail previews</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://synomanager.com/guide/multi-nas/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://synomanager.com/screenshots/manage-nas-menu.webp</image:loc>
+      <image:title>The per-NAS menu with Rename, Change IP, Edit Configuration, Test Connection and Remove</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://synomanager.com/screenshots/manage-nas.webp</image:loc>
+      <image:title>The NAS device list with Connect and Wake</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://synomanager.com/guide/network/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://synomanager.com/screenshots/network-connections.webp</image:loc>
+      <image:title>Connections showing the auto-block policy, blocked IPs and active connections</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://synomanager.com/screenshots/network-ddns.webp</image:loc>
+      <image:title>DDNS and external IP, with the public address and hostname obscured</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://synomanager.com/screenshots/network-services.webp</image:loc>
+      <image:title>DSM services with running state and toggles</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://synomanager.com/screenshots/network-vpn.webp</image:loc>
+      <image:title>The VPN sub-view listing client profiles</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://synomanager.com/screenshots/network.webp</image:loc>
+      <image:title>Live network throughput per interface</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://synomanager.com/guide/remote-access/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://synomanager.com/screenshots/add-nas.webp</image:loc>
+      <image:title>The Add NAS form showing Direct IP and QuickConnect</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://synomanager.com/guide/settings/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://synomanager.com/screenshots/about.webp</image:loc>
+      <image:title>The About screen with version, features and links</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://synomanager.com/screenshots/accent-amber.webp</image:loc>
+      <image:title>The home screen in the Amber accent</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://synomanager.com/screenshots/accent-cyan.webp</image:loc>
+      <image:title>The home screen in the Cyan accent</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://synomanager.com/screenshots/accent-green.webp</image:loc>
+      <image:title>The home screen in the Green accent</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://synomanager.com/screenshots/accent-pink.webp</image:loc>
+      <image:title>The home screen in the Pink accent</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://synomanager.com/screenshots/accent-purple.webp</image:loc>
+      <image:title>The home screen in the Purple accent</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://synomanager.com/screenshots/dashboard.webp</image:loc>
+      <image:title>The home screen in the Blue accent</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://synomanager.com/screenshots/settings-cardview.webp</image:loc>
+      <image:title>Default Card View with Remember last view, Always expanded and Always collapsed</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://synomanager.com/screenshots/settings-categories.webp</image:loc>
+      <image:title>Dashboard Categories with a switch per card</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://synomanager.com/screenshots/settings-help.webp</image:loc>
+      <image:title>The Help section with the help-card switch and the list of hidden cards</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://synomanager.com/screenshots/settings-launch.webp</image:loc>
+      <image:title>Launch Behavior with the three cold-start options</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://synomanager.com/screenshots/settings-main.webp</image:loc>
+      <image:title>The Settings screen with NAS Connections, Appearance and Preferences</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://synomanager.com/screenshots/settings-nav.webp</image:loc>
+      <image:title>Customize Navigation with a live preview of the bottom bar</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://synomanager.com/screenshots/settings-theme.webp</image:loc>
+      <image:title>Theme and Colors with brightness, surface, text size and accent</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://synomanager.com/guide/shortcuts/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://synomanager.com/guide/storage/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://synomanager.com/screenshots/storage-disk-health.webp</image:loc>
+      <image:title>Disk Health showing every drive with SMART status, temperature and a Quick SMART Test button</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://synomanager.com/screenshots/storage-external.webp</image:loc>
+      <image:title>External storage and USB devices, with nothing attached and a UPS listed</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://synomanager.com/screenshots/storage-volumes.webp</image:loc>
+      <image:title>Storage volumes and drives in Syno Manager</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://synomanager.com/guide/system/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://synomanager.com/screenshots/system-cooling.webp</image:loc>
+      <image:title>The Cooling card with Full Speed, Cool and Quiet, plus Identify and Power Controls</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://synomanager.com/screenshots/system-health.webp</image:loc>
+      <image:title>System Health with CPU and RAM gauges, load average, disk I/O and temperature history</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://synomanager.com/screenshots/system-resources.webp</image:loc>
+      <image:title>Resource monitor charts for CPU, memory, disk read and disk write</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://synomanager.com/guide/wake-on-lan/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <image:image>
+      <image:loc>https://synomanager.com/screenshots/wake-devices.webp</image:loc>
+      <image:title>The Wake devices screen</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://synomanager.com/screenshots/wake-devices.webp</image:loc>
+      <image:title>The Wake devices screen with the empty state and an Add device button</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://synomanager.com/guide/widgets/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://synomanager.com/screenshots/widget-picker.webp</image:loc>
+      <image:title>The launcher widget picker showing Quick Actions, Storage Overview and System Status under Syno Manager</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://synomanager.com/help/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://synomanager.com/privacy/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+</urlset>

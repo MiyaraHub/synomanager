@@ -1,0 +1,150 @@
+<!--meta
+{
+  "url": "/guide/multi-nas/",
+  "nav": "guide",
+  "priority": "0.7",
+  "title": "Manage Multiple Synology NAS - Syno Manager",
+  "description": "Add as many Synology devices as you like and switch in a tap. Each keeps its own credentials, dashboard layout, card order and collapse state.",
+  "keywords": "multiple Synology NAS app, manage two NAS phone, switch between NAS, Synology multi device app",
+  "og_image": "screenshots/manage-nas.webp",
+  "og_type": "article",
+  "crumb": [
+    [
+      "Home",
+      "/"
+    ],
+    [
+      "User Guide",
+      "/guide/"
+    ],
+    [
+      "Multiple NAS devices",
+      null
+    ]
+  ],
+  "faq": [
+    [
+      "How many NAS devices can I add?",
+      "As many as you like. Each keeps its own credentials, its own dashboard layout, its own card order and its own collapse state, so a media server and a backup target do not have to look the same."
+    ],
+    [
+      "Does renaming a NAS change anything on the NAS itself?",
+      "No. Rename changes the display name in the app only. To change the NAS's own server name, use DSM's Control Panel."
+    ],
+    [
+      "What is the difference between Change IP and Edit Configuration?",
+      "Change IP is a shortcut for the one field that changes most often - the address and port. Edit Configuration opens the whole form, including HTTPS, certificate verification, credentials, 2FA and the camera tunnel toggle."
+    ],
+    [
+      "What happens when I remove a NAS?",
+      "The entry and its stored credentials are deleted from the app. Nothing on the NAS is touched - it is not signed out of anywhere else, and no data is affected."
+    ]
+  ]
+}
+-->
+<div class="hero split">
+  <div class="wrap">
+    <div>
+      {{CRUMB}}
+      <div class="eyebrow">Multiple NAS devices</div>
+      <h1>One app, <span class="g">every DiskStation</span></h1>
+      <p>Add as many as you like. Each keeps its own credentials, its own dashboard layout and its own settings, so the backup target in the garage does not have to look like the media server in the lounge.</p>
+    </div>
+    <div class="hero-shot"><img alt="The NAS device list with Connect and Wake" src="{{PRE}}screenshots/manage-nas.webp" /></div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">The device list</div>
+      <h2>What each entry shows</h2>
+      <p class="lead">Reached from <b>Settings &rsaquo; Manage NAS Devices</b>, or as the screen the app opens on when you have more than one and have set it to ask.</p>
+    </div>
+    <ul class="plain">
+      <li><b>Nickname and address</b> - your name for it, and the host and port it connects on.</li>
+      <li><b>Chips</b> for the things worth seeing without opening the form: whether it is <b>HTTPS</b>, which <b>port</b>, and which <b>account</b> it signs in as.</li>
+      <li><b>Connected</b> when it is the active one.</li>
+      <li><b>Connect</b> to switch to it, and <b>Wake</b> to send it a magic packet if it is asleep.</li>
+      <li><b>A drag handle</b> - reorder the list so the one you use most is at the top.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">The overflow menu</div>
+      <h2>Five things you can do to an entry</h2>
+    </div>
+    <div class="with-shot">
+      <div>
+        <div class="tscroll"><table class="t">
+          <thead><tr><th>Action</th><th>What it does</th></tr></thead>
+          <tbody>
+            <tr><td>Rename</td><td>Changes the <b>display name only</b> - the app's label for it. The NAS's own server name is untouched; that lives in DSM's Control Panel.</td></tr>
+            <tr><td>Change IP</td><td>A shortcut for the field that changes most often - the address and port - without walking the whole form.</td></tr>
+            <tr><td>Edit Configuration</td><td>The full form: HTTPS, certificate verification, credentials, two-factor authentication and the camera live-view tunnel.</td></tr>
+            <tr><td>Test Connection</td><td>Checks reachability without changing anything, and distinguishes "cannot reach it" from "reached it and the credentials were refused".</td></tr>
+            <tr><td>Remove NAS</td><td>Deletes the entry and its stored credentials <b>from the app</b>. Nothing on the NAS is touched.</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+      <img alt="The per-NAS menu with Rename, Change IP, Edit Configuration, Test Connection and Remove" src="{{PRE}}screenshots/manage-nas-menu.webp" />
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">What is per-NAS</div>
+      <h2>What each device remembers on its own</h2>
+    </div>
+    <div class="cols">
+      <div>
+        <h3>Per NAS</h3>
+        <ul class="plain">
+          <li>Credentials and the 2FA device token.</li>
+          <li>Which dashboard cards are on, and their order.</li>
+          <li>Which cards are collapsed.</li>
+          <li>Which sub-views are hidden in each tab, and their order.</li>
+          <li>The camera live-view tunnel setting.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>App-wide</h3>
+        <ul class="plain">
+          <li>Theme, surface, accent and text size.</li>
+          <li>The bottom navigation bar.</li>
+          <li>Polling interval and temperature unit.</li>
+          <li>Launch behaviour.</li>
+          <li>Which help cards you have dismissed.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="note"><b>The same NAS twice is a legitimate setup.</b> One entry by local IP for home, one by QuickConnect for away. They are separate entries with separate layouts, and switching takes one tap.</div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Common questions</div>
+      <h2>Multi-NAS FAQ</h2>
+    </div>
+    <details open><summary>How many NAS devices can I add?</summary><div class="body">As many as you like. Each keeps its own credentials, dashboard layout, card order and collapse state.</div></details>
+    <details><summary>Does renaming a NAS change anything on the NAS itself?</summary><div class="body">No. Rename changes the display name in the app only. To change the NAS's own server name, use DSM's Control Panel.</div></details>
+    <details><summary>What is the difference between Change IP and Edit Configuration?</summary><div class="body">Change IP is a shortcut for the address and port. Edit Configuration opens the whole form, including HTTPS, certificate verification, credentials, 2FA and the camera tunnel toggle.</div></details>
+    <details><summary>What happens when I remove a NAS?</summary><div class="body">The entry and its stored credentials are deleted from the app. Nothing on the NAS is touched.</div></details>
+    <details><summary>Which one does the app open on?</summary><div class="body">Whatever you set in <a href="/guide/settings/#launch">Launch Behavior</a> - the device picker, the last one you used, or always a specific one.</div></details>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <h2>Next: Wake-on-LAN</h2>
+    <p class="lead" style="margin:0 auto 24px">Wake the NAS, or anything else on your network through it.</p>
+    <p><a class="btn" href="/guide/wake-on-lan/">Wake-on-LAN &rarr;</a> &nbsp; <a class="btn ghost" href="/guide/">Back to the guide</a></p>
+  </div>
+</section>

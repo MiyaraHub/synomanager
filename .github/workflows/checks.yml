@@ -1,0 +1,32 @@
+name: Site checks
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      # Full history, not the default shallow clone. The sitemap's <lastmod>
+      # comes from the commit date of each page's source, so a depth-1 checkout
+      # has no history to read and generates a different sitemap than the one
+      # in the repo - which fails this job for a reason that has nothing to do
+      # with the change being tested.
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: docs/ is in sync with content/
+        run: python3 tools/build_site.py --check
+
+      - name: search-index.json is current
+        run: python3 tools/build_search_index.py --check
+
+      - name: links, images, dashes and leaks
+        run: python3 tools/check_site.py

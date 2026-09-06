@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The On-Device AI Assistant - Syno Manager</title>
+<meta name="description" content="Ask about your Synology NAS in plain words. The model runs on your phone - Gemini Nano or Apple Intelligence - works offline, and only ever reads." />
+<meta name="keywords" content="on device AI NAS, Synology AI assistant, Gemini Nano app, Apple Intelligence app, private AI assistant, ask my NAS, offline AI assistant" />
+<meta name="author" content="MiyaraHub Technologies LLC" />
+<meta name="robots" content="index, follow, max-image-preview:large" />
+<meta name="theme-color" content="#3b82f6" />
+<link rel="canonical" href="https://synomanager.com/guide/assistant/" />
+<meta property="og:title" content="The On-Device AI Assistant - Syno Manager" />
+<meta property="og:description" content="Ask about your Synology NAS in plain words. The model runs on your phone - Gemini Nano or Apple Intelligence - works offline, and only ever reads." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://synomanager.com/guide/assistant/" />
+<meta property="og:site_name" content="Syno Manager" />
+<meta property="og:image" content="https://synomanager.com/screenshots/assistant.webp" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="The On-Device AI Assistant - Syno Manager" />
+<meta name="twitter:description" content="Ask about your Synology NAS in plain words. The model runs on your phone - Gemini Nano or Apple Intelligence - works offline, and only ever reads." />
+<meta name="twitter:image" content="https://synomanager.com/screenshots/assistant.webp" />
+<link rel="icon" href="../../assets/favicon.ico" sizes="any" />
+<link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png" />
+<link rel="icon" type="image/png" sizes="48x48" href="../../assets/favicon-48.png" />
+<link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preconnect" href="https://img.shields.io" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" />
+<link rel="stylesheet" href="../../assets/site.css" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "MiyaraHub Technologies LLC",
+  "url": "https://miyarahub.com",
+  "logo": "https://synomanager.com/assets/icon-192.png"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Syno Manager",
+  "url": "https://synomanager.com/",
+  "publisher": {
+    "@type": "Organization",
+    "name": "MiyaraHub Technologies LLC"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://synomanager.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "User Guide",
+      "item": "https://synomanager.com/guide/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "The Assistant"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "The On-Device AI Assistant - Syno Manager",
+  "description": "Ask about your Synology NAS in plain words. The model runs on your phone - Gemini Nano or Apple Intelligence - works offline, and only ever reads.",
+  "image": "https://synomanager.com/screenshots/assistant.webp",
+  "url": "https://synomanager.com/guide/assistant/",
+  "inLanguage": "en",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Syno Manager",
+    "url": "https://synomanager.com/"
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "MiyaraHub Technologies LLC"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "MiyaraHub Technologies LLC",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://synomanager.com/assets/icon-192.png"
+    }
+  },
+  "about": {
+    "@type": "SoftwareApplication",
+    "name": "Syno Manager",
+    "operatingSystem": "Android, iOS, macOS, Windows",
+    "applicationCategory": "UtilitiesApplication"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Where does the assistant run?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "On your phone. Gemini Nano through AICore on Android, Apple Intelligence on iOS and macOS. There is no cloud tier to fall back to - the app's build fails if a cloud host, a cloud SDK or an API key appears anywhere in the assistant, so the promise is enforced by the build rather than by anybody remembering."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does my NAS data get sent anywhere?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Your question, your NAS's data and the answer never leave the device. It works with the network switched off. Because nothing is transmitted, there is no copy of any of it to store, share or train on."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What can I ask it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "There is no fixed list. Your NAS publishes everything it can report - over a thousand entries on a typical one - and the assistant searches that and reads whatever your question is about. Install a package and it can answer about that too, straight away, with no app update."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can it change anything on my NAS?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. It only ever reads. It cannot start, stop, delete or restart anything - not as a policy the model is asked to follow, but because it is not given those tools."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it cost anything?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. It uses the model already built into your device, so there is nothing to pay and no account to make."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why can I not see the Assistant tab?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Because the device has no usable on-device model. Rather than showing a feature that cannot work, the app hides it entirely on hardware that cannot run it."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="/"><img src="../../assets/syno-manager-icon.png" alt="Syno Manager icon" width="104" height="104" decoding="async" /> Syno Manager</a>
+    <button class="nav-toggle" aria-label="Menu" onclick="document.getElementById('m').classList.toggle('open')">&#9776;</button>
+    <nav id="m">
+      <a href="/">Home</a>
+      <a href="/guide/" class="active">User Guide</a>
+      <a href="/#screenshots">Screenshots</a>
+      <a href="/compatible-nas/">Compatibility</a>
+      <a href="/best-synology-nas-app/">Why switch</a>
+      <a href="/help/">Help</a>
+      <a href="/#top" class="cta">Download</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero split">
+  <div class="wrap">
+    <div>
+      <div class="crumb"><a href="/">Home</a> &rsaquo; <a href="/guide/">User Guide</a> &rsaquo; The Assistant</div>
+      <div class="eyebrow">Assistant &middot; beta</div>
+      <h1>Ask your NAS, <span class="g">in plain words</span></h1>
+      <p>"Is anything about my storage worth worrying about?" is a question that otherwise means opening four screens. The assistant reads what your NAS reported and answers it - with a model running on your phone, offline, that never sends anything anywhere.</p>
+    </div>
+    <div class="hero-shot"><img alt="The assistant, ready with suggested questions" src="../../screenshots/assistant.webp" width="1324" height="2644" decoding="async" fetchpriority="high" /></div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="onthispage"><b>On this page</b><ul>
+      <li><a href="#asking">Asking a question</a></li>
+      <li><a href="#topics">What you can ask</a></li>
+      <li><a href="#privacy">Where your data goes</a></li>
+      <li><a href="#readonly">It only reads</a></li>
+      <li><a href="#wrong">It can be wrong</a></li>
+      <li><a href="#availability">Which devices have it</a></li>
+    </ul></div>
+
+    <div class="section-head" id="asking">
+      <div class="eyebrow">Asking</div>
+      <h2>Type it or say it</h2>
+      <p class="lead">The Assistant tab has two sub-views: <b>Ask</b>, and <b>How it works</b>. Ask opens with four suggestions, which are there to show the shape of a good question rather than to limit you.</p>
+    </div>
+    <ul class="plain">
+      <li><b>Type a question</b> into the box at the bottom, or tap one of the suggestions.</li>
+      <li><b>Speak it</b> with the microphone, if you would rather.</li>
+      <li><b>Have the answer read back</b> with the speaker control at the top right.</li>
+      <li><b>The answer is written out as it is produced</b>, rather than appearing all at once - so you can start reading before it has finished.</li>
+      <li><b>Clear</b> empties the conversation.</li>
+    </ul>
+    <div class="note"><b>The model is loaded when you open the screen</b>, not when you send the first question, so the first answer is not the slowest one.</div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head" id="topics">
+      <div class="eyebrow">Scope</div>
+      <h2>There is no list of topics</h2>
+      <p class="lead">This is the part that is easy to miss. The assistant is not a set of canned answers about storage and backups - it is pointed at whatever your NAS actually publishes.</p>
+    </div>
+    <ul class="plain">
+      <li><b>Your NAS publishes everything it can report</b> - over a thousand entries on a typical one - and the assistant searches that catalogue and reads whatever your question is about.</li>
+      <li><b>Install a package and it can answer about that too</b>, straight away, with no app update. Nothing about the catalogue is written into the app; it is discovered from your device.</li>
+      <li><b>It gets quicker as you use it.</b> How to read each part of DSM is worked out once and remembered, so later questions about the same thing are faster.</li>
+    </ul>
+    <div class="note"><b>Good questions look like questions.</b> "How is my NAS doing?", "Are my backups healthy?", "What is using the most space?", "What can you see about this NAS?" - the last one is worth asking once, because the answer tells you what it can reach on <em>your</em> NAS.</div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head" id="privacy">
+      <div class="eyebrow">Privacy</div>
+      <h2>Nothing leaves the phone</h2>
+    </div>
+    <div class="with-shot">
+      <div>
+        <p class="lead">The model belongs to the device. Your question, your NAS's data and the answer are all handled on the phone, and it works with the network switched off.</p>
+        <ul class="plain" style="margin-top:16px">
+          <li><b>There is no cloud tier to fall back to.</b> Not "we choose not to use one" - the app's build <b>fails</b> if a cloud host, a cloud SDK or an API key appears anywhere in the assistant. The promise is kept by the build, not by anybody remembering.</li>
+          <li><b>Because nothing is transmitted, there is no copy</b> to store, share, or train anything on.</li>
+          <li><b>It is free and needs no account</b>, because the model is already on your device.</li>
+        </ul>
+      </div>
+      <img alt="How it works, explaining that the model is on the device and no data leaves it" src="../../screenshots/assistant-how.webp" width="1324" height="2644" decoding="async" loading="lazy" />
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head" id="readonly">
+      <div class="eyebrow">Boundaries</div>
+      <h2>It only ever reads</h2>
+      <p class="lead">The assistant cannot start, stop, delete or restart anything. Not because it has been asked nicely not to - because it is not given those tools in the first place.</p>
+    </div>
+    <p style="color:var(--steel);max-width:72ch">That matters more than it sounds. A model that is <em>instructed</em> not to do something can be talked into doing it. A model that has no way to do it cannot. If you want to restart a container, the <a href="/guide/apps/#docker">Docker screen</a> is three taps away and it will ask you to confirm.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head" id="wrong">
+      <div class="eyebrow">Honesty</div>
+      <h2>It can be wrong, and the screen says so</h2>
+      <p class="lead">This is a small model running on a phone, not a large one in a data centre. It can misread a number or sound more certain than it should. The app says this on the screen rather than in a footnote.</p>
+    </div>
+    <ul class="plain">
+      <li><b>Check anything that matters</b> on the screen that owns it. Every answer is about something the app also shows you directly.</li>
+      <li><b>It is marked BETA</b> in the tab header for exactly this reason.</li>
+      <li><b>Your device shares the model between apps.</b> Ask a lot in a short time and it will say it is out for now, then work again shortly. Nothing is lost when that happens.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head" id="availability">
+      <div class="eyebrow">Availability</div>
+      <h2>Which devices have it</h2>
+    </div>
+    <div class="tscroll"><table class="t">
+      <thead><tr><th>Platform</th><th>Model</th><th>Requirement</th></tr></thead>
+      <tbody>
+        <tr><td>Android</td><td>Gemini Nano</td><td>A device with <b>AICore</b> and a Gemini Nano model available to it.</td></tr>
+        <tr><td>iOS and macOS</td><td>Apple Intelligence</td><td>A device where Apple Intelligence is supported and enabled.</td></tr>
+        <tr><td>Anything else</td><td>-</td><td>The tab is not shown at all.</td></tr>
+      </tbody>
+    </table></div>
+    <div class="note"><b>A device without a usable model does not show the feature.</b> Not greyed out, not a teaser - absent. A control that cannot work is worse than no control, so the tab simply is not there.</div>
+    <p style="color:var(--steel);margin-top:18px">The <b>How it works</b> sub-view tells you which state your own device is in, and what it found.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Common questions</div>
+      <h2>Assistant FAQ</h2>
+    </div>
+    <details open><summary>Where does the assistant run?</summary><div class="body">On your phone. Gemini Nano through AICore on Android, Apple Intelligence on iOS and macOS. There is no cloud tier to fall back to - the app's build fails if a cloud host, a cloud SDK or an API key appears anywhere in the assistant.</div></details>
+    <details><summary>Does my NAS data get sent anywhere?</summary><div class="body">No. Your question, your NAS's data and the answer never leave the device, and it works with the network switched off. Because nothing is transmitted, there is no copy to store, share or train on.</div></details>
+    <details><summary>What can I ask it?</summary><div class="body">There is no fixed list. Your NAS publishes everything it can report - over a thousand entries on a typical one - and the assistant searches that. Install a package and it can answer about that too, with no app update.</div></details>
+    <details><summary>Can it change anything on my NAS?</summary><div class="body">No. It only ever reads. It cannot start, stop, delete or restart anything - because it is not given those tools.</div></details>
+    <details><summary>Does it cost anything?</summary><div class="body">No. It uses the model already built into your device, so there is nothing to pay and no account to make.</div></details>
+    <details><summary>Why can I not see the Assistant tab?</summary><div class="body">Because the device has no usable on-device model. Rather than showing a feature that cannot work, the app hides it entirely on hardware that cannot run it.</div></details>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <h2>Next: Settings</h2>
+    <p class="lead" style="margin:0 auto 24px">Every preference the app has, and what each one changes.</p>
+    <p><a class="btn" href="/guide/settings/">Settings &rarr;</a> &nbsp; <a class="btn ghost" href="/guide/">Back to the guide</a></p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="flinks"><a href="/">Home</a><a href="/guide/">User Guide</a><a href="/guide/getting-started/">Getting started</a><a href="/compatible-nas/">Compatibility</a><a href="/help/">Help</a><a href="/privacy/">Privacy</a><a href="https://play.google.com/store/apps/details?id=com.synomanager">Google Play</a><a href="https://apps.apple.com/us/app/syno-manager/id6763011668">App Store</a><a href="https://github.com/MiyaraHub/synomanager/issues">Report a bug</a><a href="https://miyarahub.com">MiyaraHub</a></div>
+    <p class="legal">&copy; MiyaraHub Technologies LLC. Syno Manager is an independent app and is not affiliated with, endorsed by, or sponsored by Synology Inc. Synology, DSM, DiskStation, RackStation, Hyper Backup, Active Backup, Surveillance Station and QuickConnect are trademarks of Synology Inc.</p>
+  </div>
+</footer>
+
+<script defer src="/assets/search.js"></script>
+<script defer src="/assets/lightbox.js"></script>
+</body>
+</html>

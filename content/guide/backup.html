@@ -1,0 +1,164 @@
+<!--meta
+{
+  "url": "/guide/backup/",
+  "nav": "guide",
+  "priority": "0.8",
+  "title": "Hyper Backup & Active Backup - Syno Manager",
+  "description": "Every Hyper Backup task with the space it really takes at its destination, plus Active Backup for Business devices and deduplicated size by workload.",
+  "keywords": "Hyper Backup app, Synology backup monitoring phone, Active Backup for Business app, Synology backup size, run backup from phone, Synology backup status",
+  "og_image": "screenshots/backup-hyper.webp",
+  "og_type": "article",
+  "crumb": [
+    [
+      "Home",
+      "/"
+    ],
+    [
+      "User Guide",
+      "/guide/"
+    ],
+    [
+      "Backup",
+      null
+    ]
+  ],
+  "faq": [
+    [
+      "Can I start a backup from my phone?",
+      "Yes. Every Hyper Backup task has a Run Now button, and a running task shows a live progress bar you can cancel."
+    ],
+    [
+      "What is the difference between backup size and source size?",
+      "Source size is how much data the task is backing up. Backup size is how much space it actually occupies at the destination, after deduplication and compression. Seeing both together is how you tell what those two are saving you - and whether a destination is filling up faster than the source is growing."
+    ],
+    [
+      "Does it show Active Backup for Business?",
+      "Yes. The card and its detail view show the total deduplicated size of the backup repository, broken down by workload - PCs, servers, virtual machines and DSM devices - each with its device count, plus every protected device with its last backup time and a Backup Now button."
+    ],
+    [
+      "Will it tell me if a backup failed?",
+      "Yes. Task state is shown per task, and a failed task also raises the health badge on the home screen, so you find out without going looking."
+    ]
+  ]
+}
+-->
+<div class="hero split">
+  <div class="wrap">
+    <div>
+      {{CRUMB}}
+      <div class="eyebrow">Backup</div>
+      <h1>Did the backup <span class="g">actually run?</span></h1>
+      <p>The question a NAS owner asks most often, answered in one screen. <b>Backup</b> covers Hyper Backup; <b>Active Backup</b> covers Active Backup for Business.</p>
+    </div>
+    <div class="hero-shot"><img alt="Hyper Backup tasks with backup size, source size and next run" src="{{PRE}}screenshots/backup-hyper.webp" /></div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="onthispage"><b>On this page</b><ul>
+      <li><a href="#hyper">Hyper Backup</a></li>
+      <li><a href="#sizes">Backup size versus source size</a></li>
+      <li><a href="#active">Active Backup for Business</a></li>
+      <li><a href="#failures">When something fails</a></li>
+    </ul></div>
+
+    <div class="section-head" id="hyper">
+      <div class="eyebrow">Hyper Backup</div>
+      <h2>Every task, and what it is doing</h2>
+      <p class="lead">A summary at the top - how many tasks, how many healthy, how many in trouble - then a card per task.</p>
+    </div>
+    <div class="tscroll"><table class="t">
+      <thead><tr><th>Shown</th><th>Meaning</th></tr></thead>
+      <tbody>
+        <tr><td>Task name</td><td>As you named it in Hyper Backup.</td></tr>
+        <tr><td>Destination</td><td>Where it backs up to - Synology C2, a remote NAS, a local folder, a cloud provider.</td></tr>
+        <tr><td>State</td><td><b>Idle</b>, running, or a failure. A running task shows a live progress bar.</td></tr>
+        <tr><td>Backup size</td><td>How much space the task takes up <b>at its destination</b>.</td></tr>
+        <tr><td>Source size</td><td>How much data it is backing up.</td></tr>
+        <tr><td>Last backup</td><td>How long ago the last run finished.</td></tr>
+        <tr><td>Next backup</td><td>When the schedule fires next.</td></tr>
+        <tr><td>Run Now</td><td>Starts the task immediately. A running task can be cancelled.</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head" id="sizes">
+      <div class="eyebrow">Two numbers, on purpose</div>
+      <h2>Backup size next to source size</h2>
+      <p class="lead">Most tools show you one or the other. Shown together they answer questions neither can answer alone.</p>
+    </div>
+    <ul class="plain">
+      <li><b>What deduplication and compression are saving you.</b> A 758 GB source occupying 814 GB at the destination is telling you something quite different from one occupying 300 GB - and only the pair reveals it.</li>
+      <li><b>Whether a destination is about to fill up.</b> Source growth and destination growth are not the same curve, and the one that matters for "will this fail next month" is the destination.</li>
+      <li><b>Whether versioning is running away.</b> A destination growing much faster than its source usually means a retention policy that is keeping more than you meant.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head" id="active">
+      <div class="eyebrow">Active Backup</div>
+      <h2>Active Backup for Business</h2>
+    </div>
+    <div class="with-shot">
+      <div>
+        <p class="lead">A header with the device and task count, then the repository size, then the devices themselves.</p>
+        <h3 style="margin-top:20px">Backup size</h3>
+        <ul class="plain">
+          <li><b>The total deduplicated size</b> of the repository, per volume.</li>
+          <li><b>Broken down by workload</b> - PCs, servers, virtual machines and DSM devices - each with its own device count and size.</li>
+          <li><b>Labelled as what it is:</b> deduplicated size on the destination, as reported by Active Backup. Not a sum of source sizes dressed up as one.</li>
+        </ul>
+        <h3 style="margin-top:22px">Devices</h3>
+        <ul class="plain">
+          <li><b>Each protected device</b> with its address and operating system.</li>
+          <li><b>Last backup</b>, or <b>Never</b> when it has not run - which is the entry worth noticing.</li>
+          <li><b>Backup Now</b> per device.</li>
+        </ul>
+      </div>
+      <img alt="Active Backup for Business with repository size by workload and protected devices" src="{{PRE}}screenshots/backup-active.webp" />
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head" id="failures">
+      <div class="eyebrow">When something fails</div>
+      <h2>You find out without looking</h2>
+    </div>
+    <ul class="plain">
+      <li><b>The task says so</b> on its card, with the state the NAS reported.</li>
+      <li><b>The home screen's health badge</b> reflects it, so a failed backup surfaces on the first screen you see rather than three taps in.</li>
+      <li><b>A device that has never been backed up</b> is shown as <b>Never</b> rather than as a blank or a zero - those would read as "fine".</li>
+    </ul>
+    <div class="note"><b>What the app will not do:</b> create or edit a backup task, change a retention policy, or restore from a backup. Those are Hyper Backup's own job, and a restore in particular is not something to start by accident on a phone.</div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Common questions</div>
+      <h2>Backup FAQ</h2>
+    </div>
+    <details open><summary>Can I start a backup from my phone?</summary><div class="body">Yes. Every Hyper Backup task has a Run Now button, and a running task shows a live progress bar you can cancel.</div></details>
+    <details><summary>What is the difference between backup size and source size?</summary><div class="body">Source size is how much data the task is backing up. Backup size is how much space it actually occupies at the destination, after deduplication and compression. Seeing both together shows what those are saving you, and whether a destination is filling faster than its source is growing.</div></details>
+    <details><summary>Does it show Active Backup for Business?</summary><div class="body">Yes - the deduplicated repository size broken down by workload, each with its device count, plus every protected device with its last backup time and a Backup Now button.</div></details>
+    <details><summary>Will it tell me if a backup failed?</summary><div class="body">Yes. Task state is shown per task, and a failed task also raises the health badge on the home screen.</div></details>
+    <details><summary>Can I restore from a backup in the app?</summary><div class="body">No. Restores are done in Hyper Backup or Active Backup, where the version picker and the target selection live. The app monitors and triggers backups; it does not put data back.</div></details>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <h2>Next: Control Panel</h2>
+    <p class="lead" style="margin:0 auto 24px">Users, scheduled tasks, UPS and the app's own settings.</p>
+    <p><a class="btn" href="/guide/control-panel/">Control Panel &rarr;</a> &nbsp; <a class="btn ghost" href="/guide/">Back to the guide</a></p>
+  </div>
+</section>

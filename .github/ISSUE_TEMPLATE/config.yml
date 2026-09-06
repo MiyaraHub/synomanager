@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: User Manual
+    url: https://synomanager.com/guide/
+    about: The full illustrated manual. Most "how do I..." questions are answered there.
+  - name: Troubleshooting
+    url: https://synomanager.com/help/
+    about: Connection failures, blank tiles, missing tabs and stale widgets, with what each message means.
+  - name: Email support
+    url: mailto:admin@miyarahub.com
+    about: For private issues - anything you would rather not post publicly.

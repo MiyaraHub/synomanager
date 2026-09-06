@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Manage Multiple Synology NAS - Syno Manager</title>
+<meta name="description" content="Add as many Synology devices as you like and switch in a tap. Each keeps its own credentials, dashboard layout, card order and collapse state." />
+<meta name="keywords" content="multiple Synology NAS app, manage two NAS phone, switch between NAS, Synology multi device app" />
+<meta name="author" content="MiyaraHub Technologies LLC" />
+<meta name="robots" content="index, follow, max-image-preview:large" />
+<meta name="theme-color" content="#3b82f6" />
+<link rel="canonical" href="https://synomanager.com/guide/multi-nas/" />
+<meta property="og:title" content="Manage Multiple Synology NAS - Syno Manager" />
+<meta property="og:description" content="Add as many Synology devices as you like and switch in a tap. Each keeps its own credentials, dashboard layout, card order and collapse state." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://synomanager.com/guide/multi-nas/" />
+<meta property="og:site_name" content="Syno Manager" />
+<meta property="og:image" content="https://synomanager.com/screenshots/manage-nas.webp" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Manage Multiple Synology NAS - Syno Manager" />
+<meta name="twitter:description" content="Add as many Synology devices as you like and switch in a tap. Each keeps its own credentials, dashboard layout, card order and collapse state." />
+<meta name="twitter:image" content="https://synomanager.com/screenshots/manage-nas.webp" />
+<link rel="icon" href="../../assets/favicon.ico" sizes="any" />
+<link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png" />
+<link rel="icon" type="image/png" sizes="48x48" href="../../assets/favicon-48.png" />
+<link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preconnect" href="https://img.shields.io" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" />
+<link rel="stylesheet" href="../../assets/site.css" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "MiyaraHub Technologies LLC",
+  "url": "https://miyarahub.com",
+  "logo": "https://synomanager.com/assets/icon-192.png"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Syno Manager",
+  "url": "https://synomanager.com/",
+  "publisher": {
+    "@type": "Organization",
+    "name": "MiyaraHub Technologies LLC"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://synomanager.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "User Guide",
+      "item": "https://synomanager.com/guide/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Multiple NAS devices"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Manage Multiple Synology NAS - Syno Manager",
+  "description": "Add as many Synology devices as you like and switch in a tap. Each keeps its own credentials, dashboard layout, card order and collapse state.",
+  "image": "https://synomanager.com/screenshots/manage-nas.webp",
+  "url": "https://synomanager.com/guide/multi-nas/",
+  "inLanguage": "en",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Syno Manager",
+    "url": "https://synomanager.com/"
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "MiyaraHub Technologies LLC"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "MiyaraHub Technologies LLC",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://synomanager.com/assets/icon-192.png"
+    }
+  },
+  "about": {
+    "@type": "SoftwareApplication",
+    "name": "Syno Manager",
+    "operatingSystem": "Android, iOS, macOS, Windows",
+    "applicationCategory": "UtilitiesApplication"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How many NAS devices can I add?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "As many as you like. Each keeps its own credentials, its own dashboard layout, its own card order and its own collapse state, so a media server and a backup target do not have to look the same."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does renaming a NAS change anything on the NAS itself?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Rename changes the display name in the app only. To change the NAS's own server name, use DSM's Control Panel."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between Change IP and Edit Configuration?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Change IP is a shortcut for the one field that changes most often - the address and port. Edit Configuration opens the whole form, including HTTPS, certificate verification, credentials, 2FA and the camera tunnel toggle."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens when I remove a NAS?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The entry and its stored credentials are deleted from the app. Nothing on the NAS is touched - it is not signed out of anywhere else, and no data is affected."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="/"><img src="../../assets/syno-manager-icon.png" alt="Syno Manager icon" width="104" height="104" decoding="async" /> Syno Manager</a>
+    <button class="nav-toggle" aria-label="Menu" onclick="document.getElementById('m').classList.toggle('open')">&#9776;</button>
+    <nav id="m">
+      <a href="/">Home</a>
+      <a href="/guide/" class="active">User Guide</a>
+      <a href="/#screenshots">Screenshots</a>
+      <a href="/compatible-nas/">Compatibility</a>
+      <a href="/best-synology-nas-app/">Why switch</a>
+      <a href="/help/">Help</a>
+      <a href="/#top" class="cta">Download</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero split">
+  <div class="wrap">
+    <div>
+      <div class="crumb"><a href="/">Home</a> &rsaquo; <a href="/guide/">User Guide</a> &rsaquo; Multiple NAS devices</div>
+      <div class="eyebrow">Multiple NAS devices</div>
+      <h1>One app, <span class="g">every DiskStation</span></h1>
+      <p>Add as many as you like. Each keeps its own credentials, its own dashboard layout and its own settings, so the backup target in the garage does not have to look like the media server in the lounge.</p>
+    </div>
+    <div class="hero-shot"><img alt="The NAS device list with Connect and Wake" src="../../screenshots/manage-nas.webp" width="1324" height="2644" decoding="async" fetchpriority="high" /></div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">The device list</div>
+      <h2>What each entry shows</h2>
+      <p class="lead">Reached from <b>Settings &rsaquo; Manage NAS Devices</b>, or as the screen the app opens on when you have more than one and have set it to ask.</p>
+    </div>
+    <ul class="plain">
+      <li><b>Nickname and address</b> - your name for it, and the host and port it connects on.</li>
+      <li><b>Chips</b> for the things worth seeing without opening the form: whether it is <b>HTTPS</b>, which <b>port</b>, and which <b>account</b> it signs in as.</li>
+      <li><b>Connected</b> when it is the active one.</li>
+      <li><b>Connect</b> to switch to it, and <b>Wake</b> to send it a magic packet if it is asleep.</li>
+      <li><b>A drag handle</b> - reorder the list so the one you use most is at the top.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">The overflow menu</div>
+      <h2>Five things you can do to an entry</h2>
+    </div>
+    <div class="with-shot">
+      <div>
+        <div class="tscroll"><table class="t">
+          <thead><tr><th>Action</th><th>What it does</th></tr></thead>
+          <tbody>
+            <tr><td>Rename</td><td>Changes the <b>display name only</b> - the app's label for it. The NAS's own server name is untouched; that lives in DSM's Control Panel.</td></tr>
+            <tr><td>Change IP</td><td>A shortcut for the field that changes most often - the address and port - without walking the whole form.</td></tr>
+            <tr><td>Edit Configuration</td><td>The full form: HTTPS, certificate verification, credentials, two-factor authentication and the camera live-view tunnel.</td></tr>
+            <tr><td>Test Connection</td><td>Checks reachability without changing anything, and distinguishes "cannot reach it" from "reached it and the credentials were refused".</td></tr>
+            <tr><td>Remove NAS</td><td>Deletes the entry and its stored credentials <b>from the app</b>. Nothing on the NAS is touched.</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+      <img alt="The per-NAS menu with Rename, Change IP, Edit Configuration, Test Connection and Remove" src="../../screenshots/manage-nas-menu.webp" width="1324" height="2644" decoding="async" loading="lazy" />
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">What is per-NAS</div>
+      <h2>What each device remembers on its own</h2>
+    </div>
+    <div class="cols">
+      <div>
+        <h3>Per NAS</h3>
+        <ul class="plain">
+          <li>Credentials and the 2FA device token.</li>
+          <li>Which dashboard cards are on, and their order.</li>
+          <li>Which cards are collapsed.</li>
+          <li>Which sub-views are hidden in each tab, and their order.</li>
+          <li>The camera live-view tunnel setting.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>App-wide</h3>
+        <ul class="plain">
+          <li>Theme, surface, accent and text size.</li>
+          <li>The bottom navigation bar.</li>
+          <li>Polling interval and temperature unit.</li>
+          <li>Launch behaviour.</li>
+          <li>Which help cards you have dismissed.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="note"><b>The same NAS twice is a legitimate setup.</b> One entry by local IP for home, one by QuickConnect for away. They are separate entries with separate layouts, and switching takes one tap.</div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Common questions</div>
+      <h2>Multi-NAS FAQ</h2>
+    </div>
+    <details open><summary>How many NAS devices can I add?</summary><div class="body">As many as you like. Each keeps its own credentials, dashboard layout, card order and collapse state.</div></details>
+    <details><summary>Does renaming a NAS change anything on the NAS itself?</summary><div class="body">No. Rename changes the display name in the app only. To change the NAS's own server name, use DSM's Control Panel.</div></details>
+    <details><summary>What is the difference between Change IP and Edit Configuration?</summary><div class="body">Change IP is a shortcut for the address and port. Edit Configuration opens the whole form, including HTTPS, certificate verification, credentials, 2FA and the camera tunnel toggle.</div></details>
+    <details><summary>What happens when I remove a NAS?</summary><div class="body">The entry and its stored credentials are deleted from the app. Nothing on the NAS is touched.</div></details>
+    <details><summary>Which one does the app open on?</summary><div class="body">Whatever you set in <a href="/guide/settings/#launch">Launch Behavior</a> - the device picker, the last one you used, or always a specific one.</div></details>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <h2>Next: Wake-on-LAN</h2>
+    <p class="lead" style="margin:0 auto 24px">Wake the NAS, or anything else on your network through it.</p>
+    <p><a class="btn" href="/guide/wake-on-lan/">Wake-on-LAN &rarr;</a> &nbsp; <a class="btn ghost" href="/guide/">Back to the guide</a></p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="flinks"><a href="/">Home</a><a href="/guide/">User Guide</a><a href="/guide/getting-started/">Getting started</a><a href="/compatible-nas/">Compatibility</a><a href="/help/">Help</a><a href="/privacy/">Privacy</a><a href="https://play.google.com/store/apps/details?id=com.synomanager">Google Play</a><a href="https://apps.apple.com/us/app/syno-manager/id6763011668">App Store</a><a href="https://github.com/MiyaraHub/synomanager/issues">Report a bug</a><a href="https://miyarahub.com">MiyaraHub</a></div>
+    <p class="legal">&copy; MiyaraHub Technologies LLC. Syno Manager is an independent app and is not affiliated with, endorsed by, or sponsored by Synology Inc. Synology, DSM, DiskStation, RackStation, Hyper Backup, Active Backup, Surveillance Station and QuickConnect are trademarks of Synology Inc.</p>
+  </div>
+</footer>
+
+<script defer src="/assets/search.js"></script>
+<script defer src="/assets/lightbox.js"></script>
+</body>
+</html>

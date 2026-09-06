@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Back Up Your App Settings - Syno Manager</title>
+<meta name="description" content="Export Syno Manager's own settings to a file and restore them on a new phone. NAS connections, passwords and sessions are deliberately never included." />
+<meta name="keywords" content="Syno Manager backup settings, move NAS app to new phone, export app settings, restore Synology app settings" />
+<meta name="author" content="MiyaraHub Technologies LLC" />
+<meta name="robots" content="index, follow, max-image-preview:large" />
+<meta name="theme-color" content="#3b82f6" />
+<link rel="canonical" href="https://synomanager.com/guide/backup-restore/" />
+<meta property="og:title" content="Back Up Your App Settings - Syno Manager" />
+<meta property="og:description" content="Export Syno Manager's own settings to a file and restore them on a new phone. NAS connections, passwords and sessions are deliberately never included." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://synomanager.com/guide/backup-restore/" />
+<meta property="og:site_name" content="Syno Manager" />
+<meta property="og:image" content="https://synomanager.com/screenshots/settings-backup.webp" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Back Up Your App Settings - Syno Manager" />
+<meta name="twitter:description" content="Export Syno Manager's own settings to a file and restore them on a new phone. NAS connections, passwords and sessions are deliberately never included." />
+<meta name="twitter:image" content="https://synomanager.com/screenshots/settings-backup.webp" />
+<link rel="icon" href="../../assets/favicon.ico" sizes="any" />
+<link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png" />
+<link rel="icon" type="image/png" sizes="48x48" href="../../assets/favicon-48.png" />
+<link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preconnect" href="https://img.shields.io" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" />
+<link rel="stylesheet" href="../../assets/site.css" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "MiyaraHub Technologies LLC",
+  "url": "https://miyarahub.com",
+  "logo": "https://synomanager.com/assets/icon-192.png"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Syno Manager",
+  "url": "https://synomanager.com/",
+  "publisher": {
+    "@type": "Organization",
+    "name": "MiyaraHub Technologies LLC"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://synomanager.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "User Guide",
+      "item": "https://synomanager.com/guide/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Backup &amp; restore"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Back Up Your App Settings - Syno Manager",
+  "description": "Export Syno Manager's own settings to a file and restore them on a new phone. NAS connections, passwords and sessions are deliberately never included.",
+  "image": "https://synomanager.com/screenshots/settings-backup.webp",
+  "url": "https://synomanager.com/guide/backup-restore/",
+  "inLanguage": "en",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Syno Manager",
+    "url": "https://synomanager.com/"
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "MiyaraHub Technologies LLC"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "MiyaraHub Technologies LLC",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://synomanager.com/assets/icon-192.png"
+    }
+  },
+  "about": {
+    "@type": "SoftwareApplication",
+    "name": "Syno Manager",
+    "operatingSystem": "Android, iOS, macOS, Windows",
+    "applicationCategory": "UtilitiesApplication"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What does the settings backup include?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "App settings only: theme, navigation, dashboard layout, launch behaviour, categories, polling interval and temperature unit. NAS connections, passwords and sessions are never included."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why are my NAS credentials not backed up?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Because a portable file containing NAS passwords is a portable file containing NAS passwords. Credentials live in the device keychain or keystore, which is deliberately not somewhere an export can reach. You re-enter them once on the new phone."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I move to a new phone?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Export on the old one with Download or Share, get the file to the new phone, install the app, paste the file's contents into Restore, and add your NAS again. Everything else comes back as you had it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens to settings the file does not know about?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Only known app settings are applied and anything else in the file is ignored, so an older backup restored into a newer app leaves the new settings at their defaults instead of failing."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="/"><img src="../../assets/syno-manager-icon.png" alt="Syno Manager icon" width="104" height="104" decoding="async" /> Syno Manager</a>
+    <button class="nav-toggle" aria-label="Menu" onclick="document.getElementById('m').classList.toggle('open')">&#9776;</button>
+    <nav id="m">
+      <a href="/">Home</a>
+      <a href="/guide/" class="active">User Guide</a>
+      <a href="/#screenshots">Screenshots</a>
+      <a href="/compatible-nas/">Compatibility</a>
+      <a href="/best-synology-nas-app/">Why switch</a>
+      <a href="/help/">Help</a>
+      <a href="/#top" class="cta">Download</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero split">
+  <div class="wrap">
+    <div>
+      <div class="crumb"><a href="/">Home</a> &rsaquo; <a href="/guide/">User Guide</a> &rsaquo; Backup &amp; restore</div>
+      <div class="eyebrow">Backup &amp; restore</div>
+      <h1>Your setup, <span class="g">on the next phone</span></h1>
+      <p>One file holds every preference you have set - theme, bottom bar, dashboard layout, polling, units. It deliberately holds no credentials at all.</p>
+    </div>
+    <div class="hero-shot"><img alt="The Backup and Restore screen with Export and Restore" src="../../screenshots/settings-backup.webp" width="1324" height="2644" decoding="async" fetchpriority="high" /></div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">What is in the file</div>
+      <h2>And what is not</h2>
+    </div>
+    <div class="cols">
+      <div>
+        <h3>Included</h3>
+        <ul class="plain">
+          <li>Theme, surface, accent colour and text size.</li>
+          <li>The bottom navigation bar and its order.</li>
+          <li>Dashboard layout and which cards are on.</li>
+          <li>Dashboard categories.</li>
+          <li>Launch behaviour.</li>
+          <li>Polling interval.</li>
+          <li>Temperature unit.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Never included</h3>
+        <ul class="plain">
+          <li><b>NAS connections</b> - addresses, ports and options.</li>
+          <li><b>Passwords.</b></li>
+          <li><b>Sessions and 2FA device tokens.</b></li>
+        </ul>
+        <div class="note stop"><b>That exclusion is the point.</b> A file you can email to yourself and drop in a cloud folder is a file that can leak. Credentials live in the device keychain or keystore precisely so an export cannot reach them, and the app does not make an exception for its own convenience.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Export</div>
+      <h2>Getting the file out</h2>
+      <p class="lead"><b>Settings &rsaquo; Backup &amp; Restore</b>, then one of two buttons.</p>
+    </div>
+    <ul class="plain">
+      <li><b>Download</b> saves the JSON file straight to the device.</li>
+      <li><b>Share</b> hands it to the share sheet, so you can send it to Files, Drive, another app or yourself.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Restore</div>
+      <h2>Putting it back</h2>
+    </div>
+    <ol class="steps">
+      <li><b>Open the backup file</b> and copy its contents.</li>
+      <li><b>Paste into the Restore box</b>, or tap <b>Paste from clipboard</b>.</li>
+      <li><b>Tap Restore settings.</b></li>
+      <li><b>Add your NAS again</b> - that part was never in the file.</li>
+    </ol>
+    <div class="note"><b>Unknown entries are ignored, not rejected.</b> Only settings the app recognises are applied, so a backup taken from an older version restores cleanly into a newer one - the settings that did not exist then simply stay at their defaults.</div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Related</div>
+      <h2>Not to be confused with</h2>
+    </div>
+    <ul class="plain">
+      <li><b><a href="/guide/backup/">Hyper Backup and Active Backup</a></b> - your NAS backing up your data. Nothing to do with this screen.</li>
+      <li><b>DSM configuration backup</b> - the NAS's own settings, exported from DSM's Control Panel.</li>
+      <li><b>Device backups.</b> Syno Manager's stored credentials are deliberately <b>excluded</b> from Android and iOS device backups, so restoring a phone from a device backup will not carry NAS passwords with it.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Common questions</div>
+      <h2>Backup &amp; restore FAQ</h2>
+    </div>
+    <details open><summary>What does the settings backup include?</summary><div class="body">App settings only: theme, navigation, dashboard layout, launch behaviour, categories, polling interval and temperature unit. NAS connections, passwords and sessions are never included.</div></details>
+    <details><summary>Why are my NAS credentials not backed up?</summary><div class="body">Because a portable file containing NAS passwords is a portable file containing NAS passwords. Credentials live in the device keychain or keystore, which an export deliberately cannot reach.</div></details>
+    <details><summary>How do I move to a new phone?</summary><div class="body">Export on the old one, get the file across, install the app, paste the contents into Restore, and add your NAS again.</div></details>
+    <details><summary>What happens to settings the file does not know about?</summary><div class="body">Only known settings are applied and anything else is ignored, so an older backup restored into a newer app leaves the new settings at their defaults.</div></details>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <h2>Something not working?</h2>
+    <p class="lead" style="margin:0 auto 24px">The troubleshooting guide covers connection failures, blank tiles, missing tabs and stale widgets.</p>
+    <p><a class="btn" href="/help/">Troubleshooting &rarr;</a> &nbsp; <a class="btn ghost" href="/guide/">Back to the guide</a></p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="flinks"><a href="/">Home</a><a href="/guide/">User Guide</a><a href="/guide/getting-started/">Getting started</a><a href="/compatible-nas/">Compatibility</a><a href="/help/">Help</a><a href="/privacy/">Privacy</a><a href="https://play.google.com/store/apps/details?id=com.synomanager">Google Play</a><a href="https://apps.apple.com/us/app/syno-manager/id6763011668">App Store</a><a href="https://github.com/MiyaraHub/synomanager/issues">Report a bug</a><a href="https://miyarahub.com">MiyaraHub</a></div>
+    <p class="legal">&copy; MiyaraHub Technologies LLC. Syno Manager is an independent app and is not affiliated with, endorsed by, or sponsored by Synology Inc. Synology, DSM, DiskStation, RackStation, Hyper Backup, Active Backup, Surveillance Station and QuickConnect are trademarks of Synology Inc.</p>
+  </div>
+</footer>
+
+<script defer src="/assets/search.js"></script>
+<script defer src="/assets/lightbox.js"></script>
+</body>
+</html>

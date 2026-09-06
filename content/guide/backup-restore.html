@@ -1,0 +1,152 @@
+<!--meta
+{
+  "url": "/guide/backup-restore/",
+  "nav": "guide",
+  "priority": "0.65",
+  "title": "Back Up Your App Settings - Syno Manager",
+  "description": "Export Syno Manager's own settings to a file and restore them on a new phone. NAS connections, passwords and sessions are deliberately never included.",
+  "keywords": "Syno Manager backup settings, move NAS app to new phone, export app settings, restore Synology app settings",
+  "og_image": "screenshots/settings-backup.webp",
+  "og_type": "article",
+  "crumb": [
+    [
+      "Home",
+      "/"
+    ],
+    [
+      "User Guide",
+      "/guide/"
+    ],
+    [
+      "Backup &amp; restore",
+      null
+    ]
+  ],
+  "faq": [
+    [
+      "What does the settings backup include?",
+      "App settings only: theme, navigation, dashboard layout, launch behaviour, categories, polling interval and temperature unit. NAS connections, passwords and sessions are never included."
+    ],
+    [
+      "Why are my NAS credentials not backed up?",
+      "Because a portable file containing NAS passwords is a portable file containing NAS passwords. Credentials live in the device keychain or keystore, which is deliberately not somewhere an export can reach. You re-enter them once on the new phone."
+    ],
+    [
+      "How do I move to a new phone?",
+      "Export on the old one with Download or Share, get the file to the new phone, install the app, paste the file's contents into Restore, and add your NAS again. Everything else comes back as you had it."
+    ],
+    [
+      "What happens to settings the file does not know about?",
+      "Only known app settings are applied and anything else in the file is ignored, so an older backup restored into a newer app leaves the new settings at their defaults instead of failing."
+    ]
+  ]
+}
+-->
+<div class="hero split">
+  <div class="wrap">
+    <div>
+      {{CRUMB}}
+      <div class="eyebrow">Backup &amp; restore</div>
+      <h1>Your setup, <span class="g">on the next phone</span></h1>
+      <p>One file holds every preference you have set - theme, bottom bar, dashboard layout, polling, units. It deliberately holds no credentials at all.</p>
+    </div>
+    <div class="hero-shot"><img alt="The Backup and Restore screen with Export and Restore" src="{{PRE}}screenshots/settings-backup.webp" /></div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">What is in the file</div>
+      <h2>And what is not</h2>
+    </div>
+    <div class="cols">
+      <div>
+        <h3>Included</h3>
+        <ul class="plain">
+          <li>Theme, surface, accent colour and text size.</li>
+          <li>The bottom navigation bar and its order.</li>
+          <li>Dashboard layout and which cards are on.</li>
+          <li>Dashboard categories.</li>
+          <li>Launch behaviour.</li>
+          <li>Polling interval.</li>
+          <li>Temperature unit.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Never included</h3>
+        <ul class="plain">
+          <li><b>NAS connections</b> - addresses, ports and options.</li>
+          <li><b>Passwords.</b></li>
+          <li><b>Sessions and 2FA device tokens.</b></li>
+        </ul>
+        <div class="note stop"><b>That exclusion is the point.</b> A file you can email to yourself and drop in a cloud folder is a file that can leak. Credentials live in the device keychain or keystore precisely so an export cannot reach them, and the app does not make an exception for its own convenience.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Export</div>
+      <h2>Getting the file out</h2>
+      <p class="lead"><b>Settings &rsaquo; Backup &amp; Restore</b>, then one of two buttons.</p>
+    </div>
+    <ul class="plain">
+      <li><b>Download</b> saves the JSON file straight to the device.</li>
+      <li><b>Share</b> hands it to the share sheet, so you can send it to Files, Drive, another app or yourself.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Restore</div>
+      <h2>Putting it back</h2>
+    </div>
+    <ol class="steps">
+      <li><b>Open the backup file</b> and copy its contents.</li>
+      <li><b>Paste into the Restore box</b>, or tap <b>Paste from clipboard</b>.</li>
+      <li><b>Tap Restore settings.</b></li>
+      <li><b>Add your NAS again</b> - that part was never in the file.</li>
+    </ol>
+    <div class="note"><b>Unknown entries are ignored, not rejected.</b> Only settings the app recognises are applied, so a backup taken from an older version restores cleanly into a newer one - the settings that did not exist then simply stay at their defaults.</div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Related</div>
+      <h2>Not to be confused with</h2>
+    </div>
+    <ul class="plain">
+      <li><b><a href="/guide/backup/">Hyper Backup and Active Backup</a></b> - your NAS backing up your data. Nothing to do with this screen.</li>
+      <li><b>DSM configuration backup</b> - the NAS's own settings, exported from DSM's Control Panel.</li>
+      <li><b>Device backups.</b> Syno Manager's stored credentials are deliberately <b>excluded</b> from Android and iOS device backups, so restoring a phone from a device backup will not carry NAS passwords with it.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Common questions</div>
+      <h2>Backup &amp; restore FAQ</h2>
+    </div>
+    <details open><summary>What does the settings backup include?</summary><div class="body">App settings only: theme, navigation, dashboard layout, launch behaviour, categories, polling interval and temperature unit. NAS connections, passwords and sessions are never included.</div></details>
+    <details><summary>Why are my NAS credentials not backed up?</summary><div class="body">Because a portable file containing NAS passwords is a portable file containing NAS passwords. Credentials live in the device keychain or keystore, which an export deliberately cannot reach.</div></details>
+    <details><summary>How do I move to a new phone?</summary><div class="body">Export on the old one, get the file across, install the app, paste the contents into Restore, and add your NAS again.</div></details>
+    <details><summary>What happens to settings the file does not know about?</summary><div class="body">Only known settings are applied and anything else is ignored, so an older backup restored into a newer app leaves the new settings at their defaults.</div></details>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <h2>Something not working?</h2>
+    <p class="lead" style="margin:0 auto 24px">The troubleshooting guide covers connection failures, blank tiles, missing tabs and stale widgets.</p>
+    <p><a class="btn" href="/help/">Troubleshooting &rarr;</a> &nbsp; <a class="btn ghost" href="/guide/">Back to the guide</a></p>
+  </div>
+</section>

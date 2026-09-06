@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Privacy - What Syno Manager Sends</title>
+<meta name="description" content="Your NAS data never leaves your control: a direct connection, no server of ours, credentials in the keychain. Crash reports are the one thing that leaves." />
+<meta name="keywords" content="Syno Manager privacy, Synology app privacy, NAS app data collection, does the app send my data" />
+<meta name="author" content="MiyaraHub Technologies LLC" />
+<meta name="robots" content="index, follow, max-image-preview:large" />
+<meta name="theme-color" content="#3b82f6" />
+<link rel="canonical" href="https://synomanager.com/privacy/" />
+<meta property="og:title" content="Privacy - What Syno Manager Sends" />
+<meta property="og:description" content="Your NAS data never leaves your control: a direct connection, no server of ours, credentials in the keychain. Crash reports are the one thing that leaves." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://synomanager.com/privacy/" />
+<meta property="og:site_name" content="Syno Manager" />
+<meta property="og:image" content="https://synomanager.com/screenshots/about.webp" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Privacy - What Syno Manager Sends" />
+<meta name="twitter:description" content="Your NAS data never leaves your control: a direct connection, no server of ours, credentials in the keychain. Crash reports are the one thing that leaves." />
+<meta name="twitter:image" content="https://synomanager.com/screenshots/about.webp" />
+<link rel="icon" href="../assets/favicon.ico" sizes="any" />
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png" />
+<link rel="icon" type="image/png" sizes="48x48" href="../assets/favicon-48.png" />
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preconnect" href="https://img.shields.io" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" />
+<link rel="stylesheet" href="../assets/site.css" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "MiyaraHub Technologies LLC",
+  "url": "https://miyarahub.com",
+  "logo": "https://synomanager.com/assets/icon-192.png"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Syno Manager",
+  "url": "https://synomanager.com/",
+  "publisher": {
+    "@type": "Organization",
+    "name": "MiyaraHub Technologies LLC"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://synomanager.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Privacy"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does Syno Manager send my NAS data anywhere?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Your phone connects to your NAS directly, over your local network or whatever remote route you configured. There is no MiyaraHub server in that path, so your files, photos, camera footage, logs, usage figures and configuration never reach us or anybody else."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does anything leave my phone at all?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "One thing: crash reports. The app includes Firebase Crashlytics, which sends a diagnostic report when the app crashes - the stack trace, the device model and the app version. It exists so a crash can be fixed. It does not carry your NAS's data, your credentials or your files."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where are my NAS credentials stored?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In the platform's secure storage - the Keychain on iOS and the Keystore-backed store on Android - never in plain text. They are also explicitly excluded from Android cloud backup and device transfer, so restoring a phone from a backup does not carry your NAS passwords across."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the assistant send my questions to a server?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. It runs a model that is already on your device - Gemini Nano through AICore on Android, Apple Intelligence on iOS. It works with the network off, and the app's build fails if a cloud host, cloud SDK or API key appears anywhere in the assistant."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="/"><img src="../assets/syno-manager-icon.png" alt="Syno Manager icon" width="104" height="104" decoding="async" /> Syno Manager</a>
+    <button class="nav-toggle" aria-label="Menu" onclick="document.getElementById('m').classList.toggle('open')">&#9776;</button>
+    <nav id="m">
+      <a href="/">Home</a>
+      <a href="/guide/">User Guide</a>
+      <a href="/#screenshots">Screenshots</a>
+      <a href="/compatible-nas/">Compatibility</a>
+      <a href="/best-synology-nas-app/">Why switch</a>
+      <a href="/help/">Help</a>
+      <a href="/#top" class="cta">Download</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="crumb"><a href="/">Home</a> &rsaquo; Privacy</div>
+    <div class="eyebrow">Privacy</div>
+    <h1>What leaves the phone, <span class="g">and what does not</span></h1>
+    <p>Specific rather than reassuring. Below is what the app actually does, including the one thing that does get transmitted.</p>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">The short version</div>
+      <h2>Your NAS data never leaves your control</h2>
+    </div>
+    <div class="tscroll"><table class="t">
+      <thead><tr><th>Data</th><th>Where it goes</th></tr></thead>
+      <tbody>
+        <tr><td>Everything your NAS reports - system readings, storage, network, containers, packages, logs, users, tasks</td><td class="yes">Phone to NAS, directly. No server of ours in the path.</td></tr>
+        <tr><td>Your files, photos and camera streams</td><td class="yes">Phone to NAS, directly, over whichever route you configured.</td></tr>
+        <tr><td>Your DSM username, password and 2FA device token</td><td class="yes">The device keychain or keystore. Never transmitted anywhere but to your NAS, to sign in.</td></tr>
+        <tr><td>Your assistant questions and their answers</td><td class="yes">Nowhere. Handled by a model on the device.</td></tr>
+        <tr><td>App settings - theme, layout, polling, units</td><td class="yes">The device, unless you export them yourself.</td></tr>
+        <tr><td><b>Crash reports</b></td><td><b>Firebase Crashlytics.</b> The one thing that leaves. See below.</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">No middle</div>
+      <h2>There is no MiyaraHub server between you and your NAS</h2>
+      <p class="lead">This is architectural rather than a policy. Syno Manager is a client that speaks DSM's own API - the same one DSM's web interface calls - directly from your phone to your DiskStation.</p>
+    </div>
+    <ul class="plain">
+      <li><b>On your own network</b>, the connection is phone to NAS over the LAN.</li>
+      <li><b>Over QuickConnect</b>, it goes through Synology's relay - Synology's service, under your Synology account, not ours.</li>
+      <li><b>Over a domain or VPN</b>, it is a direct connection to your address.</li>
+      <li><b>In none of those cases</b> is there a MiyaraHub service in the path. There is nothing for your NAS's data to pass through, and nothing to store it in.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Credentials</div>
+      <h2>Where your password lives</h2>
+    </div>
+    <ul class="plain">
+      <li><b>The platform's secure storage.</b> The Keychain on iOS and macOS; the Keystore-backed encrypted store on Android. Never in plain text, and never in an ordinary preferences file.</li>
+      <li><b>Excluded from device backups.</b> The app explicitly excludes its secure-storage files from Android's cloud backup <em>and</em> device transfer, so restoring or migrating a phone does not carry your NAS passwords with it. You re-enter them once.</li>
+      <li><b>Excluded from the app's own settings export.</b> The <a href="/guide/backup-restore/">Backup &amp; Restore</a> file deliberately contains no connections, passwords or sessions - a portable file with NAS passwords in it is a portable file with NAS passwords in it.</li>
+      <li><b>Cleared when unreadable.</b> If stored credentials cannot be decrypted - which can happen after restoring onto new hardware - the app clears them and asks you to sign in, rather than retrying with something it cannot read.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">The exception</div>
+      <h2>Crash reports</h2>
+      <p class="lead">The app includes <b>Firebase Crashlytics</b>, and it is enabled. When the app crashes, a diagnostic report is sent so the crash can be found and fixed.</p>
+    </div>
+    <div class="cols">
+      <div>
+        <h3>What a crash report contains</h3>
+        <ul class="plain">
+          <li>The stack trace - which code failed, and where.</li>
+          <li>The device model and operating system version.</li>
+          <li>The app version and build number.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>What it does not contain</h3>
+        <ul class="plain">
+          <li>Your NAS's address, name or configuration.</li>
+          <li>Your DSM username, password or tokens.</li>
+          <li>Your files, photos, camera footage or logs.</li>
+          <li>Anything you asked the assistant.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="note"><b>Why it is here at all:</b> a crash that nobody can see is a crash that does not get fixed. The trade is a stack trace in exchange for the bug being found - and it is named here rather than buried, because a privacy page that quietly omits the one thing that transmits is not a privacy page.</div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">The assistant</div>
+      <h2>Enforced by the build, not by a promise</h2>
+      <p class="lead">The <a href="/guide/assistant/">on-device assistant</a> uses a model that is already on your phone. Your question, your NAS's data and the answer never leave the device, and it works with the network switched off.</p>
+    </div>
+    <p style="color:var(--steel);max-width:74ch">The part worth stating plainly: this is not a policy anyone has to remember. A check in the app's build <b>fails</b> if a cloud host, a cloud SDK or an API key appears anywhere in the assistant's code. The guarantee is structural.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Permissions</div>
+      <h2>What the app asks for, and why</h2>
+    </div>
+    <div class="tscroll"><table class="t">
+      <thead><tr><th>Permission</th><th>Why</th></tr></thead>
+      <tbody>
+        <tr><td>Local network (iOS)</td><td>To reach a NAS at an address on your own network. Without it, iOS silently blocks the connection.</td></tr>
+        <tr><td>Photo library</td><td>Only when you pick a file to send to your NAS. The app declares this on iOS and macOS and does not touch the library otherwise.</td></tr>
+        <tr><td>Microphone</td><td>Only for voice input in the assistant, and only if you use it. A device without a microphone is fully supported - the feature is simply absent.</td></tr>
+        <tr><td>Notifications</td><td>Optional, for the app's own alerts.</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">The formal document</div>
+      <h2>The full policy</h2>
+      <p class="lead">This page explains how the app behaves. The formal privacy policy for MiyaraHub Technologies applications is the canonical document, and the app links to it from About.</p>
+    </div>
+    <p style="margin-top:8px"><a class="btn ghost" href="https://miyarahub.com/privacy">Read the full privacy policy</a></p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Common questions</div>
+      <h2>Privacy FAQ</h2>
+    </div>
+    <details open><summary>Does Syno Manager send my NAS data anywhere?</summary><div class="body">No. Your phone connects to your NAS directly. There is no MiyaraHub server in that path, so your files, photos, camera footage, logs, usage figures and configuration never reach us or anybody else.</div></details>
+    <details><summary>Does anything leave my phone at all?</summary><div class="body">One thing: crash reports, through Firebase Crashlytics - the stack trace, the device model and the app version. It does not carry your NAS's data, your credentials or your files.</div></details>
+    <details><summary>Where are my NAS credentials stored?</summary><div class="body">In the platform's secure storage - the Keychain on iOS, the Keystore-backed store on Android - never in plain text, and explicitly excluded from Android cloud backup and device transfer.</div></details>
+    <details><summary>Does the assistant send my questions to a server?</summary><div class="body">No. It runs a model already on your device and works with the network off. The app's build fails if a cloud host, SDK or API key appears anywhere in the assistant.</div></details>
+    <details><summary>Are there ads or trackers?</summary><div class="body">There are no ads, no subscriptions and no in-app purchases in the app.</div></details>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <h2>Questions about any of this?</h2>
+    <p class="lead" style="margin:0 auto 24px">Ask in the tracker - it is public, so the answer helps the next person too.</p>
+    <p><a class="btn ghost" href="https://github.com/MiyaraHub/synomanager/issues">Open an issue</a></p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="flinks"><a href="/">Home</a><a href="/guide/">User Guide</a><a href="/guide/getting-started/">Getting started</a><a href="/compatible-nas/">Compatibility</a><a href="/help/">Help</a><a href="/privacy/">Privacy</a><a href="https://play.google.com/store/apps/details?id=com.synomanager">Google Play</a><a href="https://apps.apple.com/us/app/syno-manager/id6763011668">App Store</a><a href="https://github.com/MiyaraHub/synomanager/issues">Report a bug</a><a href="https://miyarahub.com">MiyaraHub</a></div>
+    <p class="legal">&copy; MiyaraHub Technologies LLC. Syno Manager is an independent app and is not affiliated with, endorsed by, or sponsored by Synology Inc. Synology, DSM, DiskStation, RackStation, Hyper Backup, Active Backup, Surveillance Station and QuickConnect are trademarks of Synology Inc.</p>
+  </div>
+</footer>
+
+<script defer src="/assets/search.js"></script>
+<script defer src="/assets/lightbox.js"></script>
+</body>
+</html>

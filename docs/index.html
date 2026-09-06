@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Syno Manager - Synology NAS App for Phone, Mac and PC</title>
+<meta name="description" content="Monitor and manage your Synology NAS from your phone: live CPU and storage, Docker, cameras, photos, backups and an on-device assistant. $6.99, no subs." />
+<meta name="keywords" content="Synology app, Synology NAS app, DSM mobile app, Synology monitoring app, DS Finder alternative, Synology Docker app, Synology Surveillance app, Synology Photos app, Hyper Backup app, Active Backup app, Download Station app, Synology Wake-on-LAN, QuickConnect app, Synology dashboard, NAS monitoring android, NAS monitoring ios" />
+<meta name="author" content="MiyaraHub Technologies LLC" />
+<meta name="robots" content="index, follow, max-image-preview:large" />
+<meta name="theme-color" content="#3b82f6" />
+<link rel="canonical" href="https://synomanager.com/" />
+<meta name="google-site-verification" content="PuGXNlWipSdY1xExK4XXpIIgn9wjO-qVcAWVLf70eM4" />
+<meta property="og:title" content="Syno Manager - your Synology NAS on every screen" />
+<meta property="og:description" content="Every part of DSM worth checking on a phone, in one fast app. Live monitoring, Docker, cameras, backups, files and an assistant that runs on your device." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://synomanager.com/" />
+<meta property="og:site_name" content="Syno Manager" />
+<meta property="og:image" content="https://synomanager.com/screenshots/dashboard.webp" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Syno Manager - your Synology NAS on every screen" />
+<meta name="twitter:description" content="Every part of DSM worth checking on a phone, in one fast app. Live monitoring, Docker, cameras, backups, files and an assistant that runs on your device." />
+<meta name="twitter:image" content="https://synomanager.com/screenshots/dashboard.webp" />
+<link rel="icon" href="assets/favicon.ico" sizes="any" />
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+<link rel="icon" type="image/png" sizes="48x48" href="assets/favicon-48.png" />
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preconnect" href="https://img.shields.io" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" />
+<link rel="stylesheet" href="assets/site.css" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "MiyaraHub Technologies LLC",
+  "url": "https://miyarahub.com",
+  "logo": "https://synomanager.com/assets/icon-192.png"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Syno Manager",
+  "url": "https://synomanager.com/",
+  "publisher": {
+    "@type": "Organization",
+    "name": "MiyaraHub Technologies LLC"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Syno Manager",
+  "operatingSystem": "Android, iOS, macOS, Windows",
+  "applicationCategory": "UtilitiesApplication",
+  "description": "A native Synology NAS monitoring and management app for Android, iOS, macOS and Windows. Live system, storage and network readings, Docker and Package Center control, Surveillance Station live view, Synology Photos and Drive, Hyper Backup and Active Backup, Download Station, Wake-on-LAN and an on-device assistant.",
+  "url": "https://synomanager.com/",
+  "image": "https://synomanager.com/screenshots/dashboard.webp",
+  "offers": {
+    "@type": "Offer",
+    "price": "6.99",
+    "priceCurrency": "USD"
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "MiyaraHub Technologies LLC",
+    "url": "https://miyarahub.com"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What does Syno Manager do?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Syno Manager puts the parts of DSM you actually check on a phone into one app: live CPU, RAM, temperature and network readings, storage volumes and per-drive SMART health, Docker containers, Package Center, Surveillance Station live view, Synology Photos and Drive, Hyper Backup and Active Backup, Download Station, File Station, users, scheduled tasks, UPS, DDNS and Wake-on-LAN. It talks to your NAS directly using DSM's own documented APIs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which Synology models does it work with?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Any Synology NAS running DSM 7.0 or later. The app reads what your particular NAS reports on connect and only shows the screens it actually supports, so a two-bay DS223j and a rackmount RS1221+ each get a dashboard that matches what they can do."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it work when I am away from home?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Add your NAS once and the app uses whatever route is reachable - your local IP at home, or QuickConnect, a custom domain or a VPN when you are out. Photos, camera live view, and File Station and Drive downloads all work over the QuickConnect relay, so no port forwarding is required."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does my data go through your servers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Your NAS data does not. Syno Manager connects to your NAS directly and there is no MiyaraHub server in that path, so your files, readings and configuration never reach us. Credentials are held in the device keychain or keystore, never in plain text, and are excluded from device backups. The assistant runs its model on your phone. The one thing that does leave the device is a crash report, through Firebase Crashlytics, which carries a stack trace, the device model and the app version - and none of your NAS data."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does Syno Manager cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A one-time purchase of $6.99, with no ads, no subscriptions and no in-app purchases - every feature is included, updates included. It is priced per platform, so Google Play and the Microsoft Store are separate purchases. Apple is a single universal purchase covering iPhone, iPad and Mac."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it support two-factor authentication?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. If your DSM account uses 2FA, the app prompts for your one-time code and can remember the device so you are not asked again on that phone. It also captures and sends DSM's SynoToken on every control action, which is what DSM requires of any client that changes something."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="/"><img src="assets/syno-manager-icon.png" alt="Syno Manager icon" width="104" height="104" decoding="async" /> Syno Manager</a>
+    <button class="nav-toggle" aria-label="Menu" onclick="document.getElementById('m').classList.toggle('open')">&#9776;</button>
+    <nav id="m">
+      <a href="/" class="active">Home</a>
+      <a href="/guide/">User Guide</a>
+      <a href="/#screenshots">Screenshots</a>
+      <a href="/compatible-nas/">Compatibility</a>
+      <a href="/best-synology-nas-app/">Why switch</a>
+      <a href="/help/">Help</a>
+      <a href="/#top" class="cta">Download</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero split" id="top">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">For Synology DSM 7</div>
+      <h1>Your NAS, <span class="g">wherever you are.</span></h1>
+      <p>Syno Manager is a native Synology app for Android, iOS, macOS and Windows. Live system, storage and network readings, Docker, cameras, photos, backups and files - the parts of DSM you actually check, in one fast app that adapts to exactly what your NAS runs.</p>
+      <div class="readout">
+        <span>DSM 7.0+</span><span>Android 7+</span><span>iOS 16+</span><span>macOS 11+</span><span>Windows</span>
+      </div>
+      <div class="badges"><a href="https://play.google.com/store/apps/details?id=com.synomanager"><img alt="Get it on Google Play" src="https://img.shields.io/badge/Google%20Play-Download-414141?logo=google-play&logoColor=white&style=for-the-badge" decoding="async" /></a><a href="https://apps.apple.com/us/app/syno-manager/id6763011668"><img alt="Download on the App Store" src="https://img.shields.io/badge/App%20Store-Download-0D96F6?logo=app-store&logoColor=white&style=for-the-badge" decoding="async" /></a><a href="https://apps.apple.com/us/app/syno-manager/id6763011668"><img alt="Download on the Mac App Store" src="https://img.shields.io/badge/Mac%20App%20Store-Download-1D1D1F?logo=apple&logoColor=white&style=for-the-badge" decoding="async" /></a><a href="https://apps.microsoft.com/detail/9P19N2B54N1R"><img alt="Get it on the Microsoft Store" src="https://img.shields.io/badge/Microsoft%20Store-Download-0078D4?logo=windows&logoColor=white&style=for-the-badge" decoding="async" /></a></div>
+      <div class="pills">
+        <span class="pill">$6.99 once*</span>
+        <span class="pill">No ads</span>
+        <span class="pill">No subscriptions</span>
+        <span class="pill">No cloud of ours</span>
+        <span class="pill">Multi-NAS</span>
+        <span class="pill">Works away from home</span>
+      </div>
+    </div>
+    <div class="hero-shot"><img alt="Syno Manager home screen showing a Synology RackStation at a glance" src="screenshots/dashboard.webp" width="1324" height="2644" decoding="async" fetchpriority="high" /></div>
+  </div>
+</div>
+
+<section id="why">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Why Syno Manager</div>
+      <h2>A native app, not a web console</h2>
+      <p class="lead">Checking whether a backup ran should not mean signing in to DSM and driving a browser UI built for a mouse. Syno Manager reads the same APIs DSM's own web interface uses and lays the answers out natively - on a phone, a tablet, a Mac or a PC, each one adapting to the screen it is on.</p>
+    </div>
+    <div class="grid">
+      <div class="gcard"><div class="ic">&#9889;</div><h3>Live, not cached</h3><p>CPU, memory, temperature, disk I/O and per-interface throughput update while you watch, at an interval you choose.</p></div>
+      <div class="gcard"><div class="ic">&#129513;</div><h3>Shaped by your NAS</h3><p>The app asks your NAS what it can do and hides everything it cannot. No dead buttons for packages you do not run.</p></div>
+      <div class="gcard"><div class="ic">&#128274;</div><h3>Direct connection</h3><p>Your device talks to your NAS. Nothing passes through a MiyaraHub server, because there isn't one.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="features">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">What's inside</div>
+      <h2>Deep where it counts</h2>
+      <p class="lead">Tap any area for the full guide - what every screen shows, what every control does, and what it will not do.</p>
+    </div>
+    <div class="grid">
+      <a class="gcard link" href="/guide/home/"><div class="ic">&#127968;</div><h3>The home screen &rsaquo;</h3><p>A health header, a quick-stats row and a grid of cards you can reorder, collapse or switch off. It remembers how you left it.</p></a>
+      <a class="gcard link" href="/guide/system/"><div class="ic">&#129504;</div><h3>System &amp; resources &rsaquo;</h3><p>CPU and RAM gauges, load average, disk I/O, temperature history, fan speed mode, the DSM update check and power controls.</p></a>
+      <a class="gcard link" href="/guide/storage/"><div class="ic">&#128190;</div><h3>Storage &amp; drives &rsaquo;</h3><p>Volumes and pools with RAID type and free space, per-drive SMART status and temperature, a Quick SMART Test, and safe eject for external drives.</p></a>
+      <a class="gcard link" href="/guide/network/"><div class="ic">&#127760;</div><h3>Network &rsaquo;</h3><p>Live throughput per interface, active connections, DSM services, VPN profiles, and DDNS with your public address.</p></a>
+      <a class="gcard link" href="/guide/apps/"><div class="ic">&#128230;</div><h3>Packages, Docker &amp; VMs &rsaquo;</h3><p>Browse the catalogue and install, update or uninstall. Start, stop and restart containers, read their logs, run whole Compose stacks.</p></a>
+      <a class="gcard link" href="/guide/media/"><div class="ic">&#128247;</div><h3>Photos, Drive &amp; cameras &rsaquo;</h3><p>Your whole photo library with real previews, Drive and team folders, and Surveillance Station live view - all of it over QuickConnect too.</p></a>
+      <a class="gcard link" href="/guide/backup/"><div class="ic">&#128260;</div><h3>Backups &rsaquo;</h3><p>Hyper Backup tasks with the space they actually take on the destination, and Active Backup devices with a deduplicated total per workload.</p></a>
+      <a class="gcard link" href="/guide/assistant/"><div class="ic">&#10024;</div><h3>The assistant &rsaquo;</h3><p>Ask about your NAS in plain words. The model runs on your phone, works with the network off, and only ever reads.</p></a>
+      <a class="gcard link" href="/guide/downloads/"><div class="ic">&#11015;&#65039;</div><h3>Download Station &rsaquo;</h3><p>Add a link, a magnet or a .torrent from your phone, watch progress, and change the settings the NAS actually reported.</p></a>
+      <a class="gcard link" href="/guide/files/"><div class="ic">&#128193;</div><h3>Files &amp; shares &rsaquo;</h3><p>Browse File Station, manage shared folders, and read Note Station, Office and Contacts.</p></a>
+      <a class="gcard link" href="/guide/wake-on-lan/"><div class="ic">&#128268;</div><h3>Wake-on-LAN &rsaquo;</h3><p>Wake the NAS, or any other machine on your network through the NAS - which works from anywhere, the way DS Router does it.</p></a>
+      <a class="gcard link" href="/guide/settings/#accents"><div class="ic">&#127912;</div><h3>Make it yours &rsaquo;</h3><p>Six accent colours or any one you pick, AMOLED true black, text size, which cards appear and which tabs are in the bottom bar. <b>See all six accents.</b></p></a>
+    </div>
+    <div class="note" style="margin-top:26px"><b>Also in the app:</b> <a href="/guide/apps/#package-center">Package Center</a> and <a href="/guide/apps/#virtual-machines">Virtual Machine Manager</a>, <a href="/guide/downloads/">Download Station settings</a>, <a href="/guide/network/#ddns">DDNS and your public IP</a>, <a href="/guide/wake-on-lan/">waking other devices</a> through the NAS, <a href="/guide/storage/#external">safe eject</a> for USB and eSATA, <a href="/guide/backup/">backup sizes</a> per task, <a href="/guide/shortcuts/">launcher and Siri shortcuts</a>, and <a href="/guide/assistant/">an assistant that runs on your device</a>.</div>
+  </div>
+</section>
+
+<section id="screenshots">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Screenshots</div>
+      <h2>A look inside</h2>
+      <p class="lead">Every shot on this site is the current app running against a real Synology, not a mock-up. Tap any of them to see it full size.</p>
+    </div>
+    <div class="shots-grid">
+      <button class="shot" onclick="synoLb('screenshots/dashboard.webp')" aria-label="Home screen"><img src="screenshots/dashboard.webp" loading="lazy" alt="Syno Manager home screen with health header, quick stats and cards" width="1324" height="2644" decoding="async" /><span class="shot-plat">Home</span></button>
+      <button class="shot" onclick="synoLb('screenshots/system-health.webp')" aria-label="System health"><img src="screenshots/system-health.webp" loading="lazy" alt="CPU and RAM gauges, load average, disk I/O and temperature history" width="1324" height="2644" decoding="async" /><span class="shot-plat">System</span></button>
+      <button class="shot" onclick="synoLb('screenshots/storage-volumes.webp')" aria-label="Storage volumes"><img src="screenshots/storage-volumes.webp" loading="lazy" alt="Storage volumes and pools with RAID type and free space" width="1324" height="2644" decoding="async" /><span class="shot-plat">Storage</span></button>
+      <button class="shot" onclick="synoLb('screenshots/docker.webp')" aria-label="Docker containers"><img src="screenshots/docker.webp" loading="lazy" alt="Docker container list with status and controls" width="1324" height="2644" decoding="async" /><span class="shot-plat">Docker</span></button>
+      <button class="shot" onclick="synoLb('screenshots/cameras.webp')" aria-label="Surveillance Station cameras"><img src="screenshots/cameras.webp" loading="lazy" alt="Surveillance Station camera grid" width="1324" height="2644" decoding="async" /><span class="shot-plat">Cameras</span></button>
+      <button class="shot" onclick="synoLb('screenshots/photos.webp')" aria-label="Synology Photos"><img src="screenshots/photos.webp" loading="lazy" alt="Synology Photos library with thumbnail previews" width="1324" height="2644" decoding="async" /><span class="shot-plat">Photos</span></button>
+      <button class="shot" onclick="synoLb('screenshots/backup-hyper.webp')" aria-label="Hyper Backup"><img src="screenshots/backup-hyper.webp" loading="lazy" alt="Hyper Backup tasks with backup size and next run" width="1324" height="2644" decoding="async" /><span class="shot-plat">Backup</span></button>
+      <button class="shot" onclick="synoLb('screenshots/packages.webp')" aria-label="Package Center"><img src="screenshots/packages.webp" loading="lazy" alt="Package Center showing installed DSM packages" width="1324" height="2644" decoding="async" /><span class="shot-plat">Packages</span></button>
+      <button class="shot" onclick="synoLb('screenshots/network.webp')" aria-label="Network"><img src="screenshots/network.webp" loading="lazy" alt="Live network throughput per interface" width="1324" height="2644" decoding="async" /><span class="shot-plat">Network</span></button>
+      <button class="shot" onclick="synoLb('screenshots/storage-disk-health.webp')" aria-label="Disk health"><img src="screenshots/storage-disk-health.webp" loading="lazy" alt="Per-drive SMART status and temperature" width="1324" height="2644" decoding="async" /><span class="shot-plat">Disk health</span></button>
+      <button class="shot" onclick="synoLb('screenshots/assistant.webp')" aria-label="The assistant"><img src="screenshots/assistant.webp" loading="lazy" alt="The on-device assistant ready to answer questions about the NAS" width="1324" height="2644" decoding="async" /><span class="shot-plat">Assistant</span></button>
+      <button class="shot" onclick="synoLb('screenshots/settings-theme.webp')" aria-label="Theme and colours"><img src="screenshots/settings-theme.webp" loading="lazy" alt="Theme and colour settings with accent picker and AMOLED surface" width="1324" height="2644" decoding="async" /><span class="shot-plat">Theme</span></button>
+      <button class="shot" onclick="synoLb('screenshots/download-settings.webp')" aria-label="Download Station settings"><img src="screenshots/download-settings.webp" loading="lazy" alt="Download Station settings read back from the NAS" width="1324" height="2644" decoding="async" /><span class="shot-plat">Downloads</span></button>
+      <button class="shot" onclick="synoLb('screenshots/dashboard-customize.webp')" aria-label="Customizing the home screen"><img src="screenshots/dashboard-customize.webp" loading="lazy" alt="Edit Dashboard mode with drag handles and remove buttons" width="1324" height="2644" decoding="async" /><span class="shot-plat">Customize</span></button>
+      <button class="shot" onclick="synoLb('screenshots/add-nas.webp')" aria-label="Adding a NAS"><img src="screenshots/add-nas.webp" loading="lazy" alt="The Add NAS form with Direct IP and QuickConnect options" width="1324" height="2644" decoding="async" /><span class="shot-plat">Add a NAS</span></button>
+    </div>
+  </div>
+</section>
+
+<style>
+  #screenshots .shots-grid{column-count:3;column-gap:16px;margin-top:8px}
+  #screenshots .shot{position:relative;display:block;width:100%;margin:0 0 16px;padding:0;border:0;background:none;cursor:pointer;break-inside:avoid}
+  #screenshots .shot img{width:100%;display:block;transition:transform .5s ease}
+  #screenshots .shot:hover img{transform:scale(1.03)}
+  #screenshots .shot-plat{position:absolute;top:18px;left:18px;font-family:var(--mono);font-size:.66rem;font-weight:500;letter-spacing:.07em;text-transform:uppercase;color:var(--vfd);background:rgba(11,13,20,.78);border:1px solid var(--edge-2);padding:4px 9px;border-radius:6px}
+  @media (max-width:900px){#screenshots .shots-grid{column-count:2}}
+  @media (max-width:600px){#screenshots .shots-grid{column-count:1}}
+  #synoLb{position:fixed;inset:0;background:rgba(8,10,16,.94);display:none;align-items:center;justify-content:center;z-index:999;padding:24px}
+  #synoLb.open{display:flex}
+  #synoLb img{max-width:92vw;max-height:88vh;box-shadow:0 24px 70px rgba(0,0,0,.6)}
+  #synoLb .x{position:absolute;top:16px;right:20px;width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:rgba(0,0,0,.3);color:#fff;font-size:1.5rem;cursor:pointer}
+</style>
+<div id="synoLb" onclick="this.classList.remove('open')"><button class="x" aria-label="Close">&times;</button><img id="synoLbImg" src="" alt="Syno Manager screenshot" /></div>
+<script>function synoLb(s){document.getElementById('synoLbImg').src=s;document.getElementById('synoLb').classList.add('open');}</script>
+
+<section id="privacy">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <div class="eyebrow">Privacy</div>
+        <h2>There is no server in the middle</h2>
+        <p class="lead">Syno Manager is a client for your NAS, not a service. Your phone opens a connection to your DiskStation and that is the whole architecture.</p>
+        <ul class="plain" style="margin-top:18px">
+          <li><b>No MiyaraHub server.</b> Nothing about your NAS reaches us, because there is nowhere in the path for it to go.</li>
+          <li><b>Credentials in the keychain.</b> Held in the platform's secure storage, never in plain text, and excluded from device backups.</li>
+          <li><b>2FA and device trust.</b> One-time codes are supported, and a trusted device is remembered so you are not asked every launch.</li>
+          <li><b>The assistant is on-device.</b> Your question, your NAS data and the answer never leave the phone.</li>
+          <li><b>One thing does leave:</b> crash reports, so a crash can be fixed. They carry a stack trace, not your NAS. <a href="/privacy/">The whole picture</a>.</li>
+        </ul>
+      </div>
+      <div>
+        <div class="eyebrow">Your NAS</div>
+        <h2>DSM 7.0 and later</h2>
+        <p class="lead">Every Synology running DSM 7 is supported, from a two-bay DiskStation to a rackmount with an expansion unit. The app discovers what your NAS offers rather than assuming a model.</p>
+        <p style="margin-top:16px"><a class="btn ghost" href="/compatible-nas/">Check your model</a> &nbsp; <a class="btn ghost" href="/guide/getting-started/">Getting started</a></p>
+        <div class="note" style="margin-top:22px"><b>Not sure it can reach your NAS?</b> If DSM's own web interface and Synology's apps can reach it on the same network, so can Syno Manager - it speaks the same API on the same port.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Common questions</div>
+      <h2>Synology on a phone, answered</h2>
+    </div>
+    <details open><summary>What does Syno Manager do?</summary><div class="body">It puts the parts of DSM you actually check on a phone into one app: live CPU, RAM, temperature and network readings, storage volumes and per-drive SMART health, Docker containers, Package Center, Surveillance Station live view, Synology Photos and Drive, Hyper Backup and Active Backup, Download Station, File Station, users, scheduled tasks, UPS, DDNS and Wake-on-LAN. It talks to your NAS directly using DSM's own documented APIs. The <a href="/guide/">User Guide</a> covers every screen.</div></details>
+    <details><summary>Which Synology models does it work with?</summary><div class="body">Any Synology NAS running DSM 7.0 or later. The app reads what your particular NAS reports on connect and only shows the screens it actually supports, so a two-bay DS223j and a rackmount RS1221+ each get a dashboard that matches what they can do. See <a href="/compatible-nas/">compatibility</a>.</div></details>
+    <details><summary>Does it work when I am away from home?</summary><div class="body">Yes. Add your NAS once and the app uses whatever route is reachable - your local IP at home, or QuickConnect, a custom domain or a VPN when you are out. Photos, camera live view, and File Station and Drive downloads all work over the QuickConnect relay, so no port forwarding is required. See <a href="/guide/remote-access/">remote access</a>.</div></details>
+    <details><summary>Does my data go through your servers?</summary><div class="body">Your NAS data does not. Syno Manager connects to your NAS directly and there is no MiyaraHub server in that path, so your files, readings and configuration never reach us. Credentials are held in the device keychain or keystore and are excluded from device backups, and the assistant runs its model on your phone. The one thing that does leave the device is a crash report, through Firebase Crashlytics - a stack trace, the device model and the app version, and none of your NAS data. <a href="/privacy/">The full detail is here</a>.</div></details>
+    <details><summary>How much does Syno Manager cost?</summary><div class="body">A one-time purchase of <b>$6.99</b>. No ads, no subscriptions and no in-app purchases - every feature is included, updates included.<p>It is priced <b>per platform</b>, so Google Play and the Microsoft Store are separate purchases. <b>Apple is a single universal purchase</b> covering iPhone, iPad and Mac - buy it once and it is on all three.</p></div></details>
+    <details><summary>Does it support two-factor authentication?</summary><div class="body">Yes. If your DSM account uses 2FA the app prompts for your one-time code and can remember the device so you are not asked again on that phone. It also captures and sends DSM's SynoToken on every control action, which is what DSM requires of any client that changes something.</div></details>
+    <details><summary>Can it manage more than one NAS?</summary><div class="body">Yes. Add as many as you like and switch between them from the device list. Each one keeps its own credentials, its own dashboard layout and its own settings. See <a href="/guide/multi-nas/">multiple NAS devices</a>.</div></details>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <h2>Get it on your phone</h2>
+    <p class="lead" style="margin:0 auto 26px">A one-time $6.99 purchase.* No ads, no subscriptions, no in-app purchases. Add your NAS and you are looking at it in under a minute.</p>
+    <div class="badges"><a href="https://play.google.com/store/apps/details?id=com.synomanager"><img alt="Get it on Google Play" src="https://img.shields.io/badge/Google%20Play-Download-414141?logo=google-play&logoColor=white&style=for-the-badge" decoding="async" /></a><a href="https://apps.apple.com/us/app/syno-manager/id6763011668"><img alt="Download on the App Store" src="https://img.shields.io/badge/App%20Store-Download-0D96F6?logo=app-store&logoColor=white&style=for-the-badge" decoding="async" /></a><a href="https://apps.apple.com/us/app/syno-manager/id6763011668"><img alt="Download on the Mac App Store" src="https://img.shields.io/badge/Mac%20App%20Store-Download-1D1D1F?logo=apple&logoColor=white&style=for-the-badge" decoding="async" /></a><a href="https://apps.microsoft.com/detail/9P19N2B54N1R"><img alt="Get it on the Microsoft Store" src="https://img.shields.io/badge/Microsoft%20Store-Download-0078D4?logo=windows&logoColor=white&style=for-the-badge" decoding="async" /></a></div>
+    <p class="capt" style="text-align:center;margin-top:14px">* One-time purchase per platform. Apple is a single universal purchase covering iPhone, iPad and Mac.</p>
+    <p style="margin-top:22px"><a class="btn ghost" href="https://github.com/MiyaraHub/synomanager/issues">Report a bug or request a feature</a></p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="flinks"><a href="/">Home</a><a href="/guide/">User Guide</a><a href="/guide/getting-started/">Getting started</a><a href="/compatible-nas/">Compatibility</a><a href="/help/">Help</a><a href="/privacy/">Privacy</a><a href="https://play.google.com/store/apps/details?id=com.synomanager">Google Play</a><a href="https://apps.apple.com/us/app/syno-manager/id6763011668">App Store</a><a href="https://github.com/MiyaraHub/synomanager/issues">Report a bug</a><a href="https://miyarahub.com">MiyaraHub</a></div>
+    <p class="legal">&copy; MiyaraHub Technologies LLC. Syno Manager is an independent app and is not affiliated with, endorsed by, or sponsored by Synology Inc. Synology, DSM, DiskStation, RackStation, Hyper Backup, Active Backup, Surveillance Station and QuickConnect are trademarks of Synology Inc.</p>
+  </div>
+</footer>
+
+<script defer src="/assets/search.js"></script>
+<script defer src="/assets/lightbox.js"></script>
+</body>
+</html>

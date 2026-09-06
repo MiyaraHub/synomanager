@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Shortcuts & Deep Links - Syno Manager</title>
+<meta name="description" content="The synomanager:// URL scheme opens the app on any screen, so Siri, launcher shortcuts and automation apps can jump straight to storage, apps or backup." />
+<meta name="keywords" content="synomanager url scheme, Synology app deep link, Siri shortcut NAS, Android shortcut Synology, NAS automation shortcut" />
+<meta name="author" content="MiyaraHub Technologies LLC" />
+<meta name="robots" content="index, follow, max-image-preview:large" />
+<meta name="theme-color" content="#3b82f6" />
+<link rel="canonical" href="https://synomanager.com/guide/shortcuts/" />
+<meta property="og:title" content="Shortcuts & Deep Links - Syno Manager" />
+<meta property="og:description" content="The synomanager:// URL scheme opens the app on any screen, so Siri, launcher shortcuts and automation apps can jump straight to storage, apps or backup." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://synomanager.com/guide/shortcuts/" />
+<meta property="og:site_name" content="Syno Manager" />
+<meta property="og:image" content="https://synomanager.com/screenshots/dashboard.webp" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Shortcuts & Deep Links - Syno Manager" />
+<meta name="twitter:description" content="The synomanager:// URL scheme opens the app on any screen, so Siri, launcher shortcuts and automation apps can jump straight to storage, apps or backup." />
+<meta name="twitter:image" content="https://synomanager.com/screenshots/dashboard.webp" />
+<link rel="icon" href="../../assets/favicon.ico" sizes="any" />
+<link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png" />
+<link rel="icon" type="image/png" sizes="48x48" href="../../assets/favicon-48.png" />
+<link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preconnect" href="https://img.shields.io" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" />
+<link rel="stylesheet" href="../../assets/site.css" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "MiyaraHub Technologies LLC",
+  "url": "https://miyarahub.com",
+  "logo": "https://synomanager.com/assets/icon-192.png"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Syno Manager",
+  "url": "https://synomanager.com/",
+  "publisher": {
+    "@type": "Organization",
+    "name": "MiyaraHub Technologies LLC"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://synomanager.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "User Guide",
+      "item": "https://synomanager.com/guide/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Shortcuts"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Shortcuts & Deep Links - Syno Manager",
+  "description": "The synomanager:// URL scheme opens the app on any screen, so Siri, launcher shortcuts and automation apps can jump straight to storage, apps or backup.",
+  "image": "https://synomanager.com/screenshots/dashboard.webp",
+  "url": "https://synomanager.com/guide/shortcuts/",
+  "inLanguage": "en",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Syno Manager",
+    "url": "https://synomanager.com/"
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "MiyaraHub Technologies LLC"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "MiyaraHub Technologies LLC",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://synomanager.com/assets/icon-192.png"
+    }
+  },
+  "about": {
+    "@type": "SoftwareApplication",
+    "name": "Syno Manager",
+    "operatingSystem": "Android, iOS, macOS, Windows",
+    "applicationCategory": "UtilitiesApplication"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does Syno Manager have a URL scheme?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. synomanager://<name> opens the app on a specific screen. Dashboard, storage, system, network, apps, backup, files and wake each have one, so Siri Shortcuts, Android launcher shortcuts and automation apps can jump straight to what you want."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can a shortcut restart my NAS in one tap?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, and deliberately. The reboot and shutdown links only open the app at the power controls, where the existing confirmation applies. A destructive action does not become one-tap because it was triggered from a launcher."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use these with Siri?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Create a shortcut in Apple's Shortcuts app that opens the URL, give it a phrase, and Siri will take you straight there."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do shortcuts pick a specific NAS?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. A shortcut opens a screen; which NAS it opens on follows your Launch Behavior setting."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="/"><img src="../../assets/syno-manager-icon.png" alt="Syno Manager icon" width="104" height="104" decoding="async" /> Syno Manager</a>
+    <button class="nav-toggle" aria-label="Menu" onclick="document.getElementById('m').classList.toggle('open')">&#9776;</button>
+    <nav id="m">
+      <a href="/">Home</a>
+      <a href="/guide/" class="active">User Guide</a>
+      <a href="/#screenshots">Screenshots</a>
+      <a href="/compatible-nas/">Compatibility</a>
+      <a href="/best-synology-nas-app/">Why switch</a>
+      <a href="/help/">Help</a>
+      <a href="/#top" class="cta">Download</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="crumb"><a href="/">Home</a> &rsaquo; <a href="/guide/">User Guide</a> &rsaquo; Shortcuts</div>
+    <div class="eyebrow">Shortcuts &amp; links</div>
+    <h1>Straight to the <span class="g">screen you want</span></h1>
+    <p>Syno Manager registers the <code>synomanager://</code> URL scheme, so a Siri phrase, a launcher shortcut or an automation app can open the app exactly where you need it instead of on the home screen.</p>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">The links</div>
+      <h2>Every shortcut</h2>
+    </div>
+    <div class="tscroll"><table class="t">
+      <thead><tr><th>Link</th><th>Opens</th></tr></thead>
+      <tbody>
+        <tr><td><code>synomanager://dashboard</code></td><td>The home screen.</td></tr>
+        <tr><td><code>synomanager://storage</code></td><td><a href="/guide/storage/">Storage</a> - volumes, disk health, external.</td></tr>
+        <tr><td><code>synomanager://system</code></td><td><a href="/guide/system/">System</a> - health, resources, logs.</td></tr>
+        <tr><td><code>synomanager://network</code></td><td><a href="/guide/network/">Network</a> - throughput, connections, services, VPN, DDNS.</td></tr>
+        <tr><td><code>synomanager://apps</code></td><td><a href="/guide/apps/">Apps</a> - packages, Docker, projects, virtual machines.</td></tr>
+        <tr><td><code>synomanager://backup</code></td><td><a href="/guide/backup/">Backup</a> - Hyper Backup and Active Backup.</td></tr>
+        <tr><td><code>synomanager://files</code></td><td><a href="/guide/files/">Files</a> - File Station and shares.</td></tr>
+        <tr><td><code>synomanager://wake</code></td><td>The <a href="/guide/wake-on-lan/">Wake devices</a> screen.</td></tr>
+        <tr><td><code>synomanager://reboot</code></td><td>The power controls. <b>Opens only</b> - see below.</td></tr>
+        <tr><td><code>synomanager://shutdown</code></td><td>The power controls. <b>Opens only</b> - see below.</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">A deliberate limit</div>
+      <h2>Why reboot and shutdown only open the app</h2>
+      <p class="lead">They take you to the power controls. They do not restart or shut down anything on their own.</p>
+    </div>
+    <p style="color:var(--steel);max-width:74ch">A shortcut is a thing you can hit by accident - a mis-tapped launcher icon, a misheard voice phrase, an automation that fires on the wrong trigger. Restarting a NAS disconnects everyone using it and interrupts whatever it was doing. Those two facts do not belong together, so the link stops at the screen and <a href="/guide/system/#power">the existing confirmation</a> still applies.</p>
+    <div class="note"><b>Every other link is safe by nature</b>, because all it does is show you something. That is why the rest are one tap and these two are not.</div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Using them</div>
+      <h2>On each platform</h2>
+    </div>
+    <div class="cols">
+      <div>
+        <h3>iOS - Siri and Shortcuts</h3>
+        <ol class="steps">
+          <li>Open <b>Shortcuts</b> and create a new shortcut.</li>
+          <li>Add the <b>Open URLs</b> action.</li>
+          <li>Enter the link, for example <code>synomanager://storage</code>.</li>
+          <li>Name it something you would say out loud - "Check my NAS storage".</li>
+          <li>Add it to the home screen, or just ask Siri.</li>
+        </ol>
+      </div>
+      <div>
+        <h3>Android - launchers and automation</h3>
+        <ol class="steps">
+          <li>Most launchers can place a shortcut that opens a URL.</li>
+          <li>Automation apps - Tasker, MacroDroid and the like - can open one from any trigger.</li>
+          <li>An <code>&lt;a href="synomanager://system"&gt;</code> link in a note or a page works too.</li>
+        </ol>
+      </div>
+    </div>
+    <div class="note" style="margin-top:24px"><b>Which NAS it opens on follows your <a href="/guide/settings/#launch">Launch Behavior</a> setting.</b> A shortcut chooses a screen, not a device - so with "Last NAS I used" set, <code>synomanager://storage</code> shows the storage of whichever NAS you were last on.</div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Common questions</div>
+      <h2>Shortcuts FAQ</h2>
+    </div>
+    <details open><summary>Does Syno Manager have a URL scheme?</summary><div class="body">Yes. <code>synomanager://&lt;name&gt;</code> opens the app on a specific screen. Dashboard, storage, system, network, apps, backup, files and wake each have one.</div></details>
+    <details><summary>Can a shortcut restart my NAS in one tap?</summary><div class="body">No, and deliberately. The reboot and shutdown links only open the app at the power controls, where the existing confirmation applies.</div></details>
+    <details><summary>Can I use these with Siri?</summary><div class="body">Yes. Create a shortcut in Apple's Shortcuts app that opens the URL, give it a phrase, and Siri will take you straight there.</div></details>
+    <details><summary>Do shortcuts pick a specific NAS?</summary><div class="body">No. A shortcut opens a screen; which NAS it opens on follows your Launch Behavior setting.</div></details>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <h2>Next: customizing</h2>
+    <p class="lead" style="margin:0 auto 24px">Cards, tabs, sub-views and the order they come in.</p>
+    <p><a class="btn" href="/guide/customizing/">Customizing the app &rarr;</a> &nbsp; <a class="btn ghost" href="/guide/">Back to the guide</a></p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="flinks"><a href="/">Home</a><a href="/guide/">User Guide</a><a href="/guide/getting-started/">Getting started</a><a href="/compatible-nas/">Compatibility</a><a href="/help/">Help</a><a href="/privacy/">Privacy</a><a href="https://play.google.com/store/apps/details?id=com.synomanager">Google Play</a><a href="https://apps.apple.com/us/app/syno-manager/id6763011668">App Store</a><a href="https://github.com/MiyaraHub/synomanager/issues">Report a bug</a><a href="https://miyarahub.com">MiyaraHub</a></div>
+    <p class="legal">&copy; MiyaraHub Technologies LLC. Syno Manager is an independent app and is not affiliated with, endorsed by, or sponsored by Synology Inc. Synology, DSM, DiskStation, RackStation, Hyper Backup, Active Backup, Surveillance Station and QuickConnect are trademarks of Synology Inc.</p>
+  </div>
+</footer>
+
+<script defer src="/assets/search.js"></script>
+<script defer src="/assets/lightbox.js"></script>
+</body>
+</html>

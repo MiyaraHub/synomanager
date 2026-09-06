@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The Home Screen - Syno Manager Guide</title>
+<meta name="description" content="The Syno Manager home screen: a health badge that names the cause, a quick-stats row, and every dashboard card - reorder, collapse or hide any of them." />
+<meta name="keywords" content="Synology dashboard app, NAS health at a glance, Synology CPU RAM phone, customizable NAS dashboard, Syno Manager home screen" />
+<meta name="author" content="MiyaraHub Technologies LLC" />
+<meta name="robots" content="index, follow, max-image-preview:large" />
+<meta name="theme-color" content="#3b82f6" />
+<link rel="canonical" href="https://synomanager.com/guide/home/" />
+<meta property="og:title" content="The Home Screen - Syno Manager Guide" />
+<meta property="og:description" content="The Syno Manager home screen: a health badge that names the cause, a quick-stats row, and every dashboard card - reorder, collapse or hide any of them." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://synomanager.com/guide/home/" />
+<meta property="og:site_name" content="Syno Manager" />
+<meta property="og:image" content="https://synomanager.com/screenshots/dashboard.webp" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="The Home Screen - Syno Manager Guide" />
+<meta name="twitter:description" content="The Syno Manager home screen: a health badge that names the cause, a quick-stats row, and every dashboard card - reorder, collapse or hide any of them." />
+<meta name="twitter:image" content="https://synomanager.com/screenshots/dashboard.webp" />
+<link rel="icon" href="../../assets/favicon.ico" sizes="any" />
+<link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png" />
+<link rel="icon" type="image/png" sizes="48x48" href="../../assets/favicon-48.png" />
+<link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preconnect" href="https://img.shields.io" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" />
+<link rel="stylesheet" href="../../assets/site.css" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "MiyaraHub Technologies LLC",
+  "url": "https://miyarahub.com",
+  "logo": "https://synomanager.com/assets/icon-192.png"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Syno Manager",
+  "url": "https://synomanager.com/",
+  "publisher": {
+    "@type": "Organization",
+    "name": "MiyaraHub Technologies LLC"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://synomanager.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "User Guide",
+      "item": "https://synomanager.com/guide/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "The home screen"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "The Home Screen - Syno Manager Guide",
+  "description": "The Syno Manager home screen: a health badge that names the cause, a quick-stats row, and every dashboard card - reorder, collapse or hide any of them.",
+  "image": "https://synomanager.com/screenshots/dashboard.webp",
+  "url": "https://synomanager.com/guide/home/",
+  "inLanguage": "en",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Syno Manager",
+    "url": "https://synomanager.com/"
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "MiyaraHub Technologies LLC"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "MiyaraHub Technologies LLC",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://synomanager.com/assets/icon-192.png"
+    }
+  },
+  "about": {
+    "@type": "SoftwareApplication",
+    "name": "Syno Manager",
+    "operatingSystem": "Android, iOS, macOS, Windows",
+    "applicationCategory": "UtilitiesApplication"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What does the health badge actually mean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is a summary of everything the app can read: drive SMART status, volume usage, system temperature, UPS charge, fan status and load average. Tap it and it tells you which of those is responsible rather than just saying Warning. A badge that cannot read something says so instead of showing a healthy tick over a failed read."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I choose which cards appear on the home screen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Tap the pencil at the top left to enter Edit Dashboard, then drag to reorder, tap the red minus to remove a card, Add to bring one back, Reset for the defaults and Done to finish. Cards for services your NAS does not run are never offered."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do collapsed cards stay collapsed?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Collapse state is remembered per view and survives closing the app. A collapsed row still carries a status glyph with its own shape - a tick, a triangle, a cross, a dash for unknown, an hourglass while loading - so it reads correctly to anyone who cannot separate red from green."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is a card I want missing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Either it is switched off in Edit Dashboard, or your NAS does not run the service behind it. Every card the NAS supports is on by default, so a missing one you never touched means the package is not installed."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="/"><img src="../../assets/syno-manager-icon.png" alt="Syno Manager icon" width="104" height="104" decoding="async" /> Syno Manager</a>
+    <button class="nav-toggle" aria-label="Menu" onclick="document.getElementById('m').classList.toggle('open')">&#9776;</button>
+    <nav id="m">
+      <a href="/">Home</a>
+      <a href="/guide/" class="active">User Guide</a>
+      <a href="/#screenshots">Screenshots</a>
+      <a href="/compatible-nas/">Compatibility</a>
+      <a href="/best-synology-nas-app/">Why switch</a>
+      <a href="/help/">Help</a>
+      <a href="/#top" class="cta">Download</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero split">
+  <div class="wrap">
+    <div>
+      <div class="crumb"><a href="/">Home</a> &rsaquo; <a href="/guide/">User Guide</a> &rsaquo; The home screen</div>
+      <div class="eyebrow">The home screen</div>
+      <h1>The whole NAS, <span class="g">one screen down</span></h1>
+      <p>A health header that names what is wrong, a row of the five numbers you check most, and a grid of cards you can reorder, collapse or switch off. It opens the way you left it.</p>
+    </div>
+    <div class="hero-shot"><img alt="Syno Manager home screen" src="../../screenshots/dashboard.webp" width="1324" height="2644" decoding="async" fetchpriority="high" /></div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="onthispage"><b>On this page</b><ul>
+      <li><a href="#header">The health header</a></li>
+      <li><a href="#quickstats">The quick-stats row</a></li>
+      <li><a href="#cards">Every card</a></li>
+      <li><a href="#collapse">Collapsing</a></li>
+      <li><a href="#edit">Edit Dashboard</a></li>
+      <li><a href="#refresh">Refreshing</a></li>
+    </ul></div>
+
+    <div class="section-head" id="header">
+      <div class="eyebrow">The header</div>
+      <h2>A badge that says <em>why</em></h2>
+      <p class="lead">The top card names your model, your nickname for it and its DSM version, with a health badge on the right. The badge is not decorative - tap it and it lists what fed the verdict.</p>
+    </div>
+    <div class="cols">
+      <div>
+        <h3>What it weighs up</h3>
+        <ul class="plain">
+          <li><b>Drive health</b> - SMART status on every drive.</li>
+          <li><b>Volume usage</b> - amber past 80% full, red past 90%.</li>
+          <li><b>System temperature</b> - amber past 50&deg;C, red past 60&deg;C.</li>
+          <li><b>Drive temperature</b> - amber past 45&deg;C, red past 55&deg;C.</li>
+          <li><b>UPS charge</b>, when a UPS is attached.</li>
+          <li><b>Fan status</b> and <b>load average</b> relative to the core count.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>What it will not do</h3>
+        <p style="color:var(--steel)">It will not show a healthy tick over a reading it could not take. If the app cannot reach the NAS, or a value came back missing, the header says <b>that</b> - loading, or unreachable - rather than quietly treating an absent number as a good one.</p>
+        <div class="note"><b>It folds too.</b> The header is the tallest thing on the screen and it collapses like everything else. Folded, it still reports the state it is actually in: the health it read, that it is still loading, or that it cannot reach the NAS.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head" id="quickstats">
+      <div class="eyebrow">Under the header</div>
+      <h2>The quick-stats row</h2>
+      <p class="lead">Five readings that answer "is it fine?" without scrolling.</p>
+    </div>
+    <div class="tscroll"><table class="t">
+      <thead><tr><th>Reading</th><th>What it tells you</th></tr></thead>
+      <tbody>
+        <tr><td>Temp</td><td>System temperature, in &deg;C or &deg;F depending on your <a href="/guide/settings/#preferences">preference</a>. Colours shift amber then red as it climbs.</td></tr>
+        <tr><td>Cooling</td><td>The fan speed mode the NAS is actually in - Full Speed, Cool or Quiet. Change it from <a href="/guide/system/#cooling">System</a>.</td></tr>
+        <tr><td>Sessions</td><td>How many connections DSM currently holds. Tap through to <a href="/guide/network/#connections">Active Connections</a> to see who they are.</td></tr>
+        <tr><td>Uptime</td><td>How long since the NAS last booted.</td></tr>
+        <tr><td>Time</td><td>The NAS's own clock and the time source it syncs against. A NAS whose clock has drifted breaks two-factor codes and makes log timestamps lie.</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head" id="cards">
+      <div class="eyebrow">The grid</div>
+      <h2>Every card you can put on it</h2>
+      <p class="lead">Each card is a summary with a way into the full screen. <b>Only cards your NAS supports are offered</b> - the app asks DSM what it can do and never shows a card for a package that is not installed. Tap a card's title to open the screen it summarises.</p>
+    </div>
+    <div class="tscroll"><table class="t">
+      <thead><tr><th>Card</th><th>What it shows</th><th>Opens</th></tr></thead>
+      <tbody>
+        <tr><td>System</td><td>CPU and RAM gauges with the user share broken out.</td><td><a href="/guide/system/">System Health</a></td></tr>
+        <tr><td>Storage</td><td>Each volume with RAID type, a usage bar, used and free.</td><td><a href="/guide/storage/">Volumes &amp; Pools</a></td></tr>
+        <tr><td>Network</td><td>Live download and upload on the primary interface, with a sparkline.</td><td><a href="/guide/network/">Network</a></td></tr>
+        <tr><td>Resource Monitor</td><td>Rolling CPU, memory and disk I/O charts.</td><td><a href="/guide/system/#resources">Resources</a></td></tr>
+        <tr><td>Disk Health</td><td>SMART state and temperature per drive.</td><td><a href="/guide/storage/#disk-health">Disk Health</a></td></tr>
+        <tr><td>Firmware</td><td>DSM version and whether an update is waiting.</td><td><a href="/guide/system/#dsm-update">System Health</a></td></tr>
+        <tr><td>Packages</td><td>How many DSM packages are installed and running.</td><td><a href="/guide/apps/#package-center">Package Center</a></td></tr>
+        <tr><td>Docker</td><td>Running versus total containers, and the first few by name with uptime.</td><td><a href="/guide/apps/#docker">Docker</a></td></tr>
+        <tr><td>Docker Projects</td><td>Compose stacks and how many are up.</td><td><a href="/guide/apps/#projects">Projects</a></td></tr>
+        <tr><td>Virtual Machines</td><td>Virtual machines and their power state.</td><td><a href="/guide/apps/#virtual-machines">Virtual Machines</a></td></tr>
+        <tr><td>Surveillance</td><td>How many cameras are online out of the total.</td><td><a href="/guide/media/#cameras">Cameras</a></td></tr>
+        <tr><td>Photos</td><td>Library size and album count.</td><td><a href="/guide/media/#photos">Photos</a></td></tr>
+        <tr><td>Drive</td><td>Synology Drive and team folders.</td><td><a href="/guide/media/#drive">Drive</a></td></tr>
+        <tr><td>Backup</td><td>Hyper Backup tasks with size and next run.</td><td><a href="/guide/backup/">Backup</a></td></tr>
+        <tr><td>Active Backup</td><td>Devices and tasks under Active Backup for Business.</td><td><a href="/guide/backup/#active">Active Backup</a></td></tr>
+        <tr><td>Download Station</td><td>Active downloads with speed and progress.</td><td><a href="/guide/downloads/">Download Station</a></td></tr>
+        <tr><td>Task Scheduler</td><td>Enabled versus disabled tasks and the next few to run.</td><td><a href="/guide/control-panel/#tasks">Tasks</a></td></tr>
+        <tr><td>UPS Status</td><td>Model, charge, estimated runtime and whether it is online.</td><td><a href="/guide/control-panel/#ups">Power</a></td></tr>
+        <tr><td>DDNS &amp; External IP</td><td>Your public address and the hostname the NAS publishes, with a refresh.</td><td><a href="/guide/network/#ddns">DDNS</a></td></tr>
+        <tr><td>Log Center</td><td>The most recent system log entries, read once with a refresh button.</td><td><a href="/guide/system/#logs">Logs</a></td></tr>
+        <tr><td>Shared Folders</td><td>Share names, their volume and whether they carry ACLs.</td><td><a href="/guide/files/#shares">Shared Folders</a></td></tr>
+        <tr><td>Active Connections</td><td>Who is signed in, from where, over which protocol.</td><td><a href="/guide/network/#connections">Connections</a></td></tr>
+        <tr><td>Services</td><td>Running versus stopped DSM services.</td><td><a href="/guide/network/#services">Services</a></td></tr>
+        <tr><td>Users</td><td>DSM accounts and their state.</td><td><a href="/guide/control-panel/#users">Users</a></td></tr>
+        <tr><td>File Browser</td><td>A way into File Station.</td><td><a href="/guide/files/">File Station</a></td></tr>
+        <tr><td>USB Devices / External Storage</td><td>Attached USB and eSATA devices, with safe eject.</td><td><a href="/guide/storage/#external">External</a></td></tr>
+        <tr><td>VPN</td><td>VPN client profiles configured on the NAS.</td><td><a href="/guide/network/#vpn">VPN</a></td></tr>
+        <tr><td>Notifications</td><td>How DSM is set to notify you - push, email, SMS.</td><td>Notification settings</td></tr>
+        <tr><td>Note Station / Office / Contacts</td><td>Notebooks, documents and address books.</td><td><a href="/guide/files/">Files</a></td></tr>
+      </tbody>
+    </table></div>
+    <div class="shots one" style="margin-top:26px"><img alt="Dashboard cards for Docker and Surveillance Station, each summarising and linking to its screen" src="../../screenshots/dashboard-cards.webp" width="1324" height="2644" decoding="async" loading="lazy" /></div>
+    <p class="capt" style="text-align:center">Two cards in the grid: each summarises, then opens the full screen.</p>
+    <div class="note"><b>A card that goes nowhere tells you why.</b> If you hide a sub-view and then tap the card that opens it, the app says it is hidden and offers to take you to Customize - rather than silently landing you on some other screen, which is what a broken link feels like.</div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head" id="collapse">
+      <div class="eyebrow">Fold what you do not read</div>
+      <h2>Collapsing, and what survives it</h2>
+      <p class="lead">Tap the chevron on any card to fold it. The choice is remembered per view and survives closing the app, so the dashboard opens the way you left it rather than resetting every launch.</p>
+    </div>
+    <ul class="plain">
+      <li><b>A collapsed card still reports.</b> The row keeps a status glyph, and each glyph has its own <em>shape</em> - a tick for healthy, a triangle for warning, a cross for a problem, a dash for unknown, an hourglass while it loads. It reads the same to anyone who cannot separate red from green, and every glyph names itself to a screen reader.</li>
+      <li><b>Long titles scroll rather than being cut.</b> A title too wide for the collapsed row moves rather than being clipped mid-word.</li>
+      <li><b>The header folds too</b>, and keeps reporting its real state when it does.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head" id="edit">
+      <div class="eyebrow">Edit Dashboard</div>
+      <h2>Reorder, remove, reset</h2>
+    </div>
+    <div class="with-shot">
+      <div>
+        <p class="lead">Tap the <b>pencil</b> at the top left of the home screen. The toolbar appears and every card grows a drag handle and a red minus.</p>
+        <ol class="steps" style="margin-top:20px">
+          <li><b>Drag</b> a card by its handle to move it.</li>
+          <li><b>Tap the red minus</b> to take a card off the dashboard. It is not deleted, only hidden.</li>
+          <li><b>Add</b> opens the list of cards you have removed, so you can put one back.</li>
+          <li><b>Reset</b> restores the default set and order.</li>
+          <li><b>Done</b> leaves edit mode. The layout is saved as you go.</li>
+        </ol>
+        <div class="note"><b>Cards keep working while you edit.</b> They render live data in edit mode rather than turning into grey boxes, so you can see what you are moving. A card that is still fetching when you enter edit mode may look empty for a moment - that is the fetch, not the card.</div>
+        <div class="note" style="margin-top:14px"><b>Per NAS, not per app.</b> Each NAS you add keeps its own layout, so a media server and a backup target do not have to look the same.</div>
+      </div>
+      <img alt="Edit Dashboard mode with the toolbar, drag handles and remove buttons" src="../../screenshots/dashboard-customize.webp" width="1324" height="2644" decoding="async" loading="lazy" />
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head" id="refresh">
+      <div class="eyebrow">Keeping current</div>
+      <h2>How often it refreshes</h2>
+      <p class="lead">Live readings poll on a timer you set in <a href="/guide/settings/#preferences">Settings &rsaquo; Polling Interval</a>: system values on the short interval, storage on a longer one, because volume usage does not change every five seconds and asking costs battery.</p>
+    </div>
+    <ul class="plain">
+      <li><b>Pull down to refresh</b> everything at once, whatever the interval is set to.</li>
+      <li><b>Logs do not poll.</b> The Log Center card reads once and has a refresh button, rather than re-reading on a timer whether or not you are looking at it.</li>
+      <li><b>Polling stops in the background.</b> The app is not draining your battery while it is not on screen.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Common questions</div>
+      <h2>Home screen FAQ</h2>
+    </div>
+    <details open><summary>What does the health badge actually mean?</summary><div class="body">It is a summary of everything the app can read: drive SMART status, volume usage, system temperature, UPS charge, fan status and load average. Tap it and it tells you which of those is responsible rather than just saying Warning. A badge that cannot read something says so instead of showing a healthy tick over a failed read.</div></details>
+    <details><summary>Can I choose which cards appear?</summary><div class="body">Yes - tap the pencil to enter Edit Dashboard, then drag to reorder, tap the red minus to remove, Add to bring one back, Reset for defaults, Done to finish. Cards for services your NAS does not run are never offered.</div></details>
+    <details><summary>Do collapsed cards stay collapsed?</summary><div class="body">Yes, per view, and it survives closing the app. A collapsed row still carries a status glyph with its own shape, so it reads correctly without relying on colour.</div></details>
+    <details><summary>Why is a card I want missing?</summary><div class="body">Either it is switched off in Edit Dashboard, or your NAS does not run the service behind it. Every card the NAS supports is on by default, so a missing one you never touched means the package is not installed.</div></details>
+    <details><summary>Can the home screen differ per NAS?</summary><div class="body">Yes. Layout, order and collapse state are stored per NAS, so each device opens the way you arranged it.</div></details>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <h2>Next: System</h2>
+    <p class="lead" style="margin:0 auto 24px">Gauges, load, temperature history, fan mode, DSM updates and power controls.</p>
+    <p><a class="btn" href="/guide/system/">System &amp; resources &rarr;</a> &nbsp; <a class="btn ghost" href="/guide/">Back to the guide</a></p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="flinks"><a href="/">Home</a><a href="/guide/">User Guide</a><a href="/guide/getting-started/">Getting started</a><a href="/compatible-nas/">Compatibility</a><a href="/help/">Help</a><a href="/privacy/">Privacy</a><a href="https://play.google.com/store/apps/details?id=com.synomanager">Google Play</a><a href="https://apps.apple.com/us/app/syno-manager/id6763011668">App Store</a><a href="https://github.com/MiyaraHub/synomanager/issues">Report a bug</a><a href="https://miyarahub.com">MiyaraHub</a></div>
+    <p class="legal">&copy; MiyaraHub Technologies LLC. Syno Manager is an independent app and is not affiliated with, endorsed by, or sponsored by Synology Inc. Synology, DSM, DiskStation, RackStation, Hyper Backup, Active Backup, Surveillance Station and QuickConnect are trademarks of Synology Inc.</p>
+  </div>
+</footer>
+
+<script defer src="/assets/search.js"></script>
+<script defer src="/assets/lightbox.js"></script>
+</body>
+</html>

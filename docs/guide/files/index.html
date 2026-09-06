@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>File Station, Shares & Notes - Syno Manager</title>
+<meta name="description" content="Browse File Station and download files from your Synology, manage shared folders, and read Note Station, Synology Office and Contacts from your phone." />
+<meta name="keywords" content="Synology File Station app, Synology shared folders phone, Note Station app, Synology Office app, Synology Contacts app, Synology download file phone" />
+<meta name="author" content="MiyaraHub Technologies LLC" />
+<meta name="robots" content="index, follow, max-image-preview:large" />
+<meta name="theme-color" content="#3b82f6" />
+<link rel="canonical" href="https://synomanager.com/guide/files/" />
+<meta property="og:title" content="File Station, Shares & Notes - Syno Manager" />
+<meta property="og:description" content="Browse File Station and download files from your Synology, manage shared folders, and read Note Station, Synology Office and Contacts from your phone." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://synomanager.com/guide/files/" />
+<meta property="og:site_name" content="Syno Manager" />
+<meta property="og:image" content="https://synomanager.com/screenshots/files-station.webp" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="File Station, Shares & Notes - Syno Manager" />
+<meta name="twitter:description" content="Browse File Station and download files from your Synology, manage shared folders, and read Note Station, Synology Office and Contacts from your phone." />
+<meta name="twitter:image" content="https://synomanager.com/screenshots/files-station.webp" />
+<link rel="icon" href="../../assets/favicon.ico" sizes="any" />
+<link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png" />
+<link rel="icon" type="image/png" sizes="48x48" href="../../assets/favicon-48.png" />
+<link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preconnect" href="https://img.shields.io" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" />
+<link rel="stylesheet" href="../../assets/site.css" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "MiyaraHub Technologies LLC",
+  "url": "https://miyarahub.com",
+  "logo": "https://synomanager.com/assets/icon-192.png"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Syno Manager",
+  "url": "https://synomanager.com/",
+  "publisher": {
+    "@type": "Organization",
+    "name": "MiyaraHub Technologies LLC"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://synomanager.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "User Guide",
+      "item": "https://synomanager.com/guide/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Files"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "File Station, Shares & Notes - Syno Manager",
+  "description": "Browse File Station and download files from your Synology, manage shared folders, and read Note Station, Synology Office and Contacts from your phone.",
+  "image": "https://synomanager.com/screenshots/files-station.webp",
+  "url": "https://synomanager.com/guide/files/",
+  "inLanguage": "en",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Syno Manager",
+    "url": "https://synomanager.com/"
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "MiyaraHub Technologies LLC"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "MiyaraHub Technologies LLC",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://synomanager.com/assets/icon-192.png"
+    }
+  },
+  "about": {
+    "@type": "SoftwareApplication",
+    "name": "Syno Manager",
+    "operatingSystem": "Android, iOS, macOS, Windows",
+    "applicationCategory": "UtilitiesApplication"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can I download a file from my NAS to my phone?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Open File Station, find the file and download it. On mobile the share sheet takes over, so you can save it, open it in another app or send it on. On Windows and macOS you get a native Save As dialog. Downloads work over QuickConnect too, so being away from home does not stop them."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I create a shared folder from the app?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, from the Shared Folders sub-view. Existing shares show their name, their volume, their description and whether they carry ACL permissions."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I read my Note Station notes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The Notes sub-view shows your notebooks with a note count and a tag count, and you can open any note to read it in full, create a notebook, or add a note."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does Synology Office only show a status?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Because Office documents are stored in and opened through Synology Drive. The app reports that Office is installed and which document types it supports; editing a spreadsheet on a phone belongs in Synology's own Drive app."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="/"><img src="../../assets/syno-manager-icon.png" alt="Syno Manager icon" width="104" height="104" decoding="async" /> Syno Manager</a>
+    <button class="nav-toggle" aria-label="Menu" onclick="document.getElementById('m').classList.toggle('open')">&#9776;</button>
+    <nav id="m">
+      <a href="/">Home</a>
+      <a href="/guide/" class="active">User Guide</a>
+      <a href="/#screenshots">Screenshots</a>
+      <a href="/compatible-nas/">Compatibility</a>
+      <a href="/best-synology-nas-app/">Why switch</a>
+      <a href="/help/">Help</a>
+      <a href="/#top" class="cta">Download</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero split">
+  <div class="wrap">
+    <div>
+      <div class="crumb"><a href="/">Home</a> &rsaquo; <a href="/guide/">User Guide</a> &rsaquo; Files</div>
+      <div class="eyebrow">Files</div>
+      <h1>Your shares, <span class="g">from anywhere</span></h1>
+      <p>File Station and Shared Folders, plus the three DSM apps that are really about content: Note Station, Synology Office and Contacts. If Download Station is installed it lives here too - it has <a href="/guide/downloads/">its own page</a>.</p>
+    </div>
+    <div class="hero-shot"><img alt="File Station browsing shared folders" src="../../screenshots/files-station.webp" width="1324" height="2644" decoding="async" fetchpriority="high" /></div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="onthispage"><b>On this page</b><ul>
+      <li><a href="#file-station">File Station</a></li>
+      <li><a href="#shares">Shared Folders</a></li>
+      <li><a href="#notes">Note Station</a></li>
+      <li><a href="#office">Synology Office</a></li>
+      <li><a href="#contacts">Contacts</a></li>
+    </ul></div>
+
+    <div class="section-head" id="file-station">
+      <div class="eyebrow">File Station</div>
+      <h2>Browse and download</h2>
+      <p class="lead">Starts at <b>Root</b> - every shared folder your account can see - and walks down from there. The breadcrumb at the top shows where you are and takes you back up.</p>
+    </div>
+    <ul class="plain">
+      <li><b>Folders and files</b>, each with the detail DSM holds: size, created and modified dates, owner and permissions.</li>
+      <li><b>Download</b> any file. On Android and iOS the share sheet opens, so you can save it, open it elsewhere or send it on. On Windows and macOS you get a native <b>Save As</b> dialog.</li>
+      <li><b>It works away from home.</b> Downloads go over whatever route the NAS is reachable on, QuickConnect relay included.</li>
+      <li><b>Upload a file to the NAS</b> by picking it from your device.</li>
+    </ul>
+    <div class="note"><b>What you can see is what DSM lets you see.</b> File Station here respects your DSM account's permissions exactly - a folder your account cannot read does not appear, the same as in the web interface.</div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head" id="shares">
+      <div class="eyebrow">Shared Folders</div>
+      <h2>The shares themselves</h2>
+    </div>
+    <div class="with-shot">
+      <div>
+        <p class="lead">Not the files - the shares. Each entry shows its name, the volume it sits on, its description and an <b>ACL</b> chip when it carries access-control permissions.</p>
+        <ul class="plain" style="margin-top:16px">
+          <li><b>Create a shared folder</b> with the button at the bottom right.</li>
+          <li><b>The overflow on each row</b> holds what you can do to that share.</li>
+          <li><b>Encrypted shares</b> are identified as such, so you can tell at a glance which ones need unlocking after a reboot.</li>
+        </ul>
+        <div class="note"><b>Where a share lives matters.</b> The volume is shown on every row, which is the fastest way to answer "which volume is filling up" when you are looking at a full one on the <a href="/guide/storage/">Storage</a> screen.</div>
+      </div>
+      <img alt="Shared folders with volume, description and ACL chips" src="../../screenshots/files-shared.webp" width="1324" height="2644" decoding="async" loading="lazy" />
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head" id="notes">
+      <div class="eyebrow">Note Station</div>
+      <h2>Notebooks and notes</h2>
+    </div>
+    <div class="with-shot left">
+      <img alt="Note Station notebooks with note counts" src="../../screenshots/notes.webp" width="1324" height="2644" decoding="async" loading="lazy" />
+      <div>
+        <p class="lead">A summary at the top - total notes, notebooks and tags - then <b>All Notes</b> and each notebook with its own count.</p>
+        <ul class="plain" style="margin-top:16px">
+          <li><b>Open any note</b> and read its full content.</li>
+          <li><b>Create a notebook</b> or <b>add a note</b> with the two buttons at the bottom right.</li>
+          <li><b>Delete a notebook</b> from its row.</li>
+        </ul>
+        <p class="capt" style="margin-top:18px">Three notebook titles in this screenshot are blurred - they are a real NAS's.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head" id="office">
+      <div class="eyebrow">Synology Office</div>
+      <h2>Installed, and what it supports</h2>
+    </div>
+    <div class="with-shot">
+      <div>
+        <p class="lead">A status screen rather than an editor: the version of Synology Office your NAS runs, and which document types it supports - <b>Documents</b>, <b>Spreadsheets</b> and <b>Slides</b> - each with a tick.</p>
+        <div class="note"><b>Why it stops there.</b> Office documents are stored in and opened through Synology Drive. Rather than build half a spreadsheet editor into a NAS monitor, the app tells you Office is there and points you at Drive, which is where the documents actually live.</div>
+      </div>
+      <img alt="Synology Office status with Documents, Spreadsheets and Slides" src="../../screenshots/office.webp" width="1324" height="2644" decoding="async" loading="lazy" />
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head" id="contacts">
+      <div class="eyebrow">Contacts</div>
+      <h2>Address books</h2>
+    </div>
+    <div class="with-shot left">
+      <img alt="Synology Contacts address books with contact counts" src="../../screenshots/contacts.webp" width="1324" height="2644" decoding="async" loading="lazy" />
+      <div>
+        <p class="lead">A total across every address book, then each book with its own count - including books imported from Google, which appear alongside the ones created on the NAS.</p>
+        <ul class="plain" style="margin-top:16px">
+          <li><b>Search across everything</b> from the box at the top.</li>
+          <li><b>Expand a book</b> to see the contacts in it; the sections collapse so a book with two thousand entries does not swamp one with six.</li>
+          <li><b>Add a contact</b> to a specific book from its row, or with the button at the bottom right.</li>
+          <li><b>Edit or delete</b> an existing contact.</li>
+        </ul>
+        <p class="capt" style="margin-top:18px">One address book name is blurred - it is a real address.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Common questions</div>
+      <h2>Files FAQ</h2>
+    </div>
+    <details open><summary>Can I download a file from my NAS to my phone?</summary><div class="body">Yes. Open File Station, find the file and download it. On mobile the share sheet takes over; on Windows and macOS you get a native Save As dialog. Downloads work over QuickConnect too.</div></details>
+    <details><summary>Can I create a shared folder from the app?</summary><div class="body">Yes, from the Shared Folders sub-view. Existing shares show their name, their volume, their description and whether they carry ACL permissions.</div></details>
+    <details><summary>Can I read my Note Station notes?</summary><div class="body">Yes. The Notes sub-view shows your notebooks with a note count and a tag count, and you can open any note to read it in full, create a notebook, or add a note.</div></details>
+    <details><summary>Why does Synology Office only show a status?</summary><div class="body">Because Office documents are stored in and opened through Synology Drive. The app reports that Office is installed and which document types it supports; editing a document belongs in Synology's Drive app.</div></details>
+    <details><summary>Why can I not see a folder I know exists?</summary><div class="body">File Station here respects your DSM account's permissions exactly. A folder your account cannot read does not appear, the same as in the web interface. Sign in as an account that can see it.</div></details>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <h2>Next: Download Station</h2>
+    <p class="lead" style="margin:0 auto 24px">Add by link, magnet or .torrent, and change the settings your NAS reported.</p>
+    <p><a class="btn" href="/guide/downloads/">Download Station &rarr;</a> &nbsp; <a class="btn ghost" href="/guide/">Back to the guide</a></p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="flinks"><a href="/">Home</a><a href="/guide/">User Guide</a><a href="/guide/getting-started/">Getting started</a><a href="/compatible-nas/">Compatibility</a><a href="/help/">Help</a><a href="/privacy/">Privacy</a><a href="https://play.google.com/store/apps/details?id=com.synomanager">Google Play</a><a href="https://apps.apple.com/us/app/syno-manager/id6763011668">App Store</a><a href="https://github.com/MiyaraHub/synomanager/issues">Report a bug</a><a href="https://miyarahub.com">MiyaraHub</a></div>
+    <p class="legal">&copy; MiyaraHub Technologies LLC. Syno Manager is an independent app and is not affiliated with, endorsed by, or sponsored by Synology Inc. Synology, DSM, DiskStation, RackStation, Hyper Backup, Active Backup, Surveillance Station and QuickConnect are trademarks of Synology Inc.</p>
+  </div>
+</footer>
+
+<script defer src="/assets/search.js"></script>
+<script defer src="/assets/lightbox.js"></script>
+</body>
+</html>

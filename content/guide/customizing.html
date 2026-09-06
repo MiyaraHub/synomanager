@@ -1,0 +1,142 @@
+<!--meta
+{
+  "url": "/guide/customizing/",
+  "nav": "guide",
+  "priority": "0.75",
+  "title": "Customize Cards, Tabs & Views - Syno Manager",
+  "description": "Reorder or hide dashboard cards, choose the tabs in the bottom bar, pick which sections appear inside each tab, and collapse what you do not read.",
+  "keywords": "customize NAS app, Synology app reorder cards, hide tabs Synology app, Synology app layout, customize views Synology",
+  "og_image": "screenshots/customize-views.webp",
+  "og_type": "article",
+  "crumb": [
+    [
+      "Home",
+      "/"
+    ],
+    [
+      "User Guide",
+      "/guide/"
+    ],
+    [
+      "Customizing",
+      null
+    ]
+  ],
+  "faq": [
+    [
+      "What can I rearrange in Syno Manager?",
+      "Four things: which dashboard cards appear and in what order, which tabs are in the bottom bar and in what order, which sub-views appear inside each tab and in what order, and whether each card is expanded or collapsed. All four are remembered."
+    ],
+    [
+      "How do I hide a section inside a tab?",
+      "Open the tab, tap the three-dot menu at the top right and choose Customize views. Untick what you do not want and drag the rest into order. At least one view has to stay visible."
+    ],
+    [
+      "I hid something and now a card does nothing.",
+      "It does something - it tells you the view is hidden and offers a Customize button that takes you straight to the setting. It will not silently open a different screen, which is what it used to do and what reads as a broken link."
+    ],
+    [
+      "Is my layout stored on the NAS or on the phone?",
+      "On the phone. Dashboard layout, card order and collapse state are kept per NAS on that device. To move them to a new phone, use Backup and Restore."
+    ]
+  ]
+}
+-->
+<div class="hero split">
+  <div class="wrap">
+    <div>
+      {{CRUMB}}
+      <div class="eyebrow">Customizing</div>
+      <h1>Four layers, <span class="g">all remembered</span></h1>
+      <p>Cards, tabs, sub-views and collapse state. Every one of them can be reordered or switched off, every one is remembered between launches, and every one can be reset.</p>
+    </div>
+    <div class="hero-shot"><img alt="Customize Views with a live preview and drag handles" src="{{PRE}}screenshots/customize-views.webp" /></div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">The map</div>
+      <h2>Where each one lives</h2>
+    </div>
+    <div class="tscroll"><table class="t">
+      <thead><tr><th>Layer</th><th>Where</th><th>Stored</th></tr></thead>
+      <tbody>
+        <tr><td>Dashboard cards</td><td>The pencil on the home screen, or <b>Settings &rsaquo; Dashboard Categories</b></td><td>Per NAS</td></tr>
+        <tr><td>Bottom navigation bar</td><td><b>Settings &rsaquo; Customize Navigation</b></td><td>App-wide</td></tr>
+        <tr><td>Sub-views inside a tab</td><td>The tab's <b>&#8942; menu &rsaquo; Customize views</b></td><td>Per NAS</td></tr>
+        <tr><td>Collapsed or expanded</td><td>The chevron on any card, with the default in <b>Settings &rsaquo; Default Card View</b></td><td>Per NAS</td></tr>
+        <tr><td>Help cards</td><td>Dismiss on the card; restore in <b>Settings &rsaquo; Help</b></td><td>App-wide</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Inside a tab</div>
+      <h2>Customize views</h2>
+      <p class="lead">Every tab with more than one section has a <b>&#8942;</b> menu at the top right, and <b>Customize views</b> in it.</p>
+    </div>
+    <ul class="plain">
+      <li><b>A live preview</b> of the sub-view row sits at the top, so you can see the result before saving.</li>
+      <li><b>A checkbox per view</b> to show or hide it.</li>
+      <li><b>A drag handle</b> to reorder - the first one in the list is the one the tab opens on.</li>
+      <li><b>At least one view must stay visible</b>, so a tab cannot be made empty.</li>
+      <li><b>Reset</b> restores the defaults; <b>Save</b> applies.</li>
+    </ul>
+    <div class="note"><b>This is how you make a tab open where you want.</b> If you always want the System tab to land on Logs, drag Logs to the top. The tab now opens there.</div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">A design rule</div>
+      <h2>Nothing you hide becomes a dead end</h2>
+      <p class="lead">Hiding things creates a trap: a dashboard card whose screen you have hidden. Tap it, and where does it go?</p>
+    </div>
+    <p style="color:var(--steel);max-width:74ch">It used to go to whatever that tab's first section happened to be - so hiding Disk Health and then tapping the Disk Health card landed you on Volumes &amp; Pools, with no explanation. That reads as a broken app.</p>
+    <p style="color:var(--steel);max-width:74ch;margin-top:12px">Now the card <b>tells you</b>. If the view is hidden it says so and offers a <b>Customize</b> button that takes you straight to the setting that would bring it back. If your NAS does not run the service at all, it says that instead - a different problem with a different answer, and the app does not confuse the two.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Starting over</div>
+      <h2>Putting it all back</h2>
+    </div>
+    <ul class="plain">
+      <li><b>Dashboard:</b> <b>Reset</b> in the edit toolbar restores the default cards and order.</li>
+      <li><b>Bottom bar:</b> <b>Reset</b> in Customize Navigation.</li>
+      <li><b>Sub-views:</b> <b>Reset</b> in each tab's Customize views.</li>
+      <li><b>Help cards:</b> <b>Restore all</b> in Settings &rsaquo; Help, or restore them one at a time.</li>
+      <li><b>Everything, on a new phone:</b> <a href="/guide/backup-restore/">export and restore</a> the app's settings.</li>
+    </ul>
+    <div class="note"><b>New cards arrive switched on.</b> When a version adds a card your NAS supports, it appears rather than waiting to be discovered in a settings screen. Customize is where you turn things off - not where you go to find out what exists.</div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Common questions</div>
+      <h2>Customizing FAQ</h2>
+    </div>
+    <details open><summary>What can I rearrange?</summary><div class="body">Which dashboard cards appear and in what order, which tabs are in the bottom bar and in what order, which sub-views appear inside each tab and in what order, and whether each card is expanded or collapsed. All four are remembered.</div></details>
+    <details><summary>How do I hide a section inside a tab?</summary><div class="body">Open the tab, tap the three-dot menu at the top right and choose Customize views. Untick what you do not want and drag the rest into order. At least one view has to stay visible.</div></details>
+    <details><summary>I hid something and now a card does nothing.</summary><div class="body">It tells you the view is hidden and offers a Customize button that takes you to the setting. It will not silently open a different screen.</div></details>
+    <details><summary>Is my layout stored on the NAS or on the phone?</summary><div class="body">On the phone, per NAS. To move it to a new phone, use Backup and Restore.</div></details>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <h2>Next: away from home</h2>
+    <p class="lead" style="margin:0 auto 24px">QuickConnect, domains, VPNs, and which features work over which route.</p>
+    <p><a class="btn" href="/guide/remote-access/">Remote access &rarr;</a> &nbsp; <a class="btn ghost" href="/guide/">Back to the guide</a></p>
+  </div>
+</section>

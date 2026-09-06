@@ -1,0 +1,163 @@
+<!--meta
+{
+  "url": "/guide/widgets/",
+  "nav": "guide",
+  "priority": "0.7",
+  "title": "Home Screen Widgets - Syno Manager",
+  "description": "System Status, Storage Overview and Quick Actions widgets for Android and iOS - each showing when its numbers were taken, so a stale reading looks stale.",
+  "keywords": "Synology widget android, Synology widget ios, NAS home screen widget, Synology status widget, NAS storage widget",
+  "og_image": "screenshots/dashboard.webp",
+  "og_type": "article",
+  "crumb": [
+    [
+      "Home",
+      "/"
+    ],
+    [
+      "User Guide",
+      "/guide/"
+    ],
+    [
+      "Widgets",
+      null
+    ]
+  ],
+  "faq": [
+    [
+      "What widgets does Syno Manager have?",
+      "Three: System Status at 2x2 for health at a glance, Storage Overview for volume usage, and Quick Actions at 4x1 for jumping straight into a screen. All three are available on Android and iOS."
+    ],
+    [
+      "Why does my widget show an old number?",
+      "Because the operating system decides when a widget may refresh, not the app. A phone saving battery can leave a widget untouched for hours. That is why each widget shows when its data was captured - so an old reading looks old instead of looking current."
+    ],
+    [
+      "What does never updated mean on a widget?",
+      "That the widget has not managed a single successful reading yet - usually because it was only just added, or the app has not been opened since. It is shown as never updated rather than as a zero, because a zero would read as a real measurement."
+    ],
+    [
+      "How do I add a widget?",
+      "On Android, long-press the home screen, choose Widgets, find Syno Manager and drag the one you want. On iOS, long-press the home screen, tap the plus, search for Syno Manager and pick a size."
+    ]
+  ]
+}
+-->
+<div class="hero">
+  <div class="wrap">
+    {{CRUMB}}
+    <div class="eyebrow">Widgets</div>
+    <h1>Your NAS on the <span class="g">home screen</span></h1>
+    <p>Three widgets on both Android and iOS - and each one tells you when its numbers were taken, which turns out to matter more than the numbers.</p>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">The three</div>
+      <h2>What each widget shows</h2>
+    </div>
+    <div class="with-shot">
+      <div>
+        <div class="tscroll"><table class="t">
+          <thead><tr><th>Widget</th><th>Size</th><th>Shows</th></tr></thead>
+          <tbody>
+            <tr><td>System Status</td><td>2&times;2</td><td>NAS health at a glance - the state of the machine, without opening anything.</td></tr>
+            <tr><td>Storage Overview</td><td>-</td><td>Volume usage, so a volume filling up is visible from the launcher.</td></tr>
+            <tr><td>Quick Actions</td><td>4&times;1</td><td>Straight into a screen you use often, without going through the home screen first.</td></tr>
+          </tbody>
+        </table></div>
+        <div class="note">All three appear under <b>Syno Manager</b> in your launcher's widget picker, which is where the sizes above come from.</div>
+      </div>
+      <img alt="The launcher widget picker showing Quick Actions, Storage Overview and System Status under Syno Manager" src="{{PRE}}screenshots/widget-picker.webp" />
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Adding one</div>
+      <h2>How to place a widget</h2>
+    </div>
+    <div class="cols">
+      <div>
+        <h3>Android</h3>
+        <ol class="steps">
+          <li><b>Long-press</b> an empty part of the home screen.</li>
+          <li><b>Tap Widgets.</b></li>
+          <li><b>Find Syno Manager</b> in the list.</li>
+          <li><b>Drag the widget</b> you want onto the home screen and resize it.</li>
+        </ol>
+      </div>
+      <div>
+        <h3>iOS</h3>
+        <ol class="steps">
+          <li><b>Long-press</b> the home screen until the icons wobble.</li>
+          <li><b>Tap the plus</b> at the top.</li>
+          <li><b>Search for Syno Manager.</b></li>
+          <li><b>Pick a size</b> and tap Add Widget.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">The important part</div>
+      <h2>Why every widget carries a timestamp</h2>
+      <p class="lead">A widget only refreshes when the operating system lets it. Android and iOS both ration widget updates aggressively to save battery, so a figure on your home screen can be hours older than it looks - and a stale reading that looks current is worse than no reading at all.</p>
+    </div>
+    <div class="tscroll"><table class="t">
+      <thead><tr><th>What it says</th><th>What it means</th></tr></thead>
+      <tbody>
+        <tr><td>just now</td><td>Read within the last minute.</td></tr>
+        <tr><td>12m ago</td><td>Under an hour old, in minutes.</td></tr>
+        <tr><td>5h ago</td><td>Under a day old, in hours.</td></tr>
+        <tr><td>2d ago</td><td>A day or more. Treat as historical.</td></tr>
+        <tr><td>never updated</td><td>No successful reading yet - freshly added, or the app has not run since. <b>Never shown as a zero</b>, because a zero reads as a measurement.</td></tr>
+      </tbody>
+    </table></div>
+    <div class="note"><b>Anything older than six hours is treated as stale</b> and marked as such, rather than presented as the current state of your NAS.</div>
+    <p style="color:var(--steel);margin-top:18px;max-width:72ch">The distinction this preserves is a real one: <b>a quiet NAS and a stale widget look identical</b> without a timestamp. "CPU 4%, taken 3 minutes ago" and "CPU 4%, taken yesterday" are different facts, and only one of them is worth acting on.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Keeping them current</div>
+      <h2>If a widget is not refreshing</h2>
+    </div>
+    <ul class="plain">
+      <li><b>Open the app.</b> The surest refresh is the app running and reading the NAS.</li>
+      <li><b>Check battery optimisation on Android.</b> An app restricted in the background gets fewer widget refreshes. Excluding Syno Manager from optimisation helps.</li>
+      <li><b>Check Background App Refresh on iOS.</b> Settings, then the app - if it is off, iOS will rarely wake the widget.</li>
+      <li><b>Remember the NAS has to be reachable.</b> A widget cannot read a NAS the phone cannot reach - on mobile data with a local-IP-only entry, it will not update until you are home.</li>
+    </ul>
+    <div class="note"><b>Neither platform guarantees a refresh interval.</b> No app can force one, which is exactly why the timestamp is there instead of a promise.</div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Common questions</div>
+      <h2>Widget FAQ</h2>
+    </div>
+    <details open><summary>What widgets does Syno Manager have?</summary><div class="body">Three: <b>System Status</b> (2&times;2) for health at a glance, <b>Storage Overview</b> for volume usage, and <b>Quick Actions</b> (4&times;1) for jumping straight into a screen. All three are available on Android and iOS.</div></details>
+    <details><summary>Why does my widget show an old number?</summary><div class="body">Because the operating system decides when a widget may refresh, not the app. That is why each widget shows when its data was captured - so an old reading looks old instead of looking current.</div></details>
+    <details><summary>What does never updated mean?</summary><div class="body">That the widget has not managed a successful reading yet - usually because it was just added, or the app has not been opened since. It is shown as never updated rather than as a zero.</div></details>
+    <details><summary>How do I add a widget?</summary><div class="body">On Android, long-press the home screen, choose Widgets, find Syno Manager and drag one across. On iOS, long-press the home screen, tap the plus, search for Syno Manager and pick a size.</div></details>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <h2>Next: shortcuts</h2>
+    <p class="lead" style="margin:0 auto 24px">Deep links, launcher shortcuts and Siri.</p>
+    <p><a class="btn" href="/guide/shortcuts/">Shortcuts &amp; links &rarr;</a> &nbsp; <a class="btn ghost" href="/guide/">Back to the guide</a></p>
+  </div>
+</section>

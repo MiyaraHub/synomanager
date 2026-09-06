@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Access Your NAS Remotely - Syno Manager</title>
+<meta name="description" content="Reach your Synology from anywhere with QuickConnect, a custom domain or a VPN. Which features work over which route, including photos and camera live view." />
+<meta name="keywords" content="Synology QuickConnect app, access NAS remotely phone, Synology DDNS remote access, Synology VPN access, NAS without port forwarding" />
+<meta name="author" content="MiyaraHub Technologies LLC" />
+<meta name="robots" content="index, follow, max-image-preview:large" />
+<meta name="theme-color" content="#3b82f6" />
+<link rel="canonical" href="https://synomanager.com/guide/remote-access/" />
+<meta property="og:title" content="Access Your NAS Remotely - Syno Manager" />
+<meta property="og:description" content="Reach your Synology from anywhere with QuickConnect, a custom domain or a VPN. Which features work over which route, including photos and camera live view." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://synomanager.com/guide/remote-access/" />
+<meta property="og:site_name" content="Syno Manager" />
+<meta property="og:image" content="https://synomanager.com/screenshots/add-nas.webp" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Access Your NAS Remotely - Syno Manager" />
+<meta name="twitter:description" content="Reach your Synology from anywhere with QuickConnect, a custom domain or a VPN. Which features work over which route, including photos and camera live view." />
+<meta name="twitter:image" content="https://synomanager.com/screenshots/add-nas.webp" />
+<link rel="icon" href="../../assets/favicon.ico" sizes="any" />
+<link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png" />
+<link rel="icon" type="image/png" sizes="48x48" href="../../assets/favicon-48.png" />
+<link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preconnect" href="https://img.shields.io" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" />
+<link rel="stylesheet" href="../../assets/site.css" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "MiyaraHub Technologies LLC",
+  "url": "https://miyarahub.com",
+  "logo": "https://synomanager.com/assets/icon-192.png"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Syno Manager",
+  "url": "https://synomanager.com/",
+  "publisher": {
+    "@type": "Organization",
+    "name": "MiyaraHub Technologies LLC"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://synomanager.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "User Guide",
+      "item": "https://synomanager.com/guide/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Away from home"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Access Your NAS Remotely - Syno Manager",
+  "description": "Reach your Synology from anywhere with QuickConnect, a custom domain or a VPN. Which features work over which route, including photos and camera live view.",
+  "image": "https://synomanager.com/screenshots/add-nas.webp",
+  "url": "https://synomanager.com/guide/remote-access/",
+  "inLanguage": "en",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Syno Manager",
+    "url": "https://synomanager.com/"
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "MiyaraHub Technologies LLC"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "MiyaraHub Technologies LLC",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://synomanager.com/assets/icon-192.png"
+    }
+  },
+  "about": {
+    "@type": "SoftwareApplication",
+    "name": "Syno Manager",
+    "operatingSystem": "Android, iOS, macOS, Windows",
+    "applicationCategory": "UtilitiesApplication"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do I need to forward ports to use my NAS remotely?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. QuickConnect relays the connection through Synology's service without any router configuration, and a VPN into your network works too. Port forwarding is only needed if you specifically want a direct route from the internet."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do photos and camera live view work over QuickConnect?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Thumbnails, full images, camera live view, and File Station and Drive downloads all go over whatever route is active, including the QuickConnect relay. The relay is slower than your own network, but it works."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I add my NAS twice?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is a good pattern. One entry by local IP for when you are at home - fast, direct - and one by QuickConnect for when you are out. They are separate entries with separate layouts and switching takes one tap."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is QuickConnect secure?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The connection is encrypted end to end when you use HTTPS, and Synology's relay passes traffic through rather than holding your data. Your DSM credentials still apply, and two-factor authentication still works."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="/"><img src="../../assets/syno-manager-icon.png" alt="Syno Manager icon" width="104" height="104" decoding="async" /> Syno Manager</a>
+    <button class="nav-toggle" aria-label="Menu" onclick="document.getElementById('m').classList.toggle('open')">&#9776;</button>
+    <nav id="m">
+      <a href="/">Home</a>
+      <a href="/guide/" class="active">User Guide</a>
+      <a href="/#screenshots">Screenshots</a>
+      <a href="/compatible-nas/">Compatibility</a>
+      <a href="/best-synology-nas-app/">Why switch</a>
+      <a href="/help/">Help</a>
+      <a href="/#top" class="cta">Download</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero split">
+  <div class="wrap">
+    <div>
+      <div class="crumb"><a href="/">Home</a> &rsaquo; <a href="/guide/">User Guide</a> &rsaquo; Away from home</div>
+      <div class="eyebrow">Away from home</div>
+      <h1>The same app, <span class="g">a different route</span></h1>
+      <p>Syno Manager works the same whether you are next to your NAS or on the other side of the world. What changes is how the connection gets there, and each route has different trade-offs worth knowing.</p>
+    </div>
+    <div class="hero-shot"><img alt="The Add NAS form showing Direct IP and QuickConnect" src="../../screenshots/add-nas.webp" width="1324" height="2644" decoding="async" fetchpriority="high" /></div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Three routes</div>
+      <h2>Pick the one that fits</h2>
+    </div>
+    <div class="tscroll"><table class="t">
+      <thead><tr><th>Route</th><th>Setup</th><th>Speed</th><th>Exposes anything?</th></tr></thead>
+      <tbody>
+        <tr><td><b>QuickConnect</b></td><td>Enable it in DSM and enter the ID. Nothing on the router.</td><td>Slower - traffic goes via Synology's relay.</td><td class="yes">Nothing. No open ports on your side.</td></tr>
+        <tr><td><b>Custom domain / DDNS</b></td><td>A hostname pointing at your address, plus a port forward on the router.</td><td>Direct, so as fast as your upload allows.</td><td class="no">Yes - the DSM port is reachable from the internet.</td></tr>
+        <tr><td><b>VPN</b></td><td>A VPN server on your router or NAS, and a client on the phone.</td><td>Direct once connected.</td><td class="yes">Only the VPN port. Everything else stays private.</td></tr>
+      </tbody>
+    </table></div>
+    <div class="note"><b>If you are unsure, use QuickConnect.</b> It is the option that requires no router knowledge and opens nothing, and every feature in the app works over it.</div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">What works remotely</div>
+      <h2>Everything, with two footnotes</h2>
+      <p class="lead">The app does not have a reduced feature set when you are away. The two things that need a moment's thought are camera live view and waking a NAS that is off.</p>
+    </div>
+    <div class="tscroll"><table class="t">
+      <thead><tr><th>Feature</th><th>Away from home</th></tr></thead>
+      <tbody>
+        <tr><td>Monitoring - system, storage, network, health</td><td class="yes">Works on any route.</td></tr>
+        <tr><td>Docker, packages, services, tasks, users</td><td class="yes">Works on any route.</td></tr>
+        <tr><td>Synology Photos - thumbnails and full images</td><td class="yes">Works, relay included.</td></tr>
+        <tr><td>File Station and Drive downloads</td><td class="yes">Works, relay included.</td></tr>
+        <tr><td>Backups - status and Run Now</td><td class="yes">Works on any route.</td></tr>
+        <tr><td>Waking another device through the NAS</td><td class="yes">Works, as long as the NAS itself is on.</td></tr>
+        <tr><td><b>Camera live view</b></td><td>Turn on <b>Tunnel camera live view through DSM port</b>. Without it, live view wants RTSP on port 554, which is usually not reachable from outside. See <a href="/guide/media/#streaming">how live view connects</a>.</td></tr>
+        <tr><td><b>Waking the NAS itself while it is off</b></td><td>Needs a VPN or a router Wake-on-LAN forward. QuickConnect cannot reach a NAS that is off. See <a href="/guide/wake-on-lan/">Wake-on-LAN</a>.</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">QuickConnect</div>
+      <h2>Setting it up</h2>
+    </div>
+    <ol class="steps">
+      <li><b>In DSM:</b> Control Panel &rsaquo; External Access &rsaquo; QuickConnect. Enable it and note the QuickConnect ID.</li>
+      <li><b>In the app:</b> add a NAS and switch <b>Connection Type</b> to <b>QuickConnect</b>.</li>
+      <li><b>Enter the ID</b> - not a host and port.</li>
+      <li><b>Your DSM credentials</b>, and 2FA if the account uses it.</li>
+      <li><b>Save &amp; Connect.</b></li>
+    </ol>
+    <div class="note"><b>Expect it to be slower.</b> The relay adds a hop and Synology rate-limits it, so a photo library scrolls less smoothly than it does at home. Everything still works - it is a latency difference, not a capability one.</div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">A pattern worth copying</div>
+      <h2>Add the same NAS twice</h2>
+      <p class="lead">One entry by <b>local IP</b>, one by <b>QuickConnect</b>. Name them so you can tell them apart - "NAS (home)" and "NAS (away)".</p>
+    </div>
+    <ul class="plain">
+      <li><b>At home</b>, use the direct one: no relay, full speed, instant thumbnails.</li>
+      <li><b>Out</b>, switch to the QuickConnect one.</li>
+      <li><b>They keep separate layouts</b>, so you can strip the away entry down to the few cards you actually check on mobile data.</li>
+      <li><b>Switching is one tap</b> from the device list.</li>
+    </ul>
+    <p style="color:var(--steel);margin-top:16px">Set <a href="/guide/settings/#launch">Launch Behavior</a> to <b>Last NAS I used</b> and the app will keep whichever you were on.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Common questions</div>
+      <h2>Remote access FAQ</h2>
+    </div>
+    <details open><summary>Do I need to forward ports to use my NAS remotely?</summary><div class="body">No. QuickConnect relays the connection without any router configuration, and a VPN works too. Port forwarding is only needed if you specifically want a direct route from the internet.</div></details>
+    <details><summary>Do photos and camera live view work over QuickConnect?</summary><div class="body">Yes. Thumbnails, full images, camera live view, and File Station and Drive downloads all go over whatever route is active, relay included. Camera live view needs the DSM-port tunnel toggle on.</div></details>
+    <details><summary>Should I add my NAS twice?</summary><div class="body">It is a good pattern - one entry by local IP for home and one by QuickConnect for away, with separate layouts and one-tap switching.</div></details>
+    <details><summary>Is QuickConnect secure?</summary><div class="body">The connection is encrypted end to end when you use HTTPS, and the relay passes traffic through rather than holding your data. Your DSM credentials and two-factor authentication still apply.</div></details>
+    <details><summary>Why is my local-IP entry not working on mobile data?</summary><div class="body">Because a private address like 192.168.x.x only exists on your own network. Use the QuickConnect entry, a domain, or connect to your VPN first.</div></details>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <h2>Next: backup &amp; restore</h2>
+    <p class="lead" style="margin:0 auto 24px">Move your app settings to a new phone.</p>
+    <p><a class="btn" href="/guide/backup-restore/">Backup &amp; restore &rarr;</a> &nbsp; <a class="btn ghost" href="/guide/">Back to the guide</a></p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="flinks"><a href="/">Home</a><a href="/guide/">User Guide</a><a href="/guide/getting-started/">Getting started</a><a href="/compatible-nas/">Compatibility</a><a href="/help/">Help</a><a href="/privacy/">Privacy</a><a href="https://play.google.com/store/apps/details?id=com.synomanager">Google Play</a><a href="https://apps.apple.com/us/app/syno-manager/id6763011668">App Store</a><a href="https://github.com/MiyaraHub/synomanager/issues">Report a bug</a><a href="https://miyarahub.com">MiyaraHub</a></div>
+    <p class="legal">&copy; MiyaraHub Technologies LLC. Syno Manager is an independent app and is not affiliated with, endorsed by, or sponsored by Synology Inc. Synology, DSM, DiskStation, RackStation, Hyper Backup, Active Backup, Surveillance Station and QuickConnect are trademarks of Synology Inc.</p>
+  </div>
+</footer>
+
+<script defer src="/assets/search.js"></script>
+<script defer src="/assets/lightbox.js"></script>
+</body>
+</html>

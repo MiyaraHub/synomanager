@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Help & Troubleshooting - Syno Manager</title>
+<meta name="description" content="Connection timeouts, certificate errors, 2FA, missing tabs, blank photo tiles, cameras failing away from home and stale widgets - what each one means." />
+<meta name="keywords" content="Syno Manager not connecting, Synology app connection timeout, Synology app certificate error, Synology app 2FA, Synology app blank photos, Synology camera not working remotely" />
+<meta name="author" content="MiyaraHub Technologies LLC" />
+<meta name="robots" content="index, follow, max-image-preview:large" />
+<meta name="theme-color" content="#3b82f6" />
+<link rel="canonical" href="https://synomanager.com/help/" />
+<meta property="og:title" content="Help & Troubleshooting - Syno Manager" />
+<meta property="og:description" content="Connection timeouts, certificate errors, 2FA, missing tabs, blank photo tiles, cameras failing away from home and stale widgets - what each one means." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://synomanager.com/help/" />
+<meta property="og:site_name" content="Syno Manager" />
+<meta property="og:image" content="https://synomanager.com/screenshots/add-nas.webp" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Help & Troubleshooting - Syno Manager" />
+<meta name="twitter:description" content="Connection timeouts, certificate errors, 2FA, missing tabs, blank photo tiles, cameras failing away from home and stale widgets - what each one means." />
+<meta name="twitter:image" content="https://synomanager.com/screenshots/add-nas.webp" />
+<link rel="icon" href="../assets/favicon.ico" sizes="any" />
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png" />
+<link rel="icon" type="image/png" sizes="48x48" href="../assets/favicon-48.png" />
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preconnect" href="https://img.shields.io" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" />
+<link rel="stylesheet" href="../assets/site.css" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "MiyaraHub Technologies LLC",
+  "url": "https://miyarahub.com",
+  "logo": "https://synomanager.com/assets/icon-192.png"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Syno Manager",
+  "url": "https://synomanager.com/",
+  "publisher": {
+    "@type": "Organization",
+    "name": "MiyaraHub Technologies LLC"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://synomanager.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Help"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Syno Manager says connection timeout. What does that mean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "That nothing answered at the address and port you gave. The credentials were never tried. Check that HTTPS matches the port - 5001 with HTTPS on, 5000 with it off - that the phone is on a network that can reach the NAS, and that DSM's own web interface loads in the phone's browser at the same address."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does the app say invalid credentials when my password is right?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Because the NAS answered and refused the sign-in. Check for a typo, check whether the account uses two-factor authentication - the 2FA toggle has to be on - and check DSM's auto-block list under Control Panel, Security, Account, in case repeated attempts have blocked your phone's address."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why can I not see a tab I expect?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Either the package behind it is not installed on that NAS, or the sub-view is hidden. The app reads what your NAS can do when it connects, so a package installed since then needs a refresh - pull down, or reopen the app."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "My cameras work at home but not away.",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Turn on Tunnel camera live view through DSM port in the NAS's configuration. With it off, live view connects straight to RTSP on port 554, which is usually not reachable from outside your network."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "My photos show as blank tiles.",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "On DSM 7.2.2 and later the NAS stops building previews for HEIC files, and Syno Manager decodes those on the device instead. If older non-HEIC photos are also blank, the NAS's thumbnails are genuinely missing - use re-index on the Photos screen and let the NAS rebuild them."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is my widget showing old numbers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Because Android and iOS decide when a widget may refresh, and both ration it to save battery. Each widget shows when its data was captured for exactly this reason. Opening the app is the surest way to refresh it."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="/"><img src="../assets/syno-manager-icon.png" alt="Syno Manager icon" width="104" height="104" decoding="async" /> Syno Manager</a>
+    <button class="nav-toggle" aria-label="Menu" onclick="document.getElementById('m').classList.toggle('open')">&#9776;</button>
+    <nav id="m">
+      <a href="/">Home</a>
+      <a href="/guide/">User Guide</a>
+      <a href="/#screenshots">Screenshots</a>
+      <a href="/compatible-nas/">Compatibility</a>
+      <a href="/best-synology-nas-app/">Why switch</a>
+      <a href="/help/" class="active">Help</a>
+      <a href="/#top" class="cta">Download</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="crumb"><a href="/">Home</a> &rsaquo; Help</div>
+    <div class="eyebrow">Help</div>
+    <h1>When something <span class="g">is not right</span></h1>
+    <p>Most problems fall into one of a handful of shapes. Each one below says what the symptom actually means, which is usually the fastest route to the fix.</p>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="onthispage"><b>Jump to</b><ul>
+      <li><a href="#connecting">Cannot connect</a></li>
+      <li><a href="#credentials">Sign-in refused</a></li>
+      <li><a href="#missing">Missing tabs or cards</a></li>
+      <li><a href="#photos">Blank photo tiles</a></li>
+      <li><a href="#cameras">Cameras away from home</a></li>
+      <li><a href="#logs">Logs will not load</a></li>
+      <li><a href="#widgets">Stale widgets</a></li>
+      <li><a href="#assistant">No Assistant tab</a></li>
+      <li><a href="#contact">Still stuck</a></li>
+    </ul></div>
+
+    <div class="section-head" id="connecting">
+      <div class="eyebrow">Connection</div>
+      <h2>"Connection timeout"</h2>
+      <p class="lead">This means <b>nothing answered</b>. Your credentials were never tried, so the problem is the address, the port, or the network - never the password.</p>
+    </div>
+    <ol class="steps">
+      <li><b>Open DSM in the phone's browser</b> at exactly the address and port you typed. If the browser cannot reach it either, the app is not the problem.</li>
+      <li><b>Check HTTPS matches the port.</b> 5001 is the HTTPS listener and 5000 is the HTTP one. Crossing them times out.</li>
+      <li><b>Check the phone's network.</b> A local address like <code>192.168.1.20</code> does not exist on mobile data. Join the Wi-Fi, or use <a href="/guide/remote-access/">QuickConnect, a domain or a VPN</a>.</li>
+      <li><b>On iOS, allow local network access.</b> Settings &rsaquo; Apps &rsaquo; Syno Manager &rsaquo; Local Network. Without it iOS silently blocks connections to your own network, and the symptom is a timeout that looks like a network fault.</li>
+      <li><b>Check DSM's firewall.</b> Control Panel &rsaquo; Security &rsaquo; Firewall - a rule allowing only certain addresses will block a phone that is not one of them.</li>
+      <li><b>Check the NAS is awake.</b> A sleeping NAS does not answer. <a href="/guide/wake-on-lan/">Wake it</a> first.</li>
+    </ol>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head" id="credentials">
+      <div class="eyebrow">Sign-in</div>
+      <h2>"Invalid credentials" or a certificate error</h2>
+    </div>
+    <div class="tscroll"><table class="t">
+      <thead><tr><th>Message</th><th>What it means</th><th>Fix</th></tr></thead>
+      <tbody>
+        <tr><td>Invalid credentials</td><td>The NAS answered and refused the sign-in. Address and port are right.</td><td>Check the username and password. Check whether the account uses 2FA - the toggle has to be on. Check DSM's auto-block list under <b>Control Panel &rsaquo; Security &rsaquo; Account</b> in case failed attempts have blocked your address.</td></tr>
+        <tr><td>Certificate error</td><td>HTTPS is on and certificate verification is also on, against a self-signed certificate.</td><td>Turn <b>Verify SSL Certificate</b> off. Most DiskStations present a self-signed certificate; the connection stays encrypted either way.</td></tr>
+        <tr><td>2FA required</td><td>The account uses two-factor authentication and the toggle is off.</td><td>Turn on <b>Two-Factor Authentication (2FA)</b> in the NAS's configuration and reconnect.</td></tr>
+        <tr><td>2FA codes rejected</td><td>Usually a clock, not a code.</td><td>Codes are derived from the current time. Check the phone's clock and the NAS's - the NAS's time source is on the home screen's quick-stats row.</td></tr>
+        <tr><td>Was working, now asks to sign in</td><td>Stored credentials became unreadable - it can happen after restoring the app onto a new phone.</td><td>The app clears what it cannot read and asks you to sign in again. Re-enter the password once.</td></tr>
+      </tbody>
+    </table></div>
+    <div class="note"><b>Username with a space in it?</b> That works. The app quotes it correctly, which is a common reason other clients fail on accounts like <code>John Smith</code>.</div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head" id="missing">
+      <div class="eyebrow">Missing things</div>
+      <h2>A tab, sub-view or card is not there</h2>
+      <p class="lead">There are exactly three reasons, and they have different fixes.</p>
+    </div>
+    <ol class="steps">
+      <li><b>The package is not installed.</b> The app reads what your NAS can do and hides everything it cannot. No Download Station package, no Download Station tab. Install it from <a href="/guide/apps/#package-center">Package Center</a>.</li>
+      <li><b>It was installed after you connected.</b> The capability list is read on connect. Pull to refresh, or reopen the app, and it appears.</li>
+      <li><b>It is hidden.</b> Check the tab's <b>&#8942; menu &rsaquo; Customize views</b>, and <b>Settings &rsaquo; Dashboard Categories</b> for cards. See <a href="/guide/customizing/">customizing</a>.</li>
+    </ol>
+    <div class="note"><b>Tapping a card whose view is hidden will tell you so</b> and offer a Customize button. If it says your NAS does not offer that view, the package genuinely is not there.</div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head" id="photos">
+      <div class="eyebrow">Photos</div>
+      <h2>Blank tiles in the photo library</h2>
+    </div>
+    <ul class="plain">
+      <li><b>Recent iPhone photos:</b> these are HEIC, and on DSM 7.2.2 and later the NAS no longer builds previews for them. Syno Manager decodes them on the device instead, so they should appear. If they do not, make sure you are on a current version of the app.</li>
+      <li><b>Older photos blank too:</b> the NAS's thumbnails are genuinely missing. Use <b>re-index</b> on the Photos screen and let the NAS rebuild them. It takes a while on a large library and runs on the NAS, so you can close the app.</li>
+      <li><b>Everything blank and slow over QuickConnect:</b> the relay is rate-limited. Give it longer, or use a direct entry when you are at home.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head" id="cameras">
+      <div class="eyebrow">Cameras</div>
+      <h2>Live view works at home but not away</h2>
+      <p class="lead">One setting fixes this: <b>Tunnel camera live view through DSM port</b>, in the NAS's configuration.</p>
+    </div>
+    <ul class="plain">
+      <li><b>Off</b> - live view connects straight to RTSP on port 554. Fast on your own network, but that port is almost never reachable from outside.</li>
+      <li><b>On</b> - the stream is tunnelled over the DSM HTTPS port you already connect on. Nothing extra to expose, and it works from anywhere you can reach DSM.</li>
+      <li><b>A camera showing "Tap to view" is not broken.</b> It is H.265, and DSM does not produce still snapshots for those. Tap it and the stream opens.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head" id="logs">
+      <div class="eyebrow">Logs</div>
+      <h2>The system log will not load</h2>
+      <p class="lead">If the log reports a connection timeout while the rest of the app works fine, the thing not answering is the Log Center service on the NAS, not your connection.</p>
+    </div>
+    <ul class="plain">
+      <li><b>Check Log Center is installed and running</b> in DSM's Package Center. The system log API belongs to it.</li>
+      <li><b>Check the account's permissions.</b> Reading system logs needs administrator rights on most DSM configurations.</li>
+      <li><b>Container and stack logs are separate</b> and come from Docker, so those can work while the system log does not.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head" id="widgets">
+      <div class="eyebrow">Widgets</div>
+      <h2>The home screen widget is out of date</h2>
+      <p class="lead">Android and iOS decide when a widget may refresh, and both ration it hard to save battery. No app can force one - which is why each widget prints the time its numbers were taken instead of a promise.</p>
+    </div>
+    <ul class="plain">
+      <li><b>Open the app</b> - the surest refresh.</li>
+      <li><b>Android:</b> exclude Syno Manager from battery optimisation.</li>
+      <li><b>iOS:</b> make sure Background App Refresh is on for the app.</li>
+      <li><b>Check reachability:</b> a widget cannot read a NAS the phone cannot reach. On mobile data with a local-IP-only entry, it will not update until you are home.</li>
+      <li><b>"never updated"</b> means no successful reading yet - freshly added, or the app has not run since.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head" id="assistant">
+      <div class="eyebrow">Assistant</div>
+      <h2>There is no Assistant tab</h2>
+      <p class="lead">The assistant needs an on-device model, and the tab is hidden entirely on hardware that does not have one - a control that cannot work is worse than no control.</p>
+    </div>
+    <ul class="plain">
+      <li><b>Android</b> needs AICore with a Gemini Nano model available to it.</li>
+      <li><b>iOS and macOS</b> need Apple Intelligence supported and enabled.</li>
+      <li><b>Check what your device reports</b> in <b>Settings &rsaquo; On-Device AI</b>, which names the state it found.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head" id="contact">
+      <div class="eyebrow">Still stuck</div>
+      <h2>Report it</h2>
+      <p class="lead">Bugs and feature requests go in the public tracker, where they get a number and a thread rather than disappearing into an inbox.</p>
+    </div>
+    <p style="margin-top:8px"><a class="btn" href="https://github.com/MiyaraHub/synomanager/issues">Report a bug or request a feature</a></p>
+    <div class="note" style="margin-top:22px"><b>What to include:</b> the app version (Settings shows it inline, and About has the build number), your DSM version, your NAS model, whether you are on your own network or away, and what you expected instead. A screenshot with anything private cropped out helps more than a description.</div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Common questions</div>
+      <h2>Troubleshooting FAQ</h2>
+    </div>
+    <details open><summary>It says connection timeout. What does that mean?</summary><div class="body">That nothing answered at the address and port you gave - the credentials were never tried. Check that HTTPS matches the port, that the phone is on a network that can reach the NAS, and that DSM's own web interface loads in the phone's browser at the same address.</div></details>
+    <details><summary>Why does it say invalid credentials when my password is right?</summary><div class="body">Because the NAS answered and refused the sign-in. Check for a typo, check whether the account uses 2FA, and check DSM's auto-block list in case repeated attempts have blocked your phone's address.</div></details>
+    <details><summary>Why can I not see a tab I expect?</summary><div class="body">Either the package behind it is not installed, or the sub-view is hidden. A package installed since you connected needs a refresh - pull down, or reopen the app.</div></details>
+    <details><summary>My cameras work at home but not away.</summary><div class="body">Turn on Tunnel camera live view through DSM port. With it off, live view wants RTSP on port 554, which is usually not reachable from outside.</div></details>
+    <details><summary>My photos show as blank tiles.</summary><div class="body">HEIC photos are decoded on the device because DSM 7.2.2+ no longer builds previews for them. If older photos are blank too, use re-index on the Photos screen.</div></details>
+    <details><summary>Why is my widget showing old numbers?</summary><div class="body">Because the operating system decides when a widget may refresh. Each widget shows when its data was captured for exactly that reason; opening the app is the surest refresh.</div></details>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <h2>The full manual</h2>
+    <p class="lead" style="margin:0 auto 24px">Every screen, every control, and what each one will not do.</p>
+    <p><a class="btn" href="/guide/">Read the User Guide &rarr;</a></p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="flinks"><a href="/">Home</a><a href="/guide/">User Guide</a><a href="/guide/getting-started/">Getting started</a><a href="/compatible-nas/">Compatibility</a><a href="/help/">Help</a><a href="/privacy/">Privacy</a><a href="https://play.google.com/store/apps/details?id=com.synomanager">Google Play</a><a href="https://apps.apple.com/us/app/syno-manager/id6763011668">App Store</a><a href="https://github.com/MiyaraHub/synomanager/issues">Report a bug</a><a href="https://miyarahub.com">MiyaraHub</a></div>
+    <p class="legal">&copy; MiyaraHub Technologies LLC. Syno Manager is an independent app and is not affiliated with, endorsed by, or sponsored by Synology Inc. Synology, DSM, DiskStation, RackStation, Hyper Backup, Active Backup, Surveillance Station and QuickConnect are trademarks of Synology Inc.</p>
+  </div>
+</footer>
+
+<script defer src="/assets/search.js"></script>
+<script defer src="/assets/lightbox.js"></script>
+</body>
+</html>

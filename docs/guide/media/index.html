@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Photos, Drive & Cameras - Syno Manager</title>
+<meta name="description" content="Browse Synology Photos by folder with on-device HEIC decoding, navigate Synology Drive, and watch Surveillance Station live - over QuickConnect too." />
+<meta name="keywords" content="Synology Photos app, Synology Drive app, Surveillance Station live view phone, Synology camera app, Synology HEIC thumbnails, Synology photos QuickConnect" />
+<meta name="author" content="MiyaraHub Technologies LLC" />
+<meta name="robots" content="index, follow, max-image-preview:large" />
+<meta name="theme-color" content="#3b82f6" />
+<link rel="canonical" href="https://synomanager.com/guide/media/" />
+<meta property="og:title" content="Photos, Drive & Cameras - Syno Manager" />
+<meta property="og:description" content="Browse Synology Photos by folder with on-device HEIC decoding, navigate Synology Drive, and watch Surveillance Station live - over QuickConnect too." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://synomanager.com/guide/media/" />
+<meta property="og:site_name" content="Syno Manager" />
+<meta property="og:image" content="https://synomanager.com/screenshots/photos.webp" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Photos, Drive & Cameras - Syno Manager" />
+<meta name="twitter:description" content="Browse Synology Photos by folder with on-device HEIC decoding, navigate Synology Drive, and watch Surveillance Station live - over QuickConnect too." />
+<meta name="twitter:image" content="https://synomanager.com/screenshots/photos.webp" />
+<link rel="icon" href="../../assets/favicon.ico" sizes="any" />
+<link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png" />
+<link rel="icon" type="image/png" sizes="48x48" href="../../assets/favicon-48.png" />
+<link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preconnect" href="https://img.shields.io" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" />
+<link rel="stylesheet" href="../../assets/site.css" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "MiyaraHub Technologies LLC",
+  "url": "https://miyarahub.com",
+  "logo": "https://synomanager.com/assets/icon-192.png"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Syno Manager",
+  "url": "https://synomanager.com/",
+  "publisher": {
+    "@type": "Organization",
+    "name": "MiyaraHub Technologies LLC"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://synomanager.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "User Guide",
+      "item": "https://synomanager.com/guide/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Media"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Photos, Drive & Cameras - Syno Manager",
+  "description": "Browse Synology Photos by folder with on-device HEIC decoding, navigate Synology Drive, and watch Surveillance Station live - over QuickConnect too.",
+  "image": "https://synomanager.com/screenshots/photos.webp",
+  "url": "https://synomanager.com/guide/media/",
+  "inLanguage": "en",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Syno Manager",
+    "url": "https://synomanager.com/"
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "MiyaraHub Technologies LLC"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "MiyaraHub Technologies LLC",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://synomanager.com/assets/icon-192.png"
+    }
+  },
+  "about": {
+    "@type": "SoftwareApplication",
+    "name": "Syno Manager",
+    "operatingSystem": "Android, iOS, macOS, Windows",
+    "applicationCategory": "UtilitiesApplication"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can I browse my Synology Photos library by folder?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. You can walk the library's actual folder structure the way DS Photo did, without having to create an album first, and you can also open your own albums and albums shared with you."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do some of my iPhone photos show as blank tiles in other apps?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "On DSM 7.2.2 and later the NAS stops building preview images for HEIC files. Syno Manager decodes those photos on your device instead, the same way Synology's own app does, so recent iPhone shots appear as pictures rather than broken tiles."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I watch my cameras when I am not at home?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Turn on Tunnel camera live view through DSM port when you add the NAS, and live view is carried over the DSM HTTPS port you already use, so RTSP port 554 does not need to be exposed. With the toggle off, live view connects straight to RTSP - faster on your own network, but that port has to be reachable."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do some cameras say tap to view instead of showing a picture?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Because they are H.265. DSM only produces live snapshot images for H.264 cameras, so an H.265 camera has no still to show until you open its stream. The card says so rather than showing an empty box."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="/"><img src="../../assets/syno-manager-icon.png" alt="Syno Manager icon" width="104" height="104" decoding="async" /> Syno Manager</a>
+    <button class="nav-toggle" aria-label="Menu" onclick="document.getElementById('m').classList.toggle('open')">&#9776;</button>
+    <nav id="m">
+      <a href="/">Home</a>
+      <a href="/guide/" class="active">User Guide</a>
+      <a href="/#screenshots">Screenshots</a>
+      <a href="/compatible-nas/">Compatibility</a>
+      <a href="/best-synology-nas-app/">Why switch</a>
+      <a href="/help/">Help</a>
+      <a href="/#top" class="cta">Download</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero split">
+  <div class="wrap">
+    <div>
+      <div class="crumb"><a href="/">Home</a> &rsaquo; <a href="/guide/">User Guide</a> &rsaquo; Media</div>
+      <div class="eyebrow">Media</div>
+      <h1>Pictures, files and <span class="g">the front door</span></h1>
+      <p>Three sub-views: <b>Photos</b> for your Synology Photos library, <b>Drive</b> for Synology Drive and team folders, and <b>Cameras</b> for Surveillance Station live view. All three work over QuickConnect, not just on your own network.</p>
+    </div>
+    <div class="hero-shot"><img alt="Synology Photos library with thumbnail previews" src="../../screenshots/photos.webp" width="1324" height="2644" decoding="async" fetchpriority="high" /></div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="onthispage"><b>On this page</b><ul>
+      <li><a href="#photos">Synology Photos</a></li>
+      <li><a href="#heic">HEIC and blank tiles</a></li>
+      <li><a href="#drive">Synology Drive</a></li>
+      <li><a href="#cameras">Surveillance Station</a></li>
+      <li><a href="#streaming">How live view connects</a></li>
+    </ul></div>
+
+    <div class="section-head" id="photos">
+      <div class="eyebrow">Photos</div>
+      <h2>Your whole library, not just albums</h2>
+      <p class="lead">A summary at the top - how many photos, how many albums - then <b>Recent Photos</b> as a grid, and everything else a tap away.</p>
+    </div>
+    <ul class="plain">
+      <li><b>Browse by folder.</b> Walk the library's actual folder structure, the way DS Photo let you, without creating an album first. This is the thing people miss most when they move to Synology Photos.</li>
+      <li><b>Albums, yours and shared.</b> Your own albums plus albums other people shared with you, opened with their access key.</li>
+      <li><b>Full screen with pinch to zoom.</b> Tap any photo.</li>
+      <li><b>Download or share</b> any photo straight from the phone.</li>
+      <li><b>Re-index the library.</b> Ask the NAS to rebuild its thumbnails when tiles come up blank - the same operation as DSM's own re-index, started from here.</li>
+      <li><b>It works away from home.</b> Thumbnails and full images load over QuickConnect, a VPN or mobile data, not just on the LAN.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head" id="heic">
+      <div class="eyebrow">A DSM quirk, handled</div>
+      <h2>Why your iPhone photos are not blank here</h2>
+      <p class="lead">On <b>DSM 7.2.2 and later</b>, the NAS stopped generating preview images for HEIC files - the format every recent iPhone shoots in. Clients that expect the NAS to have made a thumbnail get nothing, and show a broken tile.</p>
+    </div>
+    <p style="color:var(--steel);max-width:72ch">Syno Manager decodes those photos <b>on your device</b> instead, which is what Synology's own app does. Your recent iPhone shots appear as pictures. It costs a little more work on the phone and nothing at all on the NAS.</p>
+    <div class="note"><b>Still seeing blanks on older photos?</b> Those are usually genuinely missing thumbnails rather than HEIC. Use <b>re-index</b> and let the NAS rebuild them - it takes a while on a big library, and it runs on the NAS, so you can close the app.</div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head" id="drive">
+      <div class="eyebrow">Drive</div>
+      <h2>Personal Drive and team folders</h2>
+    </div>
+    <div class="with-shot">
+      <div>
+        <p class="lead">Starts at <code>/mydrive</code> and navigates like a file browser, with team folders alongside your personal one.</p>
+        <ul class="plain" style="margin-top:16px">
+          <li><b>Folders show their modified date</b>; files show size and date.</li>
+          <li><b>Open a file's detail</b> for the rest of what Drive holds about it.</li>
+          <li><b>Download and share</b> - and downloads work off-LAN over QuickConnect, which is the part that usually does not.</li>
+          <li><b>Synology Office documents live here</b>, which is why the <a href="/guide/files/#office">Office screen</a> is a status page rather than an editor.</li>
+        </ul>
+      </div>
+      <img alt="Synology Drive browsing personal drive folders and files" src="../../screenshots/drive.webp" width="1324" height="2644" decoding="async" loading="lazy" />
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head" id="cameras">
+      <div class="eyebrow">Cameras</div>
+      <h2>Surveillance Station live view</h2>
+    </div>
+    <div class="with-shot left">
+      <img alt="The Surveillance Station camera grid" src="../../screenshots/cameras.webp" width="1324" height="2644" decoding="async" loading="lazy" />
+      <div>
+        <p class="lead">Every camera Surveillance Station knows about, with a count at the top and a grid-or-list switch on the right. Your choice of layout is remembered.</p>
+        <ul class="plain" style="margin-top:16px">
+          <li><b>Two dots per camera.</b> The left one is whether the camera is online; the right one is whether it is recording.</li>
+          <li><b>H.264 cameras show a live snapshot</b> on their tile, so the grid is a wall of current stills.</li>
+          <li><b>H.265 cameras say <em>Tap to view</em>.</b> DSM does not produce snapshot images for H.265, so there is no still to show until the stream opens. The card says that rather than showing an empty box and letting you wonder.</li>
+          <li><b>Tap any camera</b> for full-screen live view, with a mute control and a LIVE indicator.</li>
+          <li><b>Stream time follows the NAS clock</b>, daylight saving included, so the timestamp burned into the picture matches the recordings.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head" id="streaming">
+      <div class="eyebrow">The connection</div>
+      <h2>How live view actually connects</h2>
+      <p class="lead">There is one per-NAS toggle behind this, set when you <a href="/guide/getting-started/#form">add the NAS</a> and changeable later: <b>Tunnel camera live view through DSM port</b>.</p>
+    </div>
+    <div class="tscroll"><table class="t">
+      <thead><tr><th>Toggle</th><th>How the stream travels</th><th>Best for</th></tr></thead>
+      <tbody>
+        <tr><td>Off (default)</td><td>Straight to <b>RTSP on port 554</b>.</td><td>Your own network. Lower latency, fewer hops. Needs port 554 reachable from wherever you are watching.</td></tr>
+        <tr><td>On</td><td>Tunnelled over the <b>DSM HTTPS port</b> you already connect on, as a secure WebSocket.</td><td>Watching from outside. Nothing extra to expose, because it reuses the port you already reach DSM on.</td></tr>
+      </tbody>
+    </table></div>
+    <div class="note"><b>If live view works at home and not away</b>, this toggle is the first thing to change. Turning it on is almost always the fix, and it does not require any router configuration.</div>
+    <div class="with-shot" style="margin-top:22px">
+      <div>
+        <div class="note" style="margin-top:0"><b>The camera view here is a real one.</b> Nothing on this site is a mock-up, which is also why several other screenshots carry a blur.</div>
+        <p style="color:var(--steel);margin-top:16px">Full-screen live view carries the camera name, a <b>LIVE</b> indicator while the stream is running, and a mute control. The timestamp burned into the picture follows the NAS clock, so it matches the recordings.</p>
+      </div>
+      <img alt="Full-screen Surveillance Station live view with the LIVE indicator and mute control" src="../../screenshots/camera-live.webp" width="1324" height="2644" decoding="async" loading="lazy" />
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Common questions</div>
+      <h2>Media FAQ</h2>
+    </div>
+    <details open><summary>Can I browse my Synology Photos library by folder?</summary><div class="body">Yes. You can walk the library's actual folder structure the way DS Photo did, without having to create an album first, and you can also open your own albums and albums shared with you.</div></details>
+    <details><summary>Why do some of my iPhone photos show as blank tiles in other apps?</summary><div class="body">On DSM 7.2.2 and later the NAS stops building preview images for HEIC files. Syno Manager decodes those photos on your device instead, so recent iPhone shots appear as pictures rather than broken tiles.</div></details>
+    <details><summary>Can I watch my cameras when I am not at home?</summary><div class="body">Yes. Turn on Tunnel camera live view through DSM port when you add the NAS, and live view is carried over the DSM HTTPS port you already use, so RTSP port 554 does not need to be exposed.</div></details>
+    <details><summary>Why do some cameras say tap to view instead of showing a picture?</summary><div class="body">Because they are H.265. DSM only produces live snapshot images for H.264 cameras, so an H.265 camera has no still to show until you open its stream.</div></details>
+    <details><summary>Can I play back a recording?</summary><div class="body">The app shows live view. Reviewing and exporting recorded footage belongs in Surveillance Station itself, where the timeline and the export tools are.</div></details>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <h2>Next: Backup</h2>
+    <p class="lead" style="margin:0 auto 24px">Hyper Backup and Active Backup for Business.</p>
+    <p><a class="btn" href="/guide/backup/">Backups &rarr;</a> &nbsp; <a class="btn ghost" href="/guide/">Back to the guide</a></p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="flinks"><a href="/">Home</a><a href="/guide/">User Guide</a><a href="/guide/getting-started/">Getting started</a><a href="/compatible-nas/">Compatibility</a><a href="/help/">Help</a><a href="/privacy/">Privacy</a><a href="https://play.google.com/store/apps/details?id=com.synomanager">Google Play</a><a href="https://apps.apple.com/us/app/syno-manager/id6763011668">App Store</a><a href="https://github.com/MiyaraHub/synomanager/issues">Report a bug</a><a href="https://miyarahub.com">MiyaraHub</a></div>
+    <p class="legal">&copy; MiyaraHub Technologies LLC. Syno Manager is an independent app and is not affiliated with, endorsed by, or sponsored by Synology Inc. Synology, DSM, DiskStation, RackStation, Hyper Backup, Active Backup, Surveillance Station and QuickConnect are trademarks of Synology Inc.</p>
+  </div>
+</footer>
+
+<script defer src="/assets/search.js"></script>
+<script defer src="/assets/lightbox.js"></script>
+</body>
+</html>
